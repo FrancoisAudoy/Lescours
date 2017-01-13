@@ -1,0 +1,21 @@
+total 92
+drwxr-xr-x 2 faudoy grp30001 4096 oct.  19 08:10 .
+drwxr-xr-x 3 faudoy grp30001 4096 oct.  12 08:09 ..
+-rw-r--r-- 1 faudoy grp30001  465 sept.  9  2011 calculer.c
+-rwxr-xr-x 1 faudoy grp30001 7888 oct.  12 08:40 faux-pipe
+-rw-r--r-- 1 faudoy grp30001  792 oct.  12 08:45 faux-pipe.c
+-rw-r--r-- 1 faudoy grp30001  695 oct.  12 08:27 faux-pipe.c~
+-rwxr-xr-x 1 faudoy grp30001 7904 oct.  12 10:51 log
+-rw-r--r-- 1 faudoy grp30001  885 oct.  19 08:10 log.c
+-rw-r--r-- 1 faudoy grp30001  800 oct.  12 10:51 log.c~
+-rwxr-xr-x 1 faudoy grp30001 7240 oct.  12 10:36 mytee
+-rw-r--r-- 1 faudoy grp30001  489 oct.  12 10:36 mytee.c
+-rw-r--r-- 1 faudoy grp30001  489 oct.  12 10:35 mytee.c~
+-rwxr-xr-x 1 faudoy grp30001 7048 oct.  12 09:47 taille-tube
+-rw-r--r-- 1 faudoy grp30001  394 oct.  12 09:47 taille-tube.c
+-rw-r--r-- 1 faudoy grp30001  439 oct.  12 09:38 taille-tube.c~
+-rw-r--r-- 1 faudoy grp30001   54 oct.  12 08:41 tmp.txt
+-rw-r--r-- 1 faudoy grp30001    0 oct.  19 08:12 toto.txt
+-rwxr-xr-x 1 faudoy grp30001 7904 oct.  12 09:27 vrai-pipe
+-rw-r--r-- 1 faudoy grp30001 1049 oct.  12 09:27 vrai-pipe.c
+-rw-r--r-- 1 faudoy grp30001  607 oct.  12 08:59 vrai-pipe.c~

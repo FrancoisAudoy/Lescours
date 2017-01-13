@@ -1,0 +1,12 @@
+HEAD / HTTP/1.0
+User-Agent: telnet
+Host: wwwinria.fr
+If-Modified-Since: Thu, 03 Nov 2016 14:51:39 GMT
+
+HEAD http://www.inria.fr/ HTTP/1.0
+User-Agent: telnet
+Host: www.inria.fr
+
+GET http://dept-info.labri.fr/ HTTP/1.0
+User-Agent: telnet
+Host: dept-info.labri.fr

@@ -1,0 +1,5 @@
+calculer.c
+faux-pipe
+faux-pipe.c
+faux-pipe.c~
+tmp.txt

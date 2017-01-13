@@ -1,0 +1,22 @@
+#include <sys/types.h>
+#include <unistd.h>
+#include <stdlib.h>
+#include <fcntl.h>
+#include <stdio.h>
+
+
+int main(int argc, char **argv){
+
+  int fd, ret_read;
+  int s[10];
+
+  fd=open("entiers-generer.txt",O_WRONLY| O_CREAT,0666);
+  if(fd==-1){
+    perror("open");
+    exit(1);
+  }
+
+  do{
+   ret_read=read(fd,s,10*sizeof(int));
+   write(1,s,ret_read);
+   }while(ret_read!=0);
