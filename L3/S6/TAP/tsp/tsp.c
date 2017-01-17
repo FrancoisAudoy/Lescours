@@ -53,23 +53,24 @@ static double tsp_brute_force(point *V, int n, int *P) {
 }
 
 static double value_opt(point *V, int n, int * P, int w){
-  double val =0, k=1 ;
-  for (int i=0; i<n-1 ; ++i, ++k){
-    val += dist(V[P[i]], V[P[+1]]);
+  double val =0;
+  int k=1 ;
+  for (int i=0; i<n-1 ; ++i,k++){
+    val += dist(V[P[i]], V[P[i+1]]);
     if( (val + dist(V[P[i+1]], V[P[0]])) > w)
-      return -k;
+      return (double) -k;
   }
-  return val + dist(V[P[n-1]], V[P[0]]) ;
+  return (val + dist(V[P[n-1]], V[P[0]])) ;
 }
 
 static void MaxPermutation(int *P, int n, int k){
-  int tmp;
-  for(int i=0; i< n-k; ++i){
-    if (k+i < n-(i+1)){
-      tmp = P[k+i];
-      P[k+i] = P[n-(i+1)];
-      P[n-(i+1)] = tmp;
-    }
+  int tmp, i=1;
+  while( k < n-i){
+    tmp = P[k];
+    P[k] = P[n-i];
+    P[n-i] = tmp;
+    ++i;
+    ++k;
   }
 }
 
@@ -83,8 +84,9 @@ static double tsp_brute_force_opt(point *V,int n,int *P){
   while(NextPermutation(Q,n)){
     tmp = value_opt(V,n,P,dist_mini);
     if (tmp < 0) 
-      MaxPermutation(P,n,tmp);
-    else if ( tmp < dist_mini){
+      MaxPermutation(Q,n,abs(tmp));
+    else
+      if ( tmp < dist_mini){
       dist_mini = tmp;
       memcpy(P,Q, n * sizeof(int));
     }
