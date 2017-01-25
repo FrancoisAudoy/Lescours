@@ -335,7 +335,7 @@ int main(int argc, char *argv[]) {
 	bool need_redraw = true;
 	bool wait_event = true;
 
-	int n = 24;
+	int n = 20;
 	int X = 300, Y = 200;
 	point *V = generatePoints(n, X, Y);
 	int *P = malloc(n * sizeof(int));
