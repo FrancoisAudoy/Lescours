@@ -16,7 +16,7 @@ all: todo
 
 todo: $(EXE)
 
-.PHONY: clean
+.PHONY: mrpropre
 
 clean:
 	rm -rf *.c

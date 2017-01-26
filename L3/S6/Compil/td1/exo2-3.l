@@ -7,10 +7,8 @@ int cartot=0;
 //printf("Ligne %d :", ligne);
 %}
 %%
-cabb {printf("(%d,0)", pos); pos+=4;}
-cbab {printf("(%d,1)",pos); pos+=4;}
-cbb {printf("(%d,1)",pos);pos+=3;}
-cbbba {printf("(%d,1)",pos);pos+=5;}
+cabbb {printf("(%d,0)", pos); pos+=2;yyless(2);}
+bbc {printf("(%d,1)",pos); pos+=1;yyless(1);}
 . {pos++;}
 \n {printf("\nLigne %d :", ++ligne);cartot+=pos; pos =0;}
 <<EOF>> {return(0);}
