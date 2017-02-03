@@ -179,6 +179,7 @@ int main(int argc, char ** argv){
   int n = (argv[1] && atoi(argv[1])) ? atoi(argv[1]) : 400;
   point *V = generatePoints(n, width, height);
   int *P = malloc(n * sizeof(int));
+  
   for(int i=0; i<n; i++) P[i]=i; // tournée de départ
   {
     drawTour(V, n, NULL); // dessine les points
