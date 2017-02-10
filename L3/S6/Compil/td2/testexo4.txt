@@ -1,0 +1,5 @@
+defun foo(bool) foo(bool)
+defun bar(mark1:int, mark2:int)
+bar(int,int)
+foo(bool)
+bar(int,int)
