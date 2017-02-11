@@ -34,5 +34,6 @@ int main(int argc, char** argv){
 fd = open("codesansdebug.c",O_TRUNC|O_CREAT|O_WRONLY,0666);
 yylex();
 close(fd);
+return 0;
 }
 

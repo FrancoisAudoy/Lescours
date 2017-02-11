@@ -24,4 +24,5 @@ Alpes {printf("Pyrenees"); BEGIN INITIAL;}
 
 int main(void){
 yylex();
+return 0;
 }
