@@ -1,0 +1,15 @@
+%{
+#include <stdio.h>
+#include <stdlib.h>
+
+%}
+
+%%
+[0-9]+ {printf("0,");}
+.|\n {printf("%d,", atoi(yylex));}
+%%
+
+int main(int argc, char ** argv){
+yylex();
+return 0;
+}
