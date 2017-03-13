@@ -45,7 +45,13 @@ extern int yydebug;
 # define YYTOKENTYPE
   enum yytokentype
   {
-    NUMBER = 258
+    NUMBER = 258,
+    Pl = 259,
+    Mo = 260,
+    Mu = 261,
+    Di = 262,
+    Pg = 263,
+    Pd = 264
   };
 #endif
 
