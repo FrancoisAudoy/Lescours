@@ -15,16 +15,12 @@
 // ne l'utilisera pas en fait).
 typedef double (*heuristic)(position,position,grid);
 
-//Fonction de comparaison des noeuds
-int fmin(node *s,node *t){
-  return s->f - t->f;
-}  
+  
 
 // Heuristique "nulle" pour Dijkstra
 double h0(position s, position t, grid G){
   return 0.0;
 }
-
 
 // Heuristique "vol d'oiseau" pour A*
 double hvo(position s, position t, grid G){
@@ -59,15 +55,23 @@ double weight[]={
     1.0,  // V_WIND
 };
 
+//Fonction de comparaison des noeuds
+int fminimum(const void *a,const void *b){
+  node *s= (node*)a;
+  node *t= (node*)b;
+  return (int) (s->f - t->f);
+}
+
 node * node_create(int p_x,int p_y, node* parent, heuristic h, position fin, grid G){
   node * new_node = (node*)malloc(sizeof(node));
   new_node->pos.x = p_x;
   new_node->pos.y = p_y;
   if(parent != NULL)
-    new_node->cost = parent->cost + weight[G.value[p.x][p.y]];
+    new_node->cost = parent->cost + weight[G.value[p_x][p_y]];
   else
     new_node->cost = 0.0;
-  new_node->f = ncost + h(p, fin, G);
+  position p ={p_x,p_y};
+  new_node->f = new_node->cost + h(p, fin, G);
   new_node->parent = parent;
 
   return new_node;
@@ -92,9 +96,9 @@ node * node_create(int p_x,int p_y, node* parent, heuristic h, position fin, gri
 
 void A_star(grid G, heuristic h){
   
-  heap *q= heap_create(1,fmin);
-  node *noeud =node_create(G.start, 0.0, NULL, h, g.fin, G);
-  heap_add(q, node);
+  heap q= heap_create(1,fminimum);
+  node *noeud =node_create(G.start.x,G.start.y,  NULL, h, G.end, G);
+  heap_add(q, (void*)noeud);
   G.mark[G.start.x][G.start.y] = M_USED | M_PATH;
 
   while(!heap_empty(q)){
@@ -106,10 +110,19 @@ void A_star(grid G, heuristic h){
   // libérer les noeuds de Q avant de sortir, vous pouvez simplement
   // les stocker au fur et à mesure à la fin du tableau représentant
   // le tas ...
-    noeud = heap_pop(q);
+    noeud = (node*)heap_pop(q);
+    //La fin a été atteinte, on marque les parents avec M_PATH
+    if((noeud->pos.x == G.end.x) && (noeud->pos.y == G.end.y)){
+      while((noeud->pos.x == G.start.x) && (noeud->pos.y == G.start.y)){
+	G.mark[noeud->pos.x][noeud->pos.y] = G.mark[noeud->pos.x][noeud->pos.y] | M_PATH;
+	noeud = noeud->parent;
+      }
+      return ;
+    }
+      
     for(int x = noeud->pos.x -1; x < noeud->pos.x+1; ++x)
-      for(int y = noeud->pos.y; y < noeud->pos.y+1; y++){
-	if(G.value[x][y] != M_WALL && G.mark[x][y] == M_ZERO){
+      for(int y = noeud->pos.y-1; y < noeud->pos.y+1; y++){
+	if(G.value[x][y] != V_WALL && G.mark[x][y] == M_ZERO){
 	  G.mark[x][y] = M_USED;
 	  heap_add(q, node_create(x,y,noeud,h,G.end,G));
 	}
@@ -121,6 +134,8 @@ void A_star(grid G, heuristic h){
   // (sentinelle).
   ;;;
   }
+  fprintf(stderr, "ERROR: ***** Aucun chemin possible\n ");
+  return;
   
 }
 

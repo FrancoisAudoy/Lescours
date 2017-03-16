@@ -41,8 +41,8 @@ int heap_add(heap h, void *object){
       h->array[pos_obj]=tmp;
       pos_obj=pos_obj/2;
     }
-    return 0;
   }
+  return 0;
 }
 
 

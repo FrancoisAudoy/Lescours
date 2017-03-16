@@ -99,7 +99,7 @@ void A_star(grid G, heuristic h){
   heap q= heap_create(1,fminimum);
   node *noeud =node_create(G.start.x,G.start.y,  NULL, h, G.end, G);
   heap_add(q, (void*)noeud);
-  G.mark[G.start.x][G.start.y] = M_USED | M_PATH;
+  //G.mark[G.start.x][G.start.y];
 
   while(!heap_empty(q)){
   // Pensez à dessiner la grille avec drawGrid(G) à chaque fois, par
@@ -111,24 +111,28 @@ void A_star(grid G, heuristic h){
   // les stocker au fur et à mesure à la fin du tableau représentant
   // le tas ...
     noeud = (node*)heap_pop(q);
+    if ( G.mark[noeud->pos.x][noeud->pos.y] != M_USED){
     //La fin a été atteinte, on marque les parents avec M_PATH
     if((noeud->pos.x == G.end.x) && (noeud->pos.y == G.end.y)){
-      while((noeud->pos.x == G.start.x) && (noeud->pos.y == G.start.y)){
+      while((noeud->pos.x != G.start.x) && (noeud->pos.y != G.start.y)){
 	G.mark[noeud->pos.x][noeud->pos.y] = G.mark[noeud->pos.x][noeud->pos.y] | M_PATH;
 	noeud = noeud->parent;
       }
       return ;
     }
-      
-    for(int x = noeud->pos.x -1; x < noeud->pos.x+1; ++x)
-      for(int y = noeud->pos.y-1; y < noeud->pos.y+1; y++){
-	if(G.value[x][y] != V_WALL && G.mark[x][y] == M_ZERO){
-	  G.mark[x][y] = M_USED;
+
+    //Ajout du sommet u dans P
+    G.mark[noeud->pos.x][noeud->pos.y] = M_USED;
+   
+    for(int x = noeud->pos.x -1; x <= noeud->pos.x+1; ++x)
+      for(int y = noeud->pos.y-1; y <= noeud->pos.y+1; y++){
+	//if(G.value[x][y] != V_WALL && G.mark[x][y] != M_USED){
+	  G.mark[x][y] = M_SEEN;
 	  heap_add(q, node_create(x,y,noeud,h,G.end,G));
-	}
+	  //}
       }
-		   
-	
+    }
+		   	
   // Les bords de la grille sont toujours constitués de murs (V_WALL) ce
   // qui évite d'avoir à tester la validité des indices des positions
   // (sentinelle).

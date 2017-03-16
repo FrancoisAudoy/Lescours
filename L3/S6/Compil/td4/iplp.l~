@@ -1,0 +1,20 @@
+%{
+#include <stdio.h>
+#include <stdlib.h>
+
+int fileno();
+
+%}
+%option noyywrap noinput nounput
+
+VARIABLES [A-Za-z]*
+BOOLEEN [0-1]
+NEGATION (~,!,"NOT","not","NON","non")
+
+%%
+":=" {return Af;}
+"ET"| "et"| "Et" {return ET;}
+"OU" | "Ou" | "ou" {return OU;}
+{NEGATION} {return NON;}
+"impl" | "Impl" {return IMPL;}
+"equi" | "Equi" { return EQUI;}
