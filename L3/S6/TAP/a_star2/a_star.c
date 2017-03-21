@@ -125,7 +125,7 @@ void A_star(grid G, heuristic h){
   while(!heap_empty(q)){
   // Pensez à dessiner la grille avec drawGrid(G) à chaque fois, par
   // exemple, que vous ajouter un sommet à P.
-    drawGrid(G);
+    
   // Après avoir extrait un noeud de Q, il ne faut pas le détruire,
   // sous peine de ne plus pouvoir reconstruire le chemin trouvé. Pour
   // libérer les noeuds de Q avant de sortir, vous pouvez simplement
@@ -144,13 +144,14 @@ void A_star(grid G, heuristic h){
 
     //Ajout du sommet u dans P
     G.mark[noeud->pos.x][noeud->pos.y] = M_USED;
+    drawGrid(G); //ralenti Tout !!!
    
     for(int x = noeud->pos.x -1; x <= noeud->pos.x+1; ++x)
       for(int y = noeud->pos.y-1; y <= noeud->pos.y+1; y++){
 	if(G.value[x][y] != V_WALL && G.mark[x][y] != M_USED){
 	  G.mark[x][y] = M_FRONT;
 	  heap_add(q, node_create(x,y,noeud,h,G.end,G));
-	  printf("x:%d y:%d\n", x,y);
+	  //printf("x:%d y:%d\n", x,y);
 	  }
       }
     }

@@ -393,7 +393,7 @@ int main(int argc, char ** argv){
     drawGraph(V, n, P,M); // force le dessin de la tournée
   }
   
-  /*sleep(1); // attend 1 seconde
+  sleep(1); // attend 1 seconde
 
   double r=(width+height)/4.0;
   int p=n/2;
@@ -433,7 +433,7 @@ int main(int argc, char ** argv){
     printf("value mst: %g\n",w);
     printf("runing time mst: %s\n",s);
     drawGraph(V, -n, P,M); // force le dessin de la tournée
-    }*/
+    }
   while(running){
    wait_event = true;
    if (has_changed) tsp_mst(V,n,P,M);

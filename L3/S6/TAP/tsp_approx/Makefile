@@ -8,5 +8,4 @@ all: tsp_approx
 tsp_approx: tsp_approx.c utils.c
 
 clean:
-	rm tsp
 	rm tsp_approx
