@@ -29,11 +29,10 @@ int heap_empty(heap h){
 
 int heap_add(heap h, void *object){
   if(h->size == h->nmax ){
-    //printf("%d\n",h->nmax);
     h->array = realloc(h->array,sizeof(void*)* (h->nmax*2 +1 ));
     h->nmax *=2;
   }
-  else{
+  //else{
     h->size++;
     h->array[h->size] = object;
     int pos_obj = h->size;
@@ -42,7 +41,7 @@ int heap_add(heap h, void *object){
       h->array[pos_obj/2] = object;
       h->array[pos_obj]=tmp;
       pos_obj=pos_obj/2;
-    }
+      // }
   }
   return 0;
 }

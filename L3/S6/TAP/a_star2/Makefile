@@ -18,3 +18,5 @@ a_star: a_star.c utils.c heap.c
 
 cor: a_star.cor.c utils.c heap.cor.c
 	$(CC) $(CFLAGS) $^ $(IFLAGS) $(LDFLAGS) -o $@
+clean:
+	rm a_star 

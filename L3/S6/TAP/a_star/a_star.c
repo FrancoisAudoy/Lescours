@@ -99,7 +99,6 @@ void A_star(grid G, heuristic h){
   heap q= heap_create(1,fminimum);
   node *noeud =node_create(G.start.x,G.start.y,  NULL, h, G.end, G);
   heap_add(q, (void*)noeud);
-  //G.mark[G.start.x][G.start.y];
 
   while(!heap_empty(q)){
   // Pensez à dessiner la grille avec drawGrid(G) à chaque fois, par

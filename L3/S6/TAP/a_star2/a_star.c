@@ -8,6 +8,9 @@
 #include "utils.h"
 #include "heap.h" // il faut aussi votre code pour heap.c
 
+double total_cost = 0;
+int nbr_sommet = 0; 
+
 
 // Une fonction de type "heuristic" est une fonction h() qui renvoie
 // une distance (type double) entre une position de départ et de fin
@@ -30,7 +33,8 @@ double hvo(position s, position t, grid G){
 
 // Structure "noeud" pour le tas min Q
 typedef struct node{
-  position pos;        // position (.x,.y) d'un noeud u
+  position pos; // position (.x,.y) d'un noeud u
+  int where; //d'ou vient ce sommet (s=1 , t=0)
   double cost;         // coût[u]
   double f;            // f[u] = coût[u] + h(u,end)
   struct node *parent; // parent[u] = pointeur vers le père, NULL pour start
@@ -83,10 +87,11 @@ int fminimum(const void *a,const void *b){
   return (int) (s->f - t->f);
 }
 
-node * node_create(int p_x,int p_y, node* parent, heuristic h, position fin, grid G){
+node * node_create(int p_x,int p_y, node* parent,int src ,heuristic h, position fin, grid G){
   node * new_node = (node*)malloc(sizeof(node));
   new_node->pos.x = p_x;
   new_node->pos.y = p_y;
+  new_node->where = src;
   if(parent != NULL)
     new_node->cost = parent->cost + weight[G.value[p_x][p_y]];
   else
@@ -118,48 +123,63 @@ node * node_create(int p_x,int p_y, node* parent, heuristic h, position fin, gri
 void A_star(grid G, heuristic h){
   
   heap q= heap_create(1,fminimum);
-  node *noeud =node_create(G.start.x,G.start.y,  NULL, h, G.end, G);
+   node *noeud =node_create(G.start.x,G.start.y, NULL, 1, h, G.end, G);
+  nbr_sommet ++;
+   heap_add(q, node_create(G.end.x,G.end.y, NULL,0 , h, G.start, G));
   heap_add(q, (void*)noeud);
-  //G.mark[G.start.x][G.start.y];
-
+ 
+  
   while(!heap_empty(q)){
-  // Pensez à dessiner la grille avec drawGrid(G) à chaque fois, par
-  // exemple, que vous ajouter un sommet à P.
+    // Pensez à dessiner la grille avec drawGrid(G) à chaque fois, par
+    // exemple, que vous ajouter un sommet à P.
     
-  // Après avoir extrait un noeud de Q, il ne faut pas le détruire,
-  // sous peine de ne plus pouvoir reconstruire le chemin trouvé. Pour
-  // libérer les noeuds de Q avant de sortir, vous pouvez simplement
-  // les stocker au fur et à mesure à la fin du tableau représentant
-  // le tas ...
+    // Après avoir extrait un noeud de Q, il ne faut pas le détruire,
+    // sous peine de ne plus pouvoir reconstruire le chemin trouvé. Pour
+    // libérer les noeuds de Q avant de sortir, vous pouvez simplement
+    // les stocker au fur et à mesure à la fin du tableau représentant
+    // le tas ...
     noeud = (node*)heap_pop(q);
-    if ( G.mark[noeud->pos.x][noeud->pos.y] != M_USED){
-    //La fin a été atteinte, on marque les parents avec M_PATH
-    if((noeud->pos.x == G.end.x) && (noeud->pos.y == G.end.y)){
-      while((noeud->pos.x != G.start.x) || (noeud->pos.y != G.start.y)){
-	G.mark[noeud->pos.x][noeud->pos.y] =  M_PATH;
-	noeud = noeud->parent;
-      }
-      return ;
-    }
-
-    //Ajout du sommet u dans P
-    G.mark[noeud->pos.x][noeud->pos.y] = M_USED;
-    drawGrid(G); //ralenti Tout !!!
-   
-    for(int x = noeud->pos.x -1; x <= noeud->pos.x+1; ++x)
-      for(int y = noeud->pos.y-1; y <= noeud->pos.y+1; y++){
-	if(G.value[x][y] != V_WALL && G.mark[x][y] != M_USED){
-	  G.mark[x][y] = M_FRONT;
-	  heap_add(q, node_create(x,y,noeud,h,G.end,G));
-	  //printf("x:%d y:%d\n", x,y);
+    if ( G.mark[noeud->pos.x][noeud->pos.y] != M_USED &&  G.mark[noeud->pos.x][noeud->pos.y] != M_USED2){
+      if(noeud->where == 1){ //s
+      //La fin a été atteinte, on marque les parents avec M_PATH
+      /*if((noeud->pos.x == G.end.x) && (noeud->pos.y == G.end.y)){
+	while((noeud->pos.x != G.start.x) || (noeud->pos.y != G.start.y)){
+	  total_cost += noeud->cost;
+	  G.mark[noeud->pos.x][noeud->pos.y] =  M_PATH;
+	  noeud = noeud->parent;
+	}
+	printf("Nombre de sommet visités : %d \nCout du chemin : %g \n", nbr_sommet, total_cost);
+	return ;
+	}*/
+      
+      //Ajout du sommet u dans P
+      G.mark[noeud->pos.x][noeud->pos.y] = M_USED;
+      drawGrid(G); //ralenti Tout !!!
+      
+      for(int x = noeud->pos.x -1; x <= noeud->pos.x+1; ++x)
+	for(int y = noeud->pos.y-1; y <= noeud->pos.y+1; y++){
+	  if(G.value[x][y] != V_WALL && (G.mark[x][y] != M_USED && G.mark[x][y] != M_USED2)){
+	    nbr_sommet ++;
+	    G.mark[x][y] = M_FRONT;
+	    heap_add(q, node_create(x,y,noeud,1 ,h,G.end,G));
 	  }
+	}
       }
+      if( noeud->where == 0){ //t
+      //Ajout du sommet u dans P
+      G.mark[noeud->pos.x][noeud->pos.y] = M_USED2;
+      drawGrid(G); //ralenti Tout !!!
+      
+      for(int x = noeud->pos.x -1; x <= noeud->pos.x+1; ++x)
+	for(int y = noeud->pos.y-1; y <= noeud->pos.y+1; y++){
+	  if(G.value[x][y] != V_WALL && (G.mark[x][y] != M_USED2 && G.mark[x][y] != M_USED)){
+	    nbr_sommet ++;
+	    G.mark[x][y] = M_FRONT;
+	    heap_add(q, node_create(x,y,noeud,0 ,h,G.start,G));
+	  }
+	}
     }
-		   	
-  // Les bords de la grille sont toujours constitués de murs (V_WALL) ce
-  // qui évite d'avoir à tester la validité des indices des positions
-  // (sentinelle).
-  ;;;
+    }
   }
   fprintf(stderr, "ERROR: ***** Aucun chemin possible\n ");
   return;
@@ -232,19 +252,19 @@ int main(int argc, char *argv[]){
 
   // Pour ajouter à G des "régions" de différent types:
 
-  //addRandomBlob(G, V_WALL,   (G.X+G.Y)/20);
-  //addRandomBlob(G, V_SAND,   (G.X+G.Y)/15);
-  //addRandomBlob(G, V_WATER,  (G.X+G.Y)/15);
-  //addRandomBlob(G, V_MUD,    (G.X+G.Y)/15);
-  //addRandomBlob(G, V_GRASS,  (G.X+G.Y)/15);
-  //addRandomBlob(G, V_TUNNEL, (G.X+G.Y)/15);
+  addRandomBlob(G, V_WALL,   (G.X+G.Y)/20);
+  addRandomBlob(G, V_SAND,   (G.X+G.Y)/15);
+  addRandomBlob(G, V_WATER,  (G.X+G.Y)/15);
+  addRandomBlob(G, V_MUD,    (G.X+G.Y)/15);
+  addRandomBlob(G, V_GRASS,  (G.X+G.Y)/15);
+  addRandomBlob(G, V_TUNNEL, (G.X+G.Y)/15);
   
   scale=round(fmin(width/G.X,height/G.Y)); // zoom courrant = nombre de pixels par unité
   init_SDL_OpenGL(); // à mettre avant le 1er "draw"
   
   drawGrid(G); // dessin de la grille avant l'algo
 
-  A_star(G,h0); // h0() ou hvo()
+  A_star(G,hvo); // h0() ou hvo()
 
   while(running){
     drawGrid(G);

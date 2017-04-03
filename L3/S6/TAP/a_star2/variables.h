@@ -37,7 +37,7 @@ enum{
 
   // pour .mark
   M_NULL, // sommet non marqué
-  M_USED, // sommet marqué dans P
+  M_USED, // sommet marqué dans P_s
   M_FRONT,// sommet marqué dans Q
   M_PATH, // sommet dans le chemin
 
@@ -46,6 +46,8 @@ enum{
   C_END,      // idem pour la destination
   C_FINAL,    // couleur de fin du dégradé pour M_USED
   C_END_WALL, // couleur de destination si sur V_WALL
+
+  M_USED2, //Sommet marqué dans P_t 
 
 };
 
