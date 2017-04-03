@@ -9,5 +9,5 @@ tp1: tp1.c tp1-tools.c
 	$(CC) $(CFLAGS) $^ $(LDLIBS) -o $@
 
 clean:
-	rm cor
 	rm tp1
+	rm cor

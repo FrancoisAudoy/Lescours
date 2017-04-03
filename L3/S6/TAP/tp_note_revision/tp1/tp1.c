@@ -15,6 +15,31 @@
 
 // calcule R = X+Y en O(n)
 void number_addition(number *R, number *X, number *Y){
+  int ind_r =0;
+  number* n_min = (Y->n < X->n ? Y : X);
+  number* n_max = (Y->n >= X->n ? Y : X);
+  short res;
+  short retenue = 0 ;
+
+  for(int i = 0; i < n_min->n ; ++i){
+    res = Y->digit[i] + X->digit[i] + retenue; // Addition chiffre par chiffre
+    retenue = res >= BASE ? 1 : 0;
+    R->digit[ind_r] = res % BASE;
+    ind_r ++;
+  }
+
+  if(n_min->n < n_max->n){
+    for (int i = n_min->n; i< n_max->n; ++i){
+      res = n_max->digit[i] + retenue; // Addition chiffre par chiffre
+      retenue = res >= BASE ? 1 : 0;
+      R->digit[ind_r] = res % BASE;
+      ind_r ++;
+      }
+  }
+  if(retenue != 0)
+    R->digit[ind_r] = retenue ;
+  
+
   return;
 }
 
