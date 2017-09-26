@@ -1,1 +1,0 @@
-(((X1:=LONG+LONG;X1:=X1+3);X2:=10);while X2 do(X1:=X1*2))
