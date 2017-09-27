@@ -1,0 +1,35 @@
+package set;
+
+public class BinaryTreeQueue implements IQueue {
+
+	@Override
+	public void push_front(Object o) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public Object pop_back() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean empty() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public void clear() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public int size() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}
