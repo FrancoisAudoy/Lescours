@@ -19,7 +19,6 @@ public class BinaryTreeQueue implements IQueue {
 		table = tmp;
 	}
 	
-	@Override
 	public void push_front(Object o) {
 		if(index >= size)
 			allocate();
@@ -31,29 +30,25 @@ public class BinaryTreeQueue implements IQueue {
 
 	}
 
-	@Override
+	
 	public Object pop_back() {
-		
 		return table[index--];
-		
 	}
 
-	@Override
+	
 	public boolean empty() {
-		// TODO Auto-generated method stub
 		return index == 0;
 	}
 
-	@Override
+	
 	public void clear() {
 		while(!empty()){
 			pop_back();
 		}
 	}
 
-	@Override
+	
 	public int size() {
-		// TODO Auto-generated method stub
 		return size;
 	}
 

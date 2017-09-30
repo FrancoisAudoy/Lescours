@@ -4,6 +4,8 @@ public abstract class BinaryTree implements IBinaryTree {
 	
 	private Object data;
 	private IBinaryTree leftChild, rightChild;
+	private int height;
+	private int nodes; //numbers of nodes under this one
 	
 	public BinaryTree(Object data, IBinaryTree leftChild,
 			IBinaryTree rightChild) {
@@ -16,60 +18,62 @@ public abstract class BinaryTree implements IBinaryTree {
 		data = o;
 		leftChild = null;
 		rightChild = null;
+		height = 0;
+		nodes = 0;
 	}
 	
-	@Override
+	
 	public Object getData() {
 		
 		return data;
 	}
 
-	@Override
+	
 	public void putData(Object data) {
 		this.data = data;
 
 	}
 
-	@Override
+	
 	public IBinaryTree getLeftChild() {
 		
 		return leftChild;
 	}
 
-	@Override
+	
 	public IBinaryTree getRightChild() {
 	
 		return rightChild;
 	}
 
-	@Override
+	
 	public void setLeftChild(IBinaryTree leftChild) {
 		this.leftChild = leftChild; 
 
 	}
 
-	@Override
+	
 	public void setRightChild(IBinaryTree rightChild) {
 		this.rightChild = rightChild;
 
 	}
 
-	@Override
+	
 	public boolean isLeaf() {
 		// TODO Auto-generated method stub
 		return (leftChild == null && rightChild == null);
 	}
 
-	@Override
+	
 	public int getHeight() {
 		// TODO Auto-generated method stub
-		return 0;
+		return height;
 	}
 
-	@Override
+	
 	public int getNumberNodes() {
 		// TODO Auto-generated method stub
-		return 0;
+		return nodes;
 	}
 
 	public String toString(){
