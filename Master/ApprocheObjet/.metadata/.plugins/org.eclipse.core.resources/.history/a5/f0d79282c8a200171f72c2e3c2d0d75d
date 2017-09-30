@@ -1,7 +1,0 @@
-package set;
-
-public interface ISet {
-	
-	boolean countains(Object element)
-
-}

@@ -1,7 +1,0 @@
-package set;
-
-public interface IQueue {
-
-	void push_front(Object o);
-	
-}

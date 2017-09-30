@@ -1,1 +1,1 @@
-[[{"location":"/usr/lib/jvm/oracle-java8-jdk-amd64","type":"JRE","hints":{"EXECUTION_ENVIRONMENT":"JavaSE-1.8"}},"jre:jre:1.8.0"]]
+[[{"location":"/usr/lib/jvm/oracle-java8-jdk-amd64","type":"JRE","hints":{"EXECUTION_ENVIRONMENT":"JavaSE-1.8"}},"jre:jre:1.8.0"],[{"location":"/autofs/netapp/travail/faudoy/Lescours/Master/ApprocheObjet/td2","type":"PROJECT","hints":{"PROJECT_NAME":"td2"}},"ABSENT"]]

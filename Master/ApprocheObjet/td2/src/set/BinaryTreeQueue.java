@@ -33,7 +33,6 @@ public class BinaryTreeQueue implements IQueue {
 
 	@Override
 	public Object pop_back() {
-		
 		return table[index--];
 		
 	}
