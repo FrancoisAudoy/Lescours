@@ -7,8 +7,8 @@ pas = 0.001;
 x = -8:1:8;
 y = -8:1:8;
 
-figure('Name', 'recherche du minimum sur un polynome')
-hold on;
+figure('Name', 'recherche du minimum sur une surface')
+hold on
 
 [X,Y] = meshgrid(x,y);
 
@@ -18,26 +18,32 @@ contour(X,Y,Z);
 
 x0 = 5;
 y0 = 2;
+xcurrent = x0;
+ycurrent = y0;
+xprec = xcurrent;
+yprec = ycurrent;
 zcurrent = f_surface(x0,y0) - pas*f_surface(x0,y0);
 zprec = f_surface(x0,y0);
 
 attenuation = attenuation +1 ;
 
-%contour(x0,y0,zprec,'ok','MarkerSize',20); marche pas
+contour(x0,y0,zprec,'ok','MarkerSize',20); marche pas
 
 
 while(abs(zprec - zcurrent) > epsilon)
     
     %contour(zcurrent,'ob');
    
-    zprec  = zcurrent;
+    %zprec  = zcurrent;
     nu = 0.01;
     attenuation = attenuation+1;
-    zcurrent = xprec - nu*valeurPolynome(derivPolynome(coefs),xprec)*xprec;
+    xcurrent = xprec - nu*xprec;
+    ycurrent = yprec - nu*yprec;
+    zcurrent = f_surface(xcurrent,ycurrent) - nu*f_surface(xcurrent,ycurrent);
     pause(1);
 end
 
-plot(xcurrent,valeurPolynome(coefs,xcurrent),'xr', 'MarkerSize',20);
+%plot(xcurrent,valeurPolynome(coefs,xcurrent),'xr', 'MarkerSize',20);
 
 hold off
 

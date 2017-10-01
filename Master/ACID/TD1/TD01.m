@@ -397,7 +397,7 @@ T0 = (sum(y) - T1 * sum(x)) / m
 figure('Name','Nuage de points + regression lineaire')
 hold on 
 scatter(x,y)
-plot(x, (T1*x + T0))
+plot(x, (T0 + (T1.*x)))
 hold off
 
 %figure('Name','Regress')
