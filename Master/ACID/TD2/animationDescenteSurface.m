@@ -1,5 +1,3 @@
-
-
 close all
 epsilon = 0.01; % critere d'arret
 attenuation = 10^10; % pas du gradient 1/log(attenuation)
@@ -16,31 +14,29 @@ hold on;
 
 Z = f_surface(X,Y);
 
-%S = reshape(Z,length(x),length(y));
+contour(X,Y,Z);
 
-surf(X,Y,Z);
-
-%x0 = randi(250,1)
 x0 = 5;
 y0 = 2;
-xcurrent = x0 - pas*f_surface(x0,y0)*x0
-xprec = x0;
+zcurrent = f_surface(x0,y0) - pas*f_surface(x0,y0);
+zprec = f_surface(x0,y0);
 
 attenuation = attenuation +1 ;
 
-plot(x0,valeurPolynome(coefs,x0),'ok','MarkerSize',20);
+%contour(x0,y0,zprec,'ok','MarkerSize',20); marche pas
 
 
-while(abs(xprec - xcurrent) > epsilon)
+while(abs(zprec - zcurrent) > epsilon)
     
-    plot(xcurrent,valeurPolynome(coefs,xcurrent),'ob');
+    %contour(zcurrent,'ob');
    
-    xprec  = xcurrent;
+    zprec  = zcurrent;
     nu = 0.01;
     attenuation = attenuation+1;
-    xcurrent = xprec - nu*valeurPolynome(derivPolynome(coefs),xprec)*xprec;
+    zcurrent = xprec - nu*valeurPolynome(derivPolynome(coefs),xprec)*xprec;
     pause(1);
 end
+
 plot(xcurrent,valeurPolynome(coefs,xcurrent),'xr', 'MarkerSize',20);
 
 hold off

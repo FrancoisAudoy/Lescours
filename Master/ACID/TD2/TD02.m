@@ -48,29 +48,14 @@ c = [2 3 5 10 2 9]
 x = [2 2]
 a = valeurPolynome(c,x)
 
-abs = 0:1:100;
+absice = 0:1:100;
 
 figure('Name','Polynome et derive');
 hold on
-plot(abs, valeurPolynome(c,abs));
+plot(absice, valeurPolynome(c,absice));
 
-derive = valeurPolynome(derivPolynome(c),abs);
-plot(abs, derive);
+derive = valeurPolynome(derivPolynome(c),absice);
+plot(absice, derive);
 hold off
 
-function v = valeurPolynome(coeff, x)
-p = length(coeff);
-puissance = 0:p-1;
-v = zeros(1,length(x));
-for i = 1:length(x)
-    x2 = repmat(x(i),1,p);
-    v(i) = sum(coeff.*(x2.^puissance));
-end
-end
 
-function d = derivPolynome(coeff)
-p = length(coeff);
-puissance  = 0:p-1;
-d = coeff .* puissance;
-d(1) = [];
-end
