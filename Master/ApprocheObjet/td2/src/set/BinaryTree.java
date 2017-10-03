@@ -8,10 +8,13 @@ public abstract class BinaryTree implements IBinaryTree {
 	private int nodes; //numbers of nodes under this one
 	
 	public BinaryTree(Object data, IBinaryTree leftChild,
-			IBinaryTree rightChild) {
+			IBinaryTree rightChild) 
+	{
 		this.data = data;
 		this.leftChild = leftChild;
 		this.rightChild = rightChild;
+		nodes = rightChild.getNumberNodes() + leftChild.getNumberNodes();
+		height = 1 + Math.max(rightChild.getHeight(), leftChild.getHeight());
 	}
 
 	public BinaryTree(Object o) {
@@ -30,8 +33,10 @@ public abstract class BinaryTree implements IBinaryTree {
 
 	
 	public void putData(Object data) {
-		this.data = data;
-
+		if(data != null)
+			this.data = data;
+		else
+			throw new Error("Data can't be null");
 	}
 
 	
@@ -48,31 +53,36 @@ public abstract class BinaryTree implements IBinaryTree {
 
 	
 	public void setLeftChild(IBinaryTree leftChild) {
+		if(leftChild != null) {
+			nodes = this.rightChild.getNumberNodes() + leftChild.getNumberNodes() + 1;
+			height = 1 + Math.max(rightChild.getHeight(), leftChild.getHeight());
+		}
 		this.leftChild = leftChild; 
 
 	}
 
 	
 	public void setRightChild(IBinaryTree rightChild) {
+		if( rightChild != null) {
+			nodes = rightChild.getNumberNodes() + leftChild.getNumberNodes() + 1;
+			height = 1 + Math.max(rightChild.getHeight(), leftChild.getHeight());
+		}
 		this.rightChild = rightChild;
 
 	}
 
 	
 	public boolean isLeaf() {
-		// TODO Auto-generated method stub
 		return (leftChild == null && rightChild == null);
 	}
 
 	
 	public int getHeight() {
-		// TODO Auto-generated method stub
 		return height;
 	}
 
 	
 	public int getNumberNodes() {
-		// TODO Auto-generated method stub
 		return nodes;
 	}
 
