@@ -1,8 +1,8 @@
 close all;
-muSaumon = [8 8];
-sigmaSaumon = [1 0; 0 1];
-muBar = [12 12];
-sigmaBar = [4 0; 0 4];
+muSaumon = 12;
+sigmaSaumon = 4;
+muBar = 10;
+sigmaBar = 2;
 sizeVT = 1000;
 sizeVTSaumon = 1000;
 sizeVTBar = 1000;
@@ -11,16 +11,16 @@ VTBar = mvnrnd(muBar, sigmaBar, sizeVTBar);
 
 figure('Name','Histo VT');
 hold on;
-hist3(VTSaumon);
-hist3(VTBar);
+histogram(VTSaumon);
+histogram(VTBar);
 hold off;
 
-mcost = [0 1 ; 5 0];
+mcost = [0 0 ; 10 10];
 
 nbIter = 100;
 sizeTrain = 100;
-nbBarErreur = zeros(nbIter);
-nbSaumonErreur = zeros(nbIter);
+ErreurClassif = zeros(nbIter);
+ErreurBay = zeros(nbIter);
 for i=1:nbIter
     
     SaumonIndice = randperm(sizeVTSaumon, sizeVTSaumon);
@@ -40,22 +40,27 @@ for i=1:nbIter
     TestBar =  VTBar(TestBarIndice);
     TestSaumon = VTSaumon(TestSaumonIndice);
     
-    %ResBar = Myclassify(TestBar,muBarTrain,sigmaBarTrain,muSaumonTrain,sigmaSaumonTrain, sizeVTBar, sizeVTSaumon);
-    %ResSaumon = Myclassify(TestSaumon,muBarTrain,sigmaBarTrain, muSaumonTrain,sigmaSaumonTrain,sizeVTBar, sizeVTSaumon);
-    %ResBar = ClassifBayesien(TestBar,muBarTrain,sigmaBarTrain,muSaumonTrain,sigmaSaumonTrain,mcost, sizeVTBar, sizeVTSaumon);
-    %ResSaumon = ClassifBayesien(TestSaumon,muBarTrain,sigmaBarTrain,muSaumonTrain,sigmaSaumonTrain,mcost,sizeVTBar, sizeVTSaumon);
-    ResBar = Classif2Bayesien(TestBar,muBarTrain,sigmaBarTrain,muSaumonTrain,sigmaSaumonTrain,mcost, sizeVTBar, sizeVTSaumon);
-    ResSaumon = Classif2Bayesien(TestSaumon,muBarTrain,sigmaBarTrain,muSaumonTrain,sigmaSaumonTrain,mcost,sizeVTBar, sizeVTSaumon);
-    nbBarErreur(i) = size(ResBar,1)-sum(ResBar);
-    nbSaumonErreur(i) = sum(ResSaumon);
+    ResBar = Myclassify(TestBar,muBarTrain,sigmaBarTrain,muSaumonTrain,sigmaSaumonTrain, sizeVTBar, sizeVTSaumon);
+    ResSaumon = Myclassify(TestSaumon,muBarTrain,sigmaBarTrain, muSaumonTrain,sigmaSaumonTrain,sizeVTBar, sizeVTSaumon);
+    
+    nbBarErreur = size(ResBar,1)-sum(ResBar);
+    nbSaumonErreur = sum(ResSaumon);
+    ErreurClassif(i) = nbBarErreur + nbSaumonErreur;
+    
+    ResBar = ClassifBayesien(TestBar,muBarTrain,sigmaBarTrain,muSaumonTrain,sigmaSaumonTrain,mcost, sizeVTBar, sizeVTSaumon);
+    ResSaumon = ClassifBayesien(TestSaumon,muBarTrain,sigmaBarTrain,muSaumonTrain,sigmaSaumonTrain,mcost,sizeVTBar, sizeVTSaumon);
+   
+    nbBarErreur = size(ResBar,1)-sum(ResBar);
+    nbSaumonErreur = sum(ResSaumon);
+    ErreurBay(i) = nbBarErreur + nbSaumonErreur;
 end;
 
-erreurmoyenne = (nbBarErreur./length(TestBar) + nbSaumonErreur./length(TestSaumon))./ (length(TestSaumon) + length(TestBar));
+erreurmoyenne = (ErreurClassif + ErreurBay) / 2;
 
 figure('Name','Error');
-plot(1:1:nbIter,nbBarErreur,'color','g');
+plot(1:1:nbIter,ErreurClassif,'color','g');
 hold on;
-plot(1:1:nbIter,nbSaumonErreur,'color','b');
+plot(1:1:nbIter,ErreurBay,'color','b');
 plot(1:1:nbIter,erreurmoyenne,'color','r');
 hold off;
     
@@ -77,15 +82,4 @@ diff = diff1 / diff2;
 
 res = (probtest > (diff * ((size2/(size1+size2)) / (size1/(size1+size2)))));
 
-end
-
-function res = Classif2Bayesien(test,mu1, cov1, mu2, cov2, mcost, size1, size2)
-probtest = mvnpdf(test,mu1,cov1) ./ mvnpdf(test,mu2,cov2);
-
-diff1 = mcost(1,2) - mcost(2,2);
-diff2 = mcost(2,1) - mcost(1,1);
-
-diff = diff1 / diff2;
-
-res = (probtest > (diff * ((size2/(size1+size2)) / (size1/(size1+size2)))));
 end
