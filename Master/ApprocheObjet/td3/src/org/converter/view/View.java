@@ -1,7 +1,7 @@
 package org.converter.view;
 
-import org.converter.controller.Controller;
 
+import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Group;
 import javafx.scene.Scene;
@@ -15,36 +15,42 @@ import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 public class View {
-
+	
 	private  Stage mainStage;
 	private Group g;
 	Scene scene;
 	private TextField tFFrom;
 	private TextField tFTo;
 	private Button buttons;
-	private Label lResultat;
 	private MenuButton mButtonsFrom;
 	private MenuButton mButtonsTo;
+	private MenuItem fromDollar;
+	private MenuItem toDollar;
+	private MenuItem fromEuro;
+	private MenuItem toEuro;
+	
 	
 
 	public View(Stage primaryStage) {
-		// TODO Auto-generated constructor stub
 		mainStage = primaryStage;
 		g = new Group();
-		scene = new Scene(g, 200, 150, Color.BURLYWOOD);
+		scene = new Scene(g, 250, 150, Color.BURLYWOOD);
 		GridPane gPane = new GridPane();
 		Label lFrom = new Label("From");
 		Label lTo = new Label("To");
+		fromDollar = new MenuItem("Dollar");
+		toDollar = new MenuItem("Dollar");
+		fromEuro = new MenuItem("Euro");
+		toEuro = new MenuItem("Euro");
 		buttons = new Button("Convert");
 		mButtonsFrom = new MenuButton("Devise");
 		mButtonsTo = new MenuButton("Devise");
-		mButtonsFrom.getItems().addAll(new MenuItem("Dollar"),
-				new MenuItem("Euro"));
-		mButtonsTo.getItems().addAll(new MenuItem("Dollar"),
-				new MenuItem("Euro"));
+		mButtonsFrom.getItems().addAll(fromDollar,
+				fromEuro);
+		mButtonsTo.getItems().addAll(toDollar,
+				toEuro);
 		tFFrom = new TextField();
 		tFTo = new TextField();
-		lResultat = new Label("Res");
 
 		gPane.add(lFrom, 0, 0);
 		gPane.add(lTo, 0, 1);
@@ -52,25 +58,71 @@ public class View {
 		gPane.add(mButtonsTo, 1, 1);
 		gPane.add(tFFrom, 2, 0);
 		gPane.add(tFTo, 2, 1);
-		gPane.add(buttons, 1, 2);
-		gPane.add(lResultat, 2, 2);
+		gPane.add(buttons, 2, 2);
 		
 		g.getChildren().add(gPane);
 		mainStage.setScene(scene);
 	}
 	
-	public Label getlResultat() {
-		return lResultat;
-	}
 
-	public void setOnAction() {
-		mButtonsFrom.setOnAction(Controller.getInstance());
-		mButtonsTo.setOnAction(Controller.getInstance());
-		buttons.setOnAction(Controller.getInstance());
+	public void setOnAction(EventHandler<ActionEvent> e) {
+		mButtonsFrom.setOnAction(e);
+		mButtonsTo.setOnAction(e);
+		buttons.setOnAction(e);
+		fromDollar.setOnAction(e);
+		fromEuro.setOnAction(e);
+		toDollar.setOnAction(e);
+		toEuro.setOnAction(e);
+		
 	}
 	
 	public void Afficher() {
 		mainStage.show();
 		
+	}
+
+
+	public TextField gettFFrom() {
+		return tFFrom;
+	}
+
+
+	public TextField gettFTo() {
+		return tFTo;
+	}
+
+
+	public Button getButtons() {
+		return buttons;
+	}
+
+
+	public MenuButton getmButtonsFrom() {
+		return mButtonsFrom;
+	}
+
+
+	public MenuButton getmButtonsTo() {
+		return mButtonsTo;
+	}
+
+
+	public MenuItem getFromDollar() {
+		return fromDollar;
+	}
+
+
+	public MenuItem getToDollar() {
+		return toDollar;
+	}
+
+
+	public MenuItem getFromEuro() {
+		return fromEuro;
+	}
+
+
+	public MenuItem getToEuro() {
+		return toEuro;
 	}
 }
