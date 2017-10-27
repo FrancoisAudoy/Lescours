@@ -4,8 +4,9 @@
 % % d'un nuage de points
 %
 close all
+clc
 mu = [0 0]
-sigma = [1 1.5 ; 1.5 3]
+sigma = [1 0 ; 0 1]
 X = mvnrnd(mu,sigma,200); 
 
 
@@ -14,35 +15,39 @@ axis equal
 hold on
 scatter(X(:,1), X(:,2));
 
-A= cov(X)
+A= cov(X);
 
 [V D] = eig(A);
-D
-Vdir1 = V(:,1)
-Vdir2 = V(:,2)
+Vdir1 = V(:,1);
+Vdir2 = V(:,2);
 x=-2:2;
 
-y1 = droite2DVd(x,Vdir1,mu)
+y1 = droite2DVd(x,Vdir1,mu);
 
 plot(x,y1,'r')
 
-y2 = droite2DVd(x,Vdir2,mu)
+y2 = droite2DVd(x,Vdir2,mu);
 
 plot(x,y2,'g')
 hold off 
 
-myacp = CalculACP(X);
-acpm = pca(X);
-Wm = transpose((acpm(:,1)));
-W1 = transpose((myacp(:,1)))
-CProj1 = transpose(W1 * X');
+moy = mean(X);
+% C = X - repmat(moy,size(X, 1), 1)
+[myacp, C] = CalculACP(X);
+W1 = transpose((myacp(:,1)));
+W2 = transpose([myacp(:,1),myacp(:,2)]);
+CProj1 = Proj(W1,C);
+CProj2 = Proj(W2,C);
 
+ymyacp = droite2DVd(C,W1,moy);
+yproj = droite2DVd(CProj1,W1,moy);
+%figure('Name','ACP 1D');
 hold on
-plot(W1,'b');
-plot(Wm);
+scatter(CProj1, yproj,'g');
+
+plot(C,ymyacp,'b');
 hold off
 
-figure('Name','ACP')
-hold on
-plot(CProj1(:,1),'y');
-hold off
+% y2dacp = droite2DVd(C,W2,moy);
+% figure('Name','ACP 2D');
+% plot(C,y2dacp);
