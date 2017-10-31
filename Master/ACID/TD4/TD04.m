@@ -31,20 +31,18 @@ y2 = droite2DVd(x,Vdir2,mu);
 plot(x,y2,'g')
 hold off 
 
-moy = mean(X);
-% C = X - repmat(moy,size(X, 1), 1)
-[myacp, C] = CalculACP(X);
+[myacp, C, moy] = CalculACP(X);
 W1 = transpose((myacp(:,1)));
-W2 = transpose([myacp(:,1),myacp(:,2)]);
-CProj1 = Proj(W1,C);
-CProj2 = Proj(W2,C);
+%W2 = transpose([myacp(:,1),myacp(:,2)]); %Inutile car on est déja en
+%dimension 2 
+CProj1 = Proj(W1,C);%Projection sur les échantillons recentrés
+%CProj2 = Proj(W2,C);
 
 ymyacp = droite2DVd(C,W1,moy);
 yproj = droite2DVd(CProj1,W1,moy);
-%figure('Name','ACP 1D');
+
 hold on
 scatter(CProj1, yproj,'g');
-
 plot(C,ymyacp,'b');
 hold off
 

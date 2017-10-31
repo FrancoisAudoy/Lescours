@@ -4,7 +4,7 @@ sigmaSaumon = [1 0; 0 1];
 muBar = [12 12];
 sigmaBar = [4 0; 0 4];
 sizeVT = 1000;
-sizeVTSaumon = 1000;
+sizeVTSaumon = 1500;
 sizeVTBar = 1000;
 VTSaumon = mvnrnd(muSaumon, sigmaSaumon, sizeVTSaumon);
 VTBar = mvnrnd(muBar, sigmaBar, sizeVTBar);
@@ -49,8 +49,6 @@ for i=1:nbIter
     erreurmoyenne(i) = ((nbBarErreur(i) * length(TestBar)) + (nbSaumonErreur(i) * length(TestSaumon)))./ (length(TestSaumon) + length(TestBar));
 end;
 
-% erreurmoyenne = (nbBarErreur./length(TestBar) + nbSaumonErreur./length(TestSaumon))./ (length(TestSaumon) + length(TestBar));
-
 figure('Name','Error');
 plot(1:1:nbIter,nbBarErreur,'color','g');
 hold on;
@@ -62,10 +60,8 @@ echantillons = [VTBar; VTSaumon];
 figure('Name','ACP');
 hold on
 scatter(echantillons(:,1),echantillons(:,2))
-moy = mean(echantillons);
-% C = echantillons - repmat(moy,size(echantillons, 1), 1); % necessaire pour L'acp et la projection
 
-[myacp C]= CalculACP(echantillons);
+[myacp, C, moy]= CalculACP(echantillons);
 W = transpose((myacp(:,1)));
 CProj = Proj(W,C);
 x = 1:20;
