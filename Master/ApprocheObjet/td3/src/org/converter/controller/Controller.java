@@ -76,13 +76,13 @@ private void onClickButtonConverter(ActionEvent e) {
 				view.gettFTo().setText(output.toString());
 			}
 			else
-				System.out.println("Problème avec les devises");
+				view.gettFTo().setText("ERROR DEVISE");//System.out.println("Problème avec les devises");
 		}catch(NumberFormatException except) {
-			System.out.println("Rentrer un somme d'argent valide");
+			view.gettFTo().setText("Error MONEY");//System.out.println("Rentrer un somme d'argent valide");
 		}
 	}
 	else
-		System.out.println("empty");
+		view.gettFFrom().setText("Empty");//System.out.println("empty");
 }
 
 private void onClickmButtonFrom(ActionEvent event) {

@@ -3,3 +3,6 @@
 *~
 Master/ApprocheObjet/.*/
 bin/
+*.png
+*.odt
+.*

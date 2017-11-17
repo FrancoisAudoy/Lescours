@@ -34,7 +34,7 @@ public class View {
 	public View(Stage primaryStage) {
 		mainStage = primaryStage;
 		g = new Group();
-		scene = new Scene(g, 250, 150, Color.BURLYWOOD);
+		scene = new Scene(g, 250, 150, Color.PAPAYAWHIP);
 		GridPane gPane = new GridPane();
 		Label lFrom = new Label("From");
 		Label lTo = new Label("To");
@@ -51,6 +51,7 @@ public class View {
 				toEuro);
 		tFFrom = new TextField();
 		tFTo = new TextField();
+		tFTo.setEditable(false);
 
 		gPane.add(lFrom, 0, 0);
 		gPane.add(lTo, 0, 1);
