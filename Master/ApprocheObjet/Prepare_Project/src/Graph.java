@@ -5,6 +5,9 @@ import org.jgrapht.graph.SimpleGraph;
 
 public class Graph {
 
+	public int init_x;
+	public int init_y;
+	
 	private  UndirectedGraph<Vertex, Edge> graph;
 	Random rand;
 	

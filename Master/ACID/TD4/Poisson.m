@@ -59,68 +59,68 @@ for i=1:nbIter
     erreurmoyenne(i) = ((nbBarErreur(i) * length(TestBar)) + (nbSaumonErreur(i) * length(TestSaumon)))./ (length(TestSaumon) + length(TestBar));
     
     %% ACP + MAP
-    echantillons = [TrainBar; TrainSaumon];
-    [myacp, C, moy]= CalculACP(echantillons);
-    ACPTrainW = transpose(myacp(:,1));
-    ACPBarTrainCentre = TrainBar - moy;
-    ACPSaumonTrainCentre = TrainSaumon - moy;
-    
-    ACPBarTrainProj = transpose(ACPTrainW * ACPBarTrainCentre');
-    ACPSaumonTrainProj = transpose(ACPTrainW * ACPSaumonTrainCentre');
-
-    ACPmuBarTrain = mean(ACPBarTrainProj);
-    ACPsigmaBarTrain = cov(ACPBarTrainProj);
-    
-    ACPmuSaumonTrain = mean(ACPSaumonTrainProj);
-    ACPsigmaSaumonTrain = cov(ACPSaumonTrainProj);
-    
-    echantillons = [TestBar; TestSaumon];
-    [myacp, C, moy] = CalculACP(echantillons);
-    
-    ACPTestW = transpose(myacp(:,1));
-    ACPBarTestCentre = TestBar - moy;
-    ACPSaumonTestCentre = TestSaumon - moy;
-    
-    ACPBarTestProj = transpose(ACPTestW * ACPBarTestCentre');
-    ACPSaumonTestProj = transpose(ACPTestW * ACPSaumonTestCentre');
-    
-    sizeBarProj = length(ACPBarTestProj);
-    sizeSaumonProj = length(ACPSaumonTestProj);
-    
-    ACPResBar = MyClassifBayesien(ACPBarTestProj,ACPmuBarTrain,ACPsigmaBarTrain,ACPmuSaumonTrain,ACPsigmaSaumonTrain,mcost, sizeBarProj, sizeSaumonProj);
-    ACPResSaumon = MyClassifBayesien(ACPSaumonTestProj,ACPmuBarTrain,ACPsigmaBarTrain,ACPmuSaumonTrain,ACPsigmaSaumonTrain,mcost,sizeBarProj, sizeSaumonProj);
-    ACPnbBarErreur(i) = ((size(ACPResBar,1)-sum(ACPResBar)) / sizeBarProj) * 100;
-    ACPnbSaumonErreur(i) = (sum(ACPResSaumon) / sizeSaumonProj) * 100;
-    
-    ACPerreurmoyenne(i) = ((ACPnbBarErreur(i) * length(ACPBarTestProj)) + (ACPnbSaumonErreur(i) * length(ACPSaumonTestProj)))./ (length(ACPSaumonTestProj) + length(ACPBarTestProj));
-    
-    %% ACI + MAP
-  myaci = CalculACI(TrainBar, TrainSaumon);
-  ACITrainW = transpose(myaci(:,1));
-  ACITrainBarProj = transpose(ACITrainW * TrainBar');
-  ACITrainSaumonProj = transpose(ACITrainW * TrainSaumon');
-  
-  ACImuBarTrain = mean(ACITrainBarProj);
-  ACIsigmaBarTrain = cov(ACITrainBarProj);
-  
-  ACImuSaumonTrain = mean(ACITrainSaumonProj);
-  ACIsigmaSaumonTrain = cov(ACITrainSaumonProj);
-  
-  myaci = CalculACI(TestBar, TestSaumon);
-  
-  ACITestW = transpose(myaci(:,1));
-  ACIBarTestProj = transpose(ACITestW * TestBar');
-  ACISaumonTestProj = transpose(ACITestW * TestSaumon');
-  
-  sizeBarProj = length(ACIBarTestProj);
-  sizeSaumonProj = length(ACISaumonTestProj);
-  
-  ACIResBar = MyClassifBayesien(ACIBarTestProj,ACImuBarTrain,ACIsigmaBarTrain,ACImuSaumonTrain,ACIsigmaSaumonTrain,mcost, sizeBarProj, sizeSaumonProj);
-  ACIResSaumon = MyClassifBayesien(ACISaumonTestProj,ACImuBarTrain,ACIsigmaBarTrain,ACImuSaumonTrain,ACIsigmaSaumonTrain,mcost,sizeBarProj, sizeSaumonProj);
-  ACInbBarErreur(i) = ((size(ACPResBar,1)-sum(ACPResBar)) / sizeBarProj) * 100;
-  ACInbSaumonErreur(i) = (sum(ACPResSaumon) / sizeSaumonProj) * 100;
-  
-  ACIerreurmoyenne(i) = ((ACInbBarErreur(i) * length(ACIBarTestProj)) + (ACInbSaumonErreur(i) * length(ACISaumonTestProj)))./ (length(ACISaumonTestProj) + length(ACIBarTestProj));
+%     echantillons = [TrainBar; TrainSaumon];
+%     [myacp, C, moy]= CalculACP(echantillons);
+%     ACPTrainW = transpose(myacp(:,1));
+%     ACPBarTrainCentre = TrainBar - moy;
+%     ACPSaumonTrainCentre = TrainSaumon - moy;
+%     
+%     ACPBarTrainProj = transpose(ACPTrainW * ACPBarTrainCentre');
+%     ACPSaumonTrainProj = transpose(ACPTrainW * ACPSaumonTrainCentre');
+% 
+%     ACPmuBarTrain = mean(ACPBarTrainProj);
+%     ACPsigmaBarTrain = cov(ACPBarTrainProj);
+%     
+%     ACPmuSaumonTrain = mean(ACPSaumonTrainProj);
+%     ACPsigmaSaumonTrain = cov(ACPSaumonTrainProj);
+%     
+%     echantillons = [TestBar; TestSaumon];
+%     [myacp, C, moy] = CalculACP(echantillons);
+%     
+%     ACPTestW = transpose(myacp(:,1));
+%     ACPBarTestCentre = TestBar - moy;
+%     ACPSaumonTestCentre = TestSaumon - moy;
+%     
+%     ACPBarTestProj = transpose(ACPTestW * ACPBarTestCentre');
+%     ACPSaumonTestProj = transpose(ACPTestW * ACPSaumonTestCentre');
+%     
+%     sizeBarProj = length(ACPBarTestProj);
+%     sizeSaumonProj = length(ACPSaumonTestProj);
+%     
+%     ACPResBar = MyClassifBayesien(ACPBarTestProj,ACPmuBarTrain,ACPsigmaBarTrain,ACPmuSaumonTrain,ACPsigmaSaumonTrain,mcost, sizeBarProj, sizeSaumonProj);
+%     ACPResSaumon = MyClassifBayesien(ACPSaumonTestProj,ACPmuBarTrain,ACPsigmaBarTrain,ACPmuSaumonTrain,ACPsigmaSaumonTrain,mcost,sizeBarProj, sizeSaumonProj);
+%     ACPnbBarErreur(i) = ((size(ACPResBar,1)-sum(ACPResBar)) / sizeBarProj) * 100;
+%     ACPnbSaumonErreur(i) = (sum(ACPResSaumon) / sizeSaumonProj) * 100;
+%     
+%     ACPerreurmoyenne(i) = ((ACPnbBarErreur(i) * length(ACPBarTestProj)) + (ACPnbSaumonErreur(i) * length(ACPSaumonTestProj)))./ (length(ACPSaumonTestProj) + length(ACPBarTestProj));
+%     
+%     %% ACI + MAP
+%   myaci = CalculACI(TrainBar, TrainSaumon);
+%   ACITrainW = transpose(myaci(:,1));
+%   ACITrainBarProj = transpose(ACITrainW * TrainBar');
+%   ACITrainSaumonProj = transpose(ACITrainW * TrainSaumon');
+%   
+%   ACImuBarTrain = mean(ACITrainBarProj);
+%   ACIsigmaBarTrain = cov(ACITrainBarProj);
+%   
+%   ACImuSaumonTrain = mean(ACITrainSaumonProj);
+%   ACIsigmaSaumonTrain = cov(ACITrainSaumonProj);
+%   
+%   myaci = CalculACI(TestBar, TestSaumon);
+%   
+%   ACITestW = transpose(myaci(:,1));
+%   ACIBarTestProj = transpose(ACITestW * TestBar');
+%   ACISaumonTestProj = transpose(ACITestW * TestSaumon');
+%   
+%   sizeBarProj = length(ACIBarTestProj);
+%   sizeSaumonProj = length(ACISaumonTestProj);
+%   
+%   ACIResBar = MyClassifBayesien(ACIBarTestProj,ACImuBarTrain,ACIsigmaBarTrain,ACImuSaumonTrain,ACIsigmaSaumonTrain,mcost, sizeBarProj, sizeSaumonProj);
+%   ACIResSaumon = MyClassifBayesien(ACISaumonTestProj,ACImuBarTrain,ACIsigmaBarTrain,ACImuSaumonTrain,ACIsigmaSaumonTrain,mcost,sizeBarProj, sizeSaumonProj);
+%   ACInbBarErreur(i) = ((size(ACPResBar,1)-sum(ACPResBar)) / sizeBarProj) * 100;
+%   ACInbSaumonErreur(i) = (sum(ACPResSaumon) / sizeSaumonProj) * 100;
+%   
+%   ACIerreurmoyenne(i) = ((ACInbBarErreur(i) * length(ACIBarTestProj)) + (ACInbSaumonErreur(i) * length(ACISaumonTestProj)))./ (length(ACISaumonTestProj) + length(ACIBarTestProj));
   
 end;
 %% Affichage des'erreurs
@@ -132,22 +132,22 @@ plot(1:1:nbIter,erreurmoyenne,'color','r');
 hold off;
 
 %%%%ACP
-figure('Name','Error ACP + MAP');
-hold on
-plot(1:1:nbIter,ACPnbBarErreur,'color','g');
-hold on;
-plot(1:1:nbIter,ACPnbSaumonErreur,'color','b');
-plot(1:1:nbIter,ACPerreurmoyenne,'color','r');
-hold off;
-
-%%%%ACI
-figure('Name','Error ACI + MAP');
-hold on 
-plot(1:1:nbIter,ACInbBarErreur,'color','g');
-hold on;
-plot(1:1:nbIter,ACInbSaumonErreur,'color','b');
-plot(1:1:nbIter,ACIerreurmoyenne,'color','r');
-hold off;
+% figure('Name','Error ACP + MAP');
+% hold on
+% plot(1:1:nbIter,ACPnbBarErreur,'color','g');
+% hold on;
+% plot(1:1:nbIter,ACPnbSaumonErreur,'color','b');
+% plot(1:1:nbIter,ACPerreurmoyenne,'color','r');
+% hold off;
+% 
+% %%%%ACI
+% figure('Name','Error ACI + MAP');
+% hold on 
+% plot(1:1:nbIter,ACInbBarErreur,'color','g');
+% hold on;
+% plot(1:1:nbIter,ACInbSaumonErreur,'color','b');
+% plot(1:1:nbIter,ACIerreurmoyenne,'color','r');
+% hold off;
 %%
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % echantillons = [VTBar; VTSaumon];

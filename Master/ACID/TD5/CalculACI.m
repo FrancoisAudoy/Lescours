@@ -22,7 +22,7 @@ SB = SB1 + SB2;
 invSw = inv(Sw);
 invSwSB = invSw * SB;
 
-[V,lambda] = eig(invSwSB);
+[V,lambda] = eigs(invSwSB);
 % [tri, itri] = sort(diag(lambda),'descend');
 % 
 % vtri = e;
