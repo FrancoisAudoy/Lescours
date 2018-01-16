@@ -2,6 +2,7 @@ function [ Ym ] = MalClasse( Y, W )
 %MALCLASSE Summary of this function goes here
 %   Detailed explanation goes here
 % Y must be a colone vector
+
 Ym = [];
 for i = 1:length(Y)
     if( W'*Y(:,i) < 0)

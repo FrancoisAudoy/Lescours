@@ -21,8 +21,8 @@ sizeC1 = length(C1);
 sizeC2 = length(C2);
 
 % W pour le Perceptron
-W = [4; 2; -1]; % Init W: vecteur normal à la droite ;
-W0 = 6;
+Wp = [4; 2; -1]; % Init W: vecteur normal à la droite ;
+W0p = 6;
 %% Boucle de traitement
 
 nbIter = 100;
@@ -33,6 +33,14 @@ erreurmoyenne = zeros(nbIter);
 C1ErreurPerc = zeros(nbIter,1);
 C2ErreurPerc = zeros(nbIter,1);
 MoyErrPerc = zeros(nbIter,1);
+
+C1ErreurMC = zeros(nbIter,1);
+C2ErreurMC = zeros(nbIter,1);
+MoyErrMC = zeros(nbIter,1);
+
+C1ErreurMCO = zeros(nbIter,1);
+C2ErreurMCO = zeros(nbIter,1);
+MoyErrMCO = zeros(nbIter,1);
 
 for i=1:nbIter
     %% extraction de l'ensemble TRAIN
@@ -54,14 +62,14 @@ for i=1:nbIter
     TestC2Indice =  C2Indice(sizeC2train+1:sizeC2);
     TestC1Indice =  C1Indice(sizeC1train+1:sizeC1);
     
-    TestC2 =  [C2(TestC2Indice,:); C2(TestC2Indice,:)];
-    TestC1 = [C1(TestC1Indice,:); C1(TestC1Indice,:)];
+    TestC2 =  C2(TestC2Indice,:);
+    TestC1 = C1(TestC1Indice,:);
     
     %% MAP + Calcul d'erreur de MAP
     ResC2 = MyClassifBayesien(TestC2,muC2Train,sigmaC2Train,muC1Train,sigmaC1Train,mcost, sizeC2, sizeC1);
     ResC1 = MyClassifBayesien(TestC1,muC2Train,sigmaC2Train,muC1Train,sigmaC1Train,mcost, sizeC2, sizeC1);
     nbC1Erreur(i) = sum(ResC1) ./ (length(TestC2) + length(TestC1)) * 100;
-    nbC2Erreur(i) = (size(ResC2,1)-sum(ResC2)) ./ (length(TestC2) + length(TestC1)) * 100;
+    nbC2Erreur(i) = (length(ResC2) - sum(ResC2)) ./ (length(TestC2) + length(TestC1)) * 100;
     
     erreurmoyenne(i) = ((nbC1Erreur(i) * length(TestC1)) + (nbC2Erreur(i) * length(TestC2)))./ (length(TestC1) + length(TestC2));
     
@@ -77,24 +85,53 @@ for i=1:nbIter
     
     Y = [TrainC1Transfo; TrainC2Transfo]';
     
-    Ym = MalClasse(Y, [W0; W]);
+    Ym = MalClasse(Y, [W0p; Wp]);
     
-    Wn = Perceptron(Y, [W0;W]);
-    W0 = Wn(1,1);
-    W = [Wn(2:length(Wn),:)]
+    Wn = Perceptron(Y, [W0p;Wp]);
+    W0p = Wn(1,1);
+    Wp = Wn(2:length(Wn),:);
     
     Colonne1 = ones(length(TestC1),1);
     YC1 = [Colonne1  TestC1]';
     Colonne1 = ones(length(TestC2),1);
     YC2 = -1 * [Colonne1 TestC2]';
-    ResPercC1 = MalClasse(YC1 , [W0;W]);%Classif(TestC1,W,W0);
-    ResPercC2 = MalClasse(YC2, [W0; W]);%Classif(TestC2,W,W0);
+    ResPercC1 = MalClasse(YC1 , [W0p;Wp]);
+    ResPercC2 = MalClasse(YC2, [W0p; Wp]);
     
     C1ErreurPerc(i) = length(ResPercC1) ./ (length(TestC1) + length(TestC2));
     C2ErreurPerc(i) = length(ResPercC2) ./ (length(TestC1) + length(TestC2));
     
     MoyErrPerc(i) = ((C1ErreurPerc(i) * length(TestC1)) + (C2ErreurPerc(i) * length(TestC2))) ./ (length(TestC1) + length(TestC2));
     
+    % Moindre Carré
+    Z = Y';
+    b = ones(length(Z), 1);
+    
+    Wn = Z\b;
+    W0 = Wn(1,1);
+    W = Wn(2:length(Wn),:);
+    
+    ResMCC1 = MalClasse(YC1, [W0; W]);
+    ResMCC2 = MalClasse(YC2, [W0; W]);
+    
+    C1ErreurMC(i) = length(ResMCC1) ./ (length(TestC1) + length(TestC2));
+    C2ErreurMC(i) = length(ResMCC2) ./ (length(TestC1) + length(TestC2));
+    MoyErrMC(i) = (C1ErreurMC(i) * length(TestC1) + (C2ErreurMC(i) * length(TestC2))) ./ (length(TestC1) + length(TestC2));
+    
+    % Moindre Carré Opti
+    
+    bmco = ones(length(Z),1);
+    
+    Wn= MCOpti(Z,bmco);
+    W0Opt = Wn(1,1);
+    WOpt = Wn(2:length(Wn),:);
+    
+    ResMCOC1 = MalClasse(YC1, [W0Opt;WOpt]);
+    ResMCOC2 = MalClasse(YC2, [W0Opt;WOpt]);
+    
+    C1ErreurMCO(i) = length(ResMCC1) ./ (length(TestC1) + length(TestC2));
+    C2ErreurMCO(i) = length(ResMCC2) ./ (length(TestC1) + length(TestC2));
+    MoyErrMCO(i) = (C1ErreurMC(i) * length(TestC1) + (C2ErreurMC(i) * length(TestC2))) ./ (length(TestC1) + length(TestC2));
     
 end;
 
@@ -113,4 +150,20 @@ hold on
 plot(1:nbIter, C1ErreurPerc,'b');
 plot(1:nbIter, C2ErreurPerc,'r');
 plot(1:nbIter, MoyErrPerc,'g');
+hold off
+
+%Moindre Carré
+figure('Name', 'Erreur MC');
+hold on
+plot(1:nbIter, C1ErreurMC,'b');
+plot(1:nbIter, C2ErreurMC,'r');
+plot(1:nbIter, MoyErrMC,'g');
+hold off
+
+%Moindre Carré
+figure('Name', 'Erreur MC Opti');
+hold on
+plot(1:nbIter, C1ErreurMCO,'b');
+plot(1:nbIter, C2ErreurMCO,'r');
+plot(1:nbIter, MoyErrMCO,'g');
 hold off
