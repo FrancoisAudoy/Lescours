@@ -1,0 +1,12 @@
+node Gen
+state	ok : bool : public;
+init 	ok := true;
+flow	plus, minus : [0,1];
+event 	repair, failure;
+trans
+	ok |- failure -> ok := ~ok;
+	~ok |- repair -> ok := ~ok;
+assert
+	plus = 1;
+	ok  = (minus = 0);
+edon
