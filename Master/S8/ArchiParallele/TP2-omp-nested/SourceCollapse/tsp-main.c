@@ -174,46 +174,24 @@ void tsp (int hops, int len, int *path, int mask)
     }
 }
 
-void par_tsp (int hops, int len, int *path, int mask)
-{
- int i ;
- int me, dist ;
- 
- if (hops == NrTowns)
-   {
-     if (len +  distance[0][path[NrTowns-1]]< minimum)
-#pragma omp critical
-       if (len +  distance[0][path[NrTowns-1]]< minimum)
-	 {
-	   minimum = len +  distance[0][path[NrTowns-1]];
-	   printf ("found path len = %3d :", minimum) ;
-	   for (i=0; i < NrTowns; i++)
-	     printf ("%2d ", path[i]) ;
-	   printf ("\n") ;
-	 }
-   }
- else
-   {
-     me = path [hops-1] ;
-#pragma omp parallel for firstprivate(hops, len) num_thread(NrTowns - hops)
-     for (i=0; i < NrTowns; i++)
-       {
-	 if (!present (i, hops, mask))
-	   {
-	     int my_path[MAXE];
-	     memcpy(my_path, path, MAXE);
-	     
-	     my_path [hops] = i ;
-	     dist = distance[me][i] ;
-	     if(hops <= grain)
-	       par_tsp (hops+1, len+dist, my_path,  mask | (1 << i)) ;
-	     else
-	       tsp (hops+1, len+dist, my_path,  mask | (1 << i)) ;
-	   }
-       }
-     
-   }
+void par_tsp(){
+  int i,j,k;
+#pragma omp parallel for collapse(3) schedule(runtime)
+  for (i=1; i < NrTowns; i++)
+    for(j=1; j < NrTowns; j++)
+      for(k=1; k < NrTowns; k++)
+	if(i != j && i != k && j != k)
+	  {
+	    int chemin[NrTowns];
+	    chemin[0] = 0;
+	    chemin[1] = i;
+	    chemin[2] = j;
+	    chemin[3] = k;
+	    int dist = distance[0][i] + distance[i][j] + distance[j][k];
+	    tsp (4, dist, chemin,1 | (1<<i) | (1<<k)) ;
+	  }
 }
+
 
 
 int main (int argc, char **argv)
@@ -245,11 +223,8 @@ int main (int argc, char **argv)
    gettimeofday(&t1,NULL);
 
    path [0] = 0;
-
-   if(grain > 0)
-     par_tsp(1,0,path,1);
-   else
-     tsp(1,0,path,1);
+   
+   par_tsp(1,0,path,1);
    
    gettimeofday(&t2,NULL);
    

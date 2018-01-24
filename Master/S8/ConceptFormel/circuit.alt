@@ -1,0 +1,9 @@
+node CircuitV1
+	sub	G:Gen;
+		S:Switch;
+		L:Ampoule
+	assert
+		S.f1 = G.plus;
+		L.f1 = S.f2;
+		L.f2 = G.minus
+edon
