@@ -144,6 +144,9 @@ void tsp (int hops, int len, int *path, int mask)
 {
   int i ;
   int me, dist ;
+  
+ if(len + distance[0][path[hops-1]] >= minimum)
+    return;
  
   if (hops == NrTowns)
     {
@@ -152,10 +155,10 @@ void tsp (int hops, int len, int *path, int mask)
       if (len +  distance[0][path[NrTowns-1]]< minimum)
 	{
 	  minimum = len +  distance[0][path[NrTowns-1]];
-	  printf ("found path len = %3d :", minimum) ;
-	  for (i=0; i < NrTowns; i++)
+	  //printf ("found path len = %3d :", minimum) ;
+	  /* for (i=0; i < NrTowns; i++)
 	    printf ("%2d ", path[i]) ;
-	  printf ("\n") ;
+	    printf ("\n") ;*/
 	}
     }
   else
@@ -178,7 +181,9 @@ void par_tsp (int hops, int len, int *path, int mask)
 {
  int i ;
  int me, dist ;
- 
+
+ if(len + distance[0][path[hops-1]] >= minimum)
+    return;
  if (hops == NrTowns)
    {
      if (len +  distance[0][path[NrTowns-1]]< minimum)
@@ -195,7 +200,7 @@ void par_tsp (int hops, int len, int *path, int mask)
  else
    {
      me = path [hops-1] ;
-#pragma omp parallel for firstprivate(hops, len) num_thread(NrTowns - hops)
+#pragma omp parallel for firstprivate(hops, len) num_threads(NrTowns - hops)
      for (i=0; i < NrTowns; i++)
        {
 	 if (!present (i, hops, mask))

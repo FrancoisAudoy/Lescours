@@ -144,7 +144,8 @@ void tsp (int hops, int len, int *path, int mask)
 {
   int i ;
   int me, dist ;
- 
+  if(len + distance[0][path[hops-1]] >= minimum)
+    return;
   if (hops == NrTowns)
     {
       if (len +  distance[0][path[NrTowns-1]]< minimum)
@@ -152,10 +153,10 @@ void tsp (int hops, int len, int *path, int mask)
       if (len +  distance[0][path[NrTowns-1]]< minimum)
 	{
 	  minimum = len +  distance[0][path[NrTowns-1]];
-	  printf ("found path len = %3d :", minimum) ;
+	  /*printf ("found path len = %3d :", minimum) ;
 	  for (i=0; i < NrTowns; i++)
 	    printf ("%2d ", path[i]) ;
-	  printf ("\n") ;
+	    printf ("\n") ;*/
 	}
     }
   else
@@ -174,9 +175,9 @@ void tsp (int hops, int len, int *path, int mask)
     }
 }
 
-void par_tsp(){
+void pardyn_tsp(){
   int i,j,k;
-#pragma omp parallel for collapse(3) schedule(runtime)
+#pragma omp parallel for collapse(3) schedule(dynamic)
   for (i=1; i < NrTowns; i++)
     for(j=1; j < NrTowns; j++)
       for(k=1; k < NrTowns; k++)
@@ -192,6 +193,67 @@ void par_tsp(){
 	  }
 }
 
+void parstat_tsp(){
+  int i,j,k;
+#pragma omp parallel for collapse(3) schedule(static)
+  for (i=1; i < NrTowns; i++)
+    for(j=1; j < NrTowns; j++)
+      for(k=1; k < NrTowns; k++)
+	if(i != j && i != k && j != k)
+	  {
+	    int chemin[NrTowns];
+	    chemin[0] = 0;
+	    chemin[1] = i;
+	    chemin[2] = j;
+	    chemin[3] = k;
+	    int dist = distance[0][i] + distance[i][j] + distance[j][k];
+	    tsp (4, dist, chemin,1 | (1<<i) | (1<<k)) ;
+	  }
+}
+
+void par_tsp (int hops, int len, int *path, int mask)
+{
+ int i ;
+ int me, dist ;
+
+ if(len + distance[0][path[hops-1]] >= minimum)
+    return;
+ 
+ if (hops == NrTowns)
+   {
+     if (len +  distance[0][path[NrTowns-1]]< minimum)
+#pragma omp critical
+       if (len +  distance[0][path[NrTowns-1]]< minimum)
+	 {
+	   minimum = len +  distance[0][path[NrTowns-1]];
+	   printf ("found path len = %3d :", minimum) ;
+	   for (i=0; i < NrTowns; i++)
+	     printf ("%2d ", path[i]) ;
+	   printf ("\n") ;
+	 }
+   }
+ else
+   {
+     me = path [hops-1] ;
+#pragma omp parallel for firstprivate(hops, len) num_threads(NrTowns - hops)
+     for (i=0; i < NrTowns; i++)
+       {
+	 if (!present (i, hops, mask))
+	   {
+	     int my_path[MAXE];
+	     memcpy(my_path, path, MAXE);
+	     
+	     my_path [hops] = i ;
+	     dist = distance[me][i] ;
+	     if(hops <= grain)
+	       par_tsp (hops+1, len+dist, my_path,  mask | (1 << i)) ;
+	     else
+	       tsp (hops+1, len+dist, my_path,  mask | (1 << i)) ;
+	   }
+       }
+     
+   }
+}
 
 
 int main (int argc, char **argv)
@@ -221,6 +283,30 @@ int main (int argc, char **argv)
    genmap () ; 
 
    gettimeofday(&t1,NULL);
+   
+   pardyn_tsp();
+   
+   gettimeofday(&t2,NULL);
+   
+   temps = TIME_DIFF(t1,t2);
+
+   printf("Collapse + distribution dynamique time = %ld.%03ldms\n", temps/1000, temps%1000);
+
+   genmap () ; 
+
+   gettimeofday(&t1,NULL);
+   
+   parstat_tsp();
+   
+   gettimeofday(&t2,NULL);
+   
+   temps = TIME_DIFF(t1,t2);
+
+   printf("Collapse + distribution statique time = %ld.%03ldms\n", temps/1000, temps%1000);
+
+   genmap () ; 
+
+   gettimeofday(&t1,NULL);
 
    path [0] = 0;
    
@@ -230,7 +316,21 @@ int main (int argc, char **argv)
    
    temps = TIME_DIFF(t1,t2);
 
-   printf("time = %ld.%03ldms\n", temps/1000, temps%1000);
+   printf("Distribution imbriquee time = %ld.%03ldms\n", temps/1000, temps%1000);
+
+   genmap () ; 
+
+   gettimeofday(&t1,NULL);
+
+   path [0] = 0;
+   
+   tsp(1,0,path,1);
+   
+   gettimeofday(&t2,NULL);
+   
+   temps = TIME_DIFF(t1,t2);
+
+   printf("sequentiel time = %ld.%03ldms\n", temps/1000, temps%1000);
 
    return 0 ;
 }
