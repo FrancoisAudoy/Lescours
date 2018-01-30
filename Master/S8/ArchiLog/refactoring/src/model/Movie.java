@@ -1,32 +1,31 @@
 package model;
 
 public class Movie {
-	public static final int CHILDRENS = 2;
-	public static final int REGULAR = 0;
-	public static final int NEW_RELEASE = 1;
+	public static final Price CHILDRENS = new DefaultPrice(1.5, 3, 1.5);
+	public static final Price REGULAR = new DefaultPrice(2, 2, 1.5);
+	public static final Price NEW_RELEASE = new DefaultPrice(0, 0, 3);
 
-	private String _title;
-	private int _priceCode;
+	private String title;
+	private Price priceCode;
 
-	public Movie(String title,int priceCode)
+	public Movie(String title,Price priceCode)
 	{
-		_title=title;
-		_priceCode=priceCode;
+		this.title=title;
+		this.priceCode=priceCode;
 	}
-	
-	public int getPriceCode()
+
+	public Price getPriceCode()
 	{
-		return _priceCode;
+		return priceCode;
 	}
-	
-	public void setPriceCode(int priceCode)
+
+	public void setPriceCode(Price priceCode)
 	{
-		_priceCode=priceCode;
+		this.priceCode=priceCode;
 	}
-	
 	public String getTitle()
 	{
-		return _title;
+		return title;
 	}
 
 }
