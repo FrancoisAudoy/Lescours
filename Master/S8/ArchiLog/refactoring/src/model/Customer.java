@@ -51,8 +51,7 @@ public class Customer {
 		b.endStatement();
 	}
 	
-	public String statement()
-	{
+	public String statement() {
 		TextStatementBuilder tsb = new TextStatementBuilder();
 		
 		statement(tsb);
