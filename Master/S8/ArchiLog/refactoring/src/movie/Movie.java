@@ -1,4 +1,4 @@
-package model;
+package movie;
 
 public class Movie {
 	public static final Price CHILDRENS = new DefaultPrice(1.5, 3, 1.5);
@@ -23,6 +23,7 @@ public class Movie {
 	{
 		this.priceCode=priceCode;
 	}
+
 	public String getTitle()
 	{
 		return title;

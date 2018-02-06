@@ -1,5 +1,8 @@
 package model;
 
+import movie.Movie;
+import movie.Price;
+
 public class Rental {
     private Movie movie;
     private int daysRented;

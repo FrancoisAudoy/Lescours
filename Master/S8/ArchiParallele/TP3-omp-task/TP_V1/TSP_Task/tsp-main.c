@@ -144,8 +144,10 @@ void tsp (int hops, int len, int *path, int mask)
 {
   int i ;
   int me, dist ;
-  if(len + distance[0][path[hops-1]] >= minimum)
+  
+ if(len + distance[0][path[hops-1]] >= minimum)
     return;
+ 
   if (hops == NrTowns)
     {
       if (len +  distance[0][path[NrTowns-1]]< minimum)
@@ -153,8 +155,8 @@ void tsp (int hops, int len, int *path, int mask)
       if (len +  distance[0][path[NrTowns-1]]< minimum)
 	{
 	  minimum = len +  distance[0][path[NrTowns-1]];
-	  printf ("found path len = %3d :", minimum) ;
-	  /*for (i=0; i < NrTowns; i++)
+	  /*printf ("found path len = %3d :", minimum) ;
+	   for (i=0; i < NrTowns; i++)
 	    printf ("%2d ", path[i]) ;
 	    printf ("\n") ;*/
 	}
@@ -175,46 +177,6 @@ void tsp (int hops, int len, int *path, int mask)
     }
 }
 
-void pardyn_tsp(){
-  int i,j,k;
-  /*----------------------------------------------------------------------
-   *Collapse fusionne les boucles for
-   *----------------------------------------------------------------------
-   */
-#pragma omp parallel for collapse(3) schedule(dynamic)
-  for (i=1; i < NrTowns; i++)
-    for(j=1; j < NrTowns; j++)
-      for(k=1; k < NrTowns; k++)
-	if(i != j && i != k && j != k)
-	  {
-	    int chemin[NrTowns];
-	    chemin[0] = 0;
-	    chemin[1] = i;
-	    chemin[2] = j;
-	    chemin[3] = k;
-	    int dist = distance[0][i] + distance[i][j] + distance[j][k];
-	    tsp (4, dist, chemin,1 | (1<<i) | (1<<k)) ;
-	  }
-}
-
-void parstat_tsp(){
-  int i,j,k;
-#pragma omp parallel for collapse(3) schedule(static)
-  for (i=1; i < NrTowns; i++)
-    for(j=1; j < NrTowns; j++)
-      for(k=1; k < NrTowns; k++)
-	if(i != j && i != k && j != k)
-	  {
-	    int chemin[NrTowns];
-	    chemin[0] = 0;
-	    chemin[1] = i;
-	    chemin[2] = j;
-	    chemin[3] = k;
-	    int dist = distance[0][i] + distance[i][j] + distance[j][k];
-	    tsp (4, dist, chemin,1 | (1<<i) | (1<<k)) ;
-	  }
-}
-
 void par_tsp (int hops, int len, int *path, int mask)
 {
  int i ;
@@ -222,7 +184,6 @@ void par_tsp (int hops, int len, int *path, int mask)
 
  if(len + distance[0][path[hops-1]] >= minimum)
     return;
- 
  if (hops == NrTowns)
    {
      if (len +  distance[0][path[NrTowns-1]]< minimum)
@@ -239,7 +200,8 @@ void par_tsp (int hops, int len, int *path, int mask)
  else
    {
      me = path [hops-1] ;
-#pragma omp parallel for firstprivate(hops, len) num_threads(NrTowns - hops)
+#pragma omp parallel //for firstprivate(hops, len) num_threads(NrTowns - hops)
+#pragma omp single // un seul thread créé les tâches sinon, elles seront créées autant de fois que qu'il y a de threads 
      for (i=0; i < NrTowns; i++)
        {
 	 if (!present (i, hops, mask))
@@ -250,6 +212,7 @@ void par_tsp (int hops, int len, int *path, int mask)
 	     my_path [hops] = i ;
 	     dist = distance[me][i] ;
 	     if(hops <= grain)
+#pragma omp task //création d'une tâche qui sera éxecuté plus tard par n'importe quel thread sans travail
 	       par_tsp (hops+1, len+dist, my_path,  mask | (1 << i)) ;
 	     else
 	       tsp (hops+1, len+dist, my_path,  mask | (1 << i)) ;
@@ -287,54 +250,20 @@ int main (int argc, char **argv)
    genmap () ; 
 
    gettimeofday(&t1,NULL);
-   
-   pardyn_tsp();
-   
-   gettimeofday(&t2,NULL);
-   
-   temps = TIME_DIFF(t1,t2);
-
-   printf("Collapse + distribution dynamique time = %ld.%03ldms\n", temps/1000, temps%1000);
-
-   genmap () ; 
-
-   gettimeofday(&t1,NULL);
-   
-   parstat_tsp();
-   
-   gettimeofday(&t2,NULL);
-   
-   temps = TIME_DIFF(t1,t2);
-
-   printf("Collapse + distribution statique time = %ld.%03ldms\n", temps/1000, temps%1000);
-
-   genmap () ; 
-
-   gettimeofday(&t1,NULL);
 
    path [0] = 0;
-   
-   par_tsp(1,0,path,1);
+
+   if(grain > 0)
+     
+     par_tsp(1,0,path,1);
+   else
+     tsp(1,0,path,1);
    
    gettimeofday(&t2,NULL);
    
    temps = TIME_DIFF(t1,t2);
 
-   printf("Distribution imbriquee time = %ld.%03ldms\n", temps/1000, temps%1000);
-
-   genmap () ; 
-
-   gettimeofday(&t1,NULL);
-
-   path [0] = 0;
-   
-   tsp(1,0,path,1);
-   
-   gettimeofday(&t2,NULL);
-   
-   temps = TIME_DIFF(t1,t2);
-
-   printf("sequentiel time = %ld.%03ldms\n", temps/1000, temps%1000);
+   printf("time = %ld.%03ldms\n", temps/1000, temps%1000);
 
    return 0 ;
 }

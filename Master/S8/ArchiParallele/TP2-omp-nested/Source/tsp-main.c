@@ -140,21 +140,29 @@ inline int present (int city, int hops, int mask)
 
 }
 
+/**----------------------------------------------------------------------
+ * On duplique le code du tsp pour éviter d'avoir à refaire un memcpy en séquentiel
+ *ça fait perdre beaucoup de temps
+ **----------------------------------------------------------------------
+ */
 void tsp (int hops, int len, int *path, int mask)
 {
   int i ;
   int me, dist ;
-  
+
+  //si lorsqu'on a pas fini le chemin et qu'on est déja supérieur au minimum on s'arréte et on passe à un autre chemin
  if(len + distance[0][path[hops-1]] >= minimum)
     return;
  
   if (hops == NrTowns)
     {
+      // On s'assure d'être un minimum potentiel avant de prendre le verrou critical
       if (len +  distance[0][path[NrTowns-1]]< minimum)
 #pragma omp critical
       if (len +  distance[0][path[NrTowns-1]]< minimum)
 	{
 	  minimum = len +  distance[0][path[NrTowns-1]];
+	  //L'affichage ralenti donc je l'ai commenté
 	  //printf ("found path len = %3d :", minimum) ;
 	  /* for (i=0; i < NrTowns; i++)
 	    printf ("%2d ", path[i]) ;
@@ -200,12 +208,25 @@ void par_tsp (int hops, int len, int *path, int mask)
  else
    {
      me = path [hops-1] ;
+     /*----------------------------------------------------------------------
+      *firstprivate crée une copie pour chaque threads des variables précisées
+      *num_threads limite la création du nombre de threads 
+      **----------------------------------------------------------------------
+      */
 #pragma omp parallel for firstprivate(hops, len) num_threads(NrTowns - hops)
      for (i=0; i < NrTowns; i++)
        {
 	 if (!present (i, hops, mask))
 	   {
 	     int my_path[MAXE];
+	     /*----------------------------------------------------------------------
+	      *On fait un memcpy pour que chaque thread ai sa propre version de path
+	      * On pourrait le mettre en firstprivate mais c'est un pointeur donc 
+	      * les threads copierai juste l'adresse du première élèment pointé
+	      * et le problème est que tout les threads pourrai changé la valeur et donc 
+	      *faussé le calcul des autres threads
+	      *----------------------------------------------------------------------
+	      */
 	     memcpy(my_path, path, MAXE);
 	     
 	     my_path [hops] = i ;

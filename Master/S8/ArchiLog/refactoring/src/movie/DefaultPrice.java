@@ -1,12 +1,12 @@
-package model;
+package movie;
 
-public class DefaultPrice implements Price {
+class DefaultPrice implements Price {
 
 	private double fee;
 	private int bundleDuration;
 	private double extraFee;
 	
-	public DefaultPrice(double fee, int bundleDuration, double extraFee) {
+	DefaultPrice(double fee, int bundleDuration, double extraFee) {
 		this.fee = fee;
 		this.bundleDuration = bundleDuration;
 		this.extraFee = extraFee;

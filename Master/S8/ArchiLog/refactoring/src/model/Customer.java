@@ -2,6 +2,8 @@ package model;
 
 import java.util.ArrayList;
 
+import movie.Movie;
+
 public class Customer {
 
 	private String name;
@@ -22,33 +24,45 @@ public class Customer {
 		return name;
 	}
 
-	public String statement()
-	{
-		double totalAmount = 0;
-		int frequentRenterPoints = 0;
-		//Enumeration<Rental> rentals = this.rentals.elements();
-		String result = "Rental Record for "+getName()+"\n";
-		
-		for (Rental each : this.rentals) {
-
-					double thisAmount = each.price();
-
-					frequentRenterPoints++;
-
-					if( (each.getMovie().getPriceCode()== Movie.NEW_RELEASE)
-							&& (each.getDaysRented()>1)) 
-						frequentRenterPoints++;
-					
-					result +="\t" + each.getMovie().getTitle()+"\t"+
-							String.valueOf(thisAmount) +" \n";
-					totalAmount+=thisAmount;
+	private int computeRenterPoint() {
+		int points = 0;
+		for(Rental each : this.rentals) {
+			points++;
+			if(each.getMovie().getPriceCode() == Movie.NEW_RELEASE)
+				points++;
 		}
-				result += "Amount owned is " + String.valueOf(totalAmount) +
-						"\n";
-				result += "You earned " + String.valueOf(frequentRenterPoints) +
-						" frequent renter points";
-				return result;
-
+		return points;
 	}
 	
+	private void statement(StatementBuilder b) {
+		double totalAmount = 0;
+		int frequentRenterPoints = computeRenterPoint();
+		b.beginStatement(getName());
+		
+		for(Rental each : this.rentals) {
+			double thisAmount = each.price();
+
+			b.addRental(each.getMovie().getTitle(), thisAmount);
+			
+			totalAmount+=thisAmount;
+		}
+		
+		b.addSummary(totalAmount, frequentRenterPoints);
+		b.endStatement();
+	}
+	
+	public String statement()
+	{
+		TextStatementBuilder tsb = new TextStatementBuilder();
+		
+		statement(tsb);
+		return tsb.getTextStatement().toString();
+	}
+	
+	public String statementHTML() {
+		HTMLStatementBuilder hsb = new HTMLStatementBuilder();
+		statement(hsb);
+		return hsb.getHTMLStatement().toString();
+	}
+
 }

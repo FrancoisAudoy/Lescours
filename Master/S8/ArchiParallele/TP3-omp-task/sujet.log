@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.5.16)  17 JAN 2018 13:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.5.16)  31 JAN 2018 10:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -121,43 +121,31 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Warning: No \author given.
 
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 31.
-LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <12> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 39.
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 41.
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 13.
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 14.
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-)
-Overfull \hbox (2.98914pt too wide) in paragraph at lines 74--81
-[]\T1/ppl/m/n/10 Poursuivez la pa-ral-lé-li-sa-tion du code en fai-sant at-ten-
-tion aux va-riables par-ta-gées ou pri-vées. Par exemple
- []
+) [1
 
-[1
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 178.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 178.
- [3] (./sujet.aux) ) 
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] (./sujet.aux) ) 
 Here is how much of TeX's memory you used:
- 1716 strings out of 493013
- 22429 string characters out of 6135682
- 86562 words of memory out of 5000000
- 5282 multiletter control sequences out of 15000+600000
- 15732 words of font info for 36 fonts, out of 8000000 for 9000
+ 1712 strings out of 493013
+ 22373 string characters out of 6135682
+ 85565 words of memory out of 5000000
+ 5277 multiletter control sequences out of 15000+600000
+ 15836 words of font info for 36 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 29i,6n,30p,202b,439s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive
-/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/urw/palatino/uplr8a.pfb>
-Output written on sujet.pdf (3 pages, 67272 bytes).
+ 29i,6n,30p,204b,439s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/s
+hare/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-d
+ist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palat
+ino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.
+pfb>
+Output written on sujet.pdf (2 pages, 62128 bytes).
 PDF statistics:
- 31 PDF objects out of 1000 (max. 8388607)
- 21 compressed objects within 1 object stream
+ 28 PDF objects out of 1000 (max. 8388607)
+ 19 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

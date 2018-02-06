@@ -1,6 +1,6 @@
 import model.Customers;
-import model.Movie;
 import model.Rental;
+import movie.Movie;
 
 @SuppressWarnings("deprecation")
 public class Main {
