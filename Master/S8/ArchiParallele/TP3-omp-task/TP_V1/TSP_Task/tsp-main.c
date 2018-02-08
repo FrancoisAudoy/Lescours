@@ -145,21 +145,21 @@ void tsp (int hops, int len, int *path, int mask)
   int i ;
   int me, dist ;
   
- if(len + distance[0][path[hops-1]] >= minimum)
+  if(len + distance[0][path[hops-1]] >= minimum)
     return;
  
   if (hops == NrTowns)
     {
       if (len +  distance[0][path[NrTowns-1]]< minimum)
 #pragma omp critical
-      if (len +  distance[0][path[NrTowns-1]]< minimum)
-	{
-	  minimum = len +  distance[0][path[NrTowns-1]];
-	  /*printf ("found path len = %3d :", minimum) ;
-	   for (i=0; i < NrTowns; i++)
-	    printf ("%2d ", path[i]) ;
-	    printf ("\n") ;*/
-	}
+	if (len +  distance[0][path[NrTowns-1]]< minimum)
+	  {
+	    minimum = len +  distance[0][path[NrTowns-1]];
+	    printf ("found path len = %3d :", minimum) ;
+	    for (i=0; i < NrTowns; i++)
+	      printf ("%2d ", path[i]) ;
+	    printf ("\n") ;
+	  }
     }
   else
     {
@@ -179,49 +179,49 @@ void tsp (int hops, int len, int *path, int mask)
 
 void par_tsp (int hops, int len, int *path, int mask)
 {
- int i ;
- int me, dist ;
+  int i ;
+  int me, dist ;
 
- if(len + distance[0][path[hops-1]] >= minimum)
+  if(len + distance[0][path[hops-1]] >= minimum)
     return;
- if (hops == NrTowns)
-   {
-     if (len +  distance[0][path[NrTowns-1]]< minimum)
+  if (hops == NrTowns)
+    {
+      if (len +  distance[0][path[NrTowns-1]]< minimum)
 #pragma omp critical
-       if (len +  distance[0][path[NrTowns-1]]< minimum)
-	 {
-	   minimum = len +  distance[0][path[NrTowns-1]];
-	   printf ("found path len = %3d :", minimum) ;
-	   for (i=0; i < NrTowns; i++)
-	     printf ("%2d ", path[i]) ;
-	   printf ("\n") ;
-	 }
-   }
- else
-   {
-     me = path [hops-1] ;
-#pragma omp parallel //for firstprivate(hops, len) num_threads(NrTowns - hops)
-#pragma omp single // un seul thread créé les tâches sinon, elles seront créées autant de fois que qu'il y a de threads 
-     for (i=0; i < NrTowns; i++)
-       {
-	 if (!present (i, hops, mask))
-	   {
-	     int my_path[MAXE];
-	     memcpy(my_path, path, MAXE);
-	     
-	     my_path [hops] = i ;
-	     dist = distance[me][i] ;
-	     if(hops <= grain)
-#pragma omp task //création d'une tâche qui sera éxecuté plus tard par n'importe quel thread sans travail
-	       par_tsp (hops+1, len+dist, my_path,  mask | (1 << i)) ;
-	     else
-	       tsp (hops+1, len+dist, my_path,  mask | (1 << i)) ;
-	   }
-       }
-     
-   }
+	if (len +  distance[0][path[NrTowns-1]]< minimum)
+	  {
+	    minimum = len +  distance[0][path[NrTowns-1]];
+	    printf ("found path len = %3d :", minimum) ;
+	    for (i=0; i < NrTowns; i++)
+	      printf ("%2d ", path[i]) ;
+	    printf ("\n") ;
+	  }
+    }
+  else
+    {
+      me = path [hops-1] ;
+      //#pragma omp parallel num_threads(NrTowns - hops)for firstprivate(hops, len) num_threads(NrTowns - hops)
+      //#pragma omp single
+      for (i=0; i < NrTowns; i++)
+	{
+	  if (!present (i, hops, mask))
+	    {
+	      dist = distance[me][i] ;
+	      if(hops <= grain)
+#pragma omp task firstprivate(i,mask,path, hops, len)
+		{
+		  int my_path[MAXE];
+		  memcpy(my_path, path, MAXE * sizeof(int));
+		  my_path[hops] = i;
+		  par_tsp (hops+1, len+dist, my_path,  mask | (1 << i)) ;
+		}
+	      else
+		tsp (hops+1, len+dist, path,  mask | (1 << i)) ;
+	    }
+#pragma omp taskwait
+	}
+    }
 }
-
 
 int main (int argc, char **argv)
 {
@@ -254,7 +254,8 @@ int main (int argc, char **argv)
    path [0] = 0;
 
    if(grain > 0)
-     
+#pragma omp parallel
+#pragma omp single
      par_tsp(1,0,path,1);
    else
      tsp(1,0,path,1);
@@ -263,7 +264,7 @@ int main (int argc, char **argv)
    
    temps = TIME_DIFF(t1,t2);
 
-   printf("time = %ld.%03ldms\n", temps/1000, temps%1000);
+   fprintf(stderr,"%ld.%03ld\n", temps/1000, temps%1000);
 
    return 0 ;
 }

@@ -12,7 +12,7 @@ node Button
 edon
 
 node Door
-     state door_open : bool;
+     state door_open : bool : public;
      init door_open := false;
      event open, close;
      trans
@@ -25,6 +25,13 @@ node Floor
      sub
 	B : Button;
 	D : Door;
+	event close, open;
+	trans
+	 D.door_open |- close -> ;
+	 ~D.door_open |- open -> ;
+	sync
+	 <close,D.close,B.off>;
+	 <open, D.open>;
 edon
 
 node Lift
