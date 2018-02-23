@@ -200,8 +200,6 @@ void par_tsp (int hops, int len, int *path, int mask)
   else
     {
       me = path [hops-1] ;
-      //#pragma omp parallel num_threads(NrTowns - hops)for firstprivate(hops, len) num_threads(NrTowns - hops)
-      //#pragma omp single
       for (i=0; i < NrTowns; i++)
 	{
 	  if (!present (i, hops, mask))
@@ -213,6 +211,7 @@ void par_tsp (int hops, int len, int *path, int mask)
 		  int my_path[MAXE];
 		  memcpy(my_path, path, MAXE * sizeof(int));
 		  my_path[hops] = i;
+#pragma omp capture 
 		  par_tsp (hops+1, len+dist, my_path,  mask | (1 << i)) ;
 		}
 	      else
