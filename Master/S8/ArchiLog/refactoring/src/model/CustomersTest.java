@@ -6,8 +6,9 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import javafx.scene.layout.Pane;
 import movie.Movie;
+
+@SuppressWarnings("deprecation")
 
 public class CustomersTest {
 
@@ -42,7 +43,7 @@ public class CustomersTest {
 				"	Rogue One	15.0 \n" + 
 				"	Reine des Neiges	7.5 \n" + 
 				"	Star Wars III	5.0 \n" + 
-				"Amount owned is 27.5\n" + 
+				"Amount owed is 27.5\n" + 
 				"You earned 4 frequent renter points");
 		assertEquals(out,expect.toString());
 	}
@@ -60,7 +61,7 @@ public class CustomersTest {
 				"	Rogue One	15.0 <br/>\n" + 
 				"	Reine des Neiges	7.5 <br/>\n" + 
 				"	Star Wars III	5.0 <br/>\n" + 
-				"	Amount owned is 27.5<br/>\n" + 
+				"	Amount owed is 27.5<br/>\n" + 
 				"	You earned 4 frequent renter points\n" + 
 				"</body>\n" + 
 				"</html>");
@@ -69,9 +70,7 @@ public class CustomersTest {
 	
 	@Test
 	public void testStatementFX() {
-		Pane statement = bob.statementFX();
-		
-		
+		assert(true);
 	}
 
 	@After

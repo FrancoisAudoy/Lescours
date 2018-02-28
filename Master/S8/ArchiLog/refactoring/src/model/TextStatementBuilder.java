@@ -1,6 +1,6 @@
 package model;
 
-public class TextStatementBuilder implements StatementBuilder {
+public class TextStatementBuilder extends AbstractStatementBuilder {
 
 	private StringBuffer buf;
 	
@@ -9,19 +9,19 @@ public class TextStatementBuilder implements StatementBuilder {
 	}
 	
 	public void beginStatement(String name) {
-		buf.append("Rental Record for "+name+"\n");
+		buf.append(super.nameString(name)).append("\n");
 
 
 	}
 
 	public void addRental(String title, double amount) {
-		buf.append("\t" + title + "\t" + String.valueOf(amount) + " \n");
+		buf.append(super.rentalString(title, amount, "\t")).append(" \n");
 
 	}
 
 	public void addSummary(double totalAmount, int renterPoints) {
-		buf.append("Amount owned is " + String.valueOf(totalAmount) + "\n");
-		buf.append("You earned " + String.valueOf(renterPoints) + " frequent renter points");
+		buf.append(super.totalAmountString(totalAmount)).append("\n");
+		buf.append(super.totalRenterPoints(renterPoints));
 
 	}
 
