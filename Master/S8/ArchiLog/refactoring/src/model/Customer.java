@@ -2,6 +2,8 @@ package model;
 
 import java.util.ArrayList;
 
+import javafx.scene.Scene;
+import javafx.scene.layout.Pane;
 import movie.Movie;
 
 public class Customer {
@@ -62,6 +64,12 @@ public class Customer {
 		HTMLStatementBuilder hsb = new HTMLStatementBuilder();
 		statement(hsb);
 		return hsb.getHTMLStatement().toString();
+	}
+	
+	public Pane statementFX() {
+		FXStatementBuilder fxbuilder = new FXStatementBuilder();
+		statement(fxbuilder);
+		return fxbuilder.getFXStatement();
 	}
 
 }

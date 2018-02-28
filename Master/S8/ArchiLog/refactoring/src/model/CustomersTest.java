@@ -6,6 +6,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import javafx.scene.layout.Pane;
 import movie.Movie;
 
 public class CustomersTest {
@@ -64,6 +65,13 @@ public class CustomersTest {
 				"</body>\n" + 
 				"</html>");
 		assertEquals(out,expect.toString());
+	}
+	
+	@Test
+	public void testStatementFX() {
+		Pane statement = bob.statementFX();
+		
+		
 	}
 
 	@After
