@@ -5,7 +5,7 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-public class HTMLStatementBuilder implements StatementBuilder {
+public class HTMLStatementBuilder extends AbstractStatementBuilder {
 
 	private StringBuffer buf;
 	private String name;
@@ -17,21 +17,20 @@ public class HTMLStatementBuilder implements StatementBuilder {
 	@Override
 	public void beginStatement(String name) {
 		this.name = name;
-		buf.append("<!DOCTYPE html>\n<html>\n<head>\n\t<title>Rental Record for "+name+"</title>\n</head>\n<body>\n");
+		buf.append("<!DOCTYPE html>\n<html>\n<head>\n\t<title>")
+		.append(super.nameString(name)).append("</title>\n</head>\n<body>\n");
 	}
 
 	@Override
 	public void addRental(String title, double amount) {
-		buf.append("\t" + title+"\t"+amount +" <br/>\n");
+		buf.append(super.rentalString(title, amount, "\t")).append(" <br/>\n");
 
 	}
 
 	@Override
 	public void addSummary(double totalAmount, int renterPoints) {
-		buf.append("\tAmount owned is " + totalAmount +
-				"<br/>\n");
-		buf.append("\tYou earned " + renterPoints +
-				" frequent renter points\n");
+		buf.append("\t").append(super.totalAmountString(totalAmount)).append("<br/>\n");
+		buf.append("\t").append(super.totalRenterPoints(renterPoints)).append("\n");
 
 	}
 

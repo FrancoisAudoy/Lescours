@@ -45,8 +45,8 @@ with Building do
      ([L.level != 2] - [F[2].D.closed])  |
      ([L.level != 3] - [F[3].D.closed]));
 
-     /*P5 The software opens the door at come floor only if there is some requesrs for that floor
-     P5 : if "no request at level i " then " the door at level i the door still close"
+     /*P5 The software opens the door at come floor only if there is some requests for that floor
+     P5 : if "no request at level i " then " the door at level i still close"
      */
 
      notP5 := any_s & ((src(label open[0]) - [request[0]]) |
@@ -61,5 +61,30 @@ with Building do
     notP6 := any_s &
     src(label up | label down) -
     [request[0] | request[1] | request[2] | request[3]];
-	
+
+
+    /* P7 When the lift moves, it must stop where there is a request
+    * P7 if "there is one or more request" then "the lift had to stop at only at those floor(s)"
+    */
+
+    notP7 := any_s &
+    	  src(label up | label down) &
+	  ([request[0] & L.level=0] |
+	   [request[1] & L.level=1] |
+	   [request[2] & L.level=2] |
+	   [request[3] & L.level=3] );
+
+
+/* p8 When there are several requests, the software must (if necessary)
+*continu in the same direction than its last move
+* P8 : if "the lift move, and there is several request "
+       then " the lift must continue in the same way than its last move"
+*/
+
+notP8 := any_s &
+      (reach(tgt(label up), any_t - (label up | label down)) |
+      reach(tgt(label down), any_t - (label up | label down)))
+      & src(label up)
+      & src(label down);
+
 done

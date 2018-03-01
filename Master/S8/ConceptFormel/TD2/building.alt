@@ -9,12 +9,22 @@ node Button
 edon
 
 node Door
-     state closed : bool : public;
-     init closed := true;
-     event close, open;
+     state
+	closed : bool : public;
+	stuck : bool;
+     init
+	closed := true;
+	stuck := false
+     event
+	close, open;
      trans
-           true |- close -> closed := true; // signal reçu
-           true |- open -> closed := false; // signal reçu
+           ~stuck |- close -> closed := true; // signal reçu
+           ~stuck |- open -> closed := false; // signal reçu
+	   ~stuck |- close -> stuck := true; // La panne arrive
+	   ~stuck |- open -> stuck := true;
+	   stuck |- close ->; // C'est en panne
+	   stuck |- open ->;
+	   
 edon
 
 // Petite modif : le bouton s'éteint en fermant la porte
@@ -65,9 +75,15 @@ node Building
      sub
 	F : Floor[nbFloors];
 	L : Lift;
+     state
+	lastMoveIsUp : bool;
+	doorsClosed : bool;
+     init
+	lastMoveIsUp := true;
+	doorsClosed := true;
      event
-	open[nbFloors];
-	down, up;
+	open[nbFloors] > {down, up};
+	
      flow
 	request : bool[nbFloors] : private;
 	requestDown, requestUp : bool : private;
@@ -82,13 +98,19 @@ node Building
 	requestUp = ((request[3] & L.level < 3)|
 		      (request[2] & L.level < 2)|
 		      (request[1] & L.level < 1));
+	doorsClosed = (F[0].D.closed &
+		       F[1].D.closed &
+		       F[2].D.closed &
+		       F[3].D.closed );
      trans
 	L.level=0 & (F[0].B.light | L.B[0].light) |- open[0] -> ;
 	L.level=1 & (F[1].B.light | L.B[1].light) |- open[1] -> ;
 	L.level=2 & (F[2].B.light | L.B[2].light) |- open[2] -> ;
 	L.level=3 & (F[3].B.light | L.B[3].light) |- open[3] -> ;
-	requestDown |- down -> ;
-	requestUp   |- up   -> ;
+	doorsClosed & ~lastMoveIsUp & requestDown |- down -> ;
+	doorsClosed & lastMoveIsUp & requestUp |- up -> ;
+	doorsClosed & (~lastMoveIsUp & ~requestUp) & requestDown |- down -> lastMoveIsUp := false;
+	doorsClosed & (lastMoveIsUp & ~requestDown) & requestUp  |- up   -> lastMoveIsUp := true;
      sync
 	<F[0].close, L.close[0]>;
 	<F[1].close, L.close[1]>;
