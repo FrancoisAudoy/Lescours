@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="8">
+<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="1">
+<org.eventb.core.poIdentifier name="maxi" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poPredicate name="maxj" org.eventb.core.predicate="maxi∈ℕ1" org.eventb.core.source="/Compteur2018/Maximum.buc|org.eventb.core.contextFile#Maximum|org.eventb.core.axiom#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/Compteur2018/C0.bpo|org.eventb.core.poFile#C0|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="1">
+<org.eventb.core.poIdentifier name="cpt" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="INITIALISATION/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="8">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Compteur2018/C0.bpo|org.eventb.core.poFile#C0|org.eventb.core.poPredicateSet#EVTALLHYPMaximup"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0∈0 ‥ maxi" org.eventb.core.source="/Compteur2018/C0.bum|org.eventb.core.machineFile#C0|org.eventb.core.invariant#)"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Compteur2018/C0.bum|org.eventb.core.machineFile#C0|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Compteur2018/C0.bum|org.eventb.core.machineFile#C0|org.eventb.core.invariant#)"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Compteur2018/C0.bpo|org.eventb.core.poFile#C0|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Compteur2018/C0.bpo|org.eventb.core.poFile#C0|org.eventb.core.poSequent#INITIALISATION\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Compteur2018/C0.bpo|org.eventb.core.poFile#C0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/DLF/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="8">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Compteur2018/C0.bpo|org.eventb.core.poFile#C0|org.eventb.core.poPredicateSet#EVTALLHYPMaximup"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0&lt;maxi∨0&gt;0" org.eventb.core.source="/Compteur2018/C0.bum|org.eventb.core.machineFile#C0|org.eventb.core.invariant#-"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Compteur2018/C0.bum|org.eventb.core.machineFile#C0|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Compteur2018/C0.bum|org.eventb.core.machineFile#C0|org.eventb.core.invariant#-"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Compteur2018/C0.bpo|org.eventb.core.poFile#C0|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Compteur2018/C0.bpo|org.eventb.core.poFile#C0|org.eventb.core.poSequent#INITIALISATION\/DLF\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Compteur2018/C0.bpo|org.eventb.core.poFile#C0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTMaximup" org.eventb.core.parentSet="/Compteur2018/C0.bpo|org.eventb.core.poFile#C0|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="8">
+<org.eventb.core.poIdentifier name="cpt'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPMaximup" org.eventb.core.parentSet="/Compteur2018/C0.bpo|org.eventb.core.poFile#C0|org.eventb.core.poPredicateSet#EVTIDENTMaximup" org.eventb.core.poStamp="8"/>
+<org.eventb.core.poSequent name="raz/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="8">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Compteur2018/C0.bpo|org.eventb.core.poFile#C0|org.eventb.core.poPredicateSet#EVTALLHYPMaximuq"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0∈0 ‥ maxi" org.eventb.core.source="/Compteur2018/C0.bum|org.eventb.core.machineFile#C0|org.eventb.core.invariant#)"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Compteur2018/C0.bum|org.eventb.core.machineFile#C0|org.eventb.core.event#+"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Compteur2018/C0.bum|org.eventb.core.machineFile#C0|org.eventb.core.invariant#)"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Compteur2018/C0.bpo|org.eventb.core.poFile#C0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Compteur2018/C0.bpo|org.eventb.core.poFile#C0|org.eventb.core.poSequent#raz\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Compteur2018/C0.bpo|org.eventb.core.poFile#C0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="raz/DLF/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="8">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Compteur2018/C0.bpo|org.eventb.core.poFile#C0|org.eventb.core.poPredicateSet#EVTALLHYPMaximuq"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0&lt;maxi∨0&gt;0" org.eventb.core.source="/Compteur2018/C0.bum|org.eventb.core.machineFile#C0|org.eventb.core.invariant#-"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Compteur2018/C0.bum|org.eventb.core.machineFile#C0|org.eventb.core.event#+"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Compteur2018/C0.bum|org.eventb.core.machineFile#C0|org.eventb.core.invariant#-"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Compteur2018/C0.bpo|org.eventb.core.poFile#C0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Compteur2018/C0.bpo|org.eventb.core.poFile#C0|org.eventb.core.poSequent#raz\/DLF\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Compteur2018/C0.bpo|org.eventb.core.poFile#C0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTMaximuq" org.eventb.core.parentSet="/Compteur2018/C0.bpo|org.eventb.core.poFile#C0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="8">
+<org.eventb.core.poIdentifier name="cpt'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPMaximuq" org.eventb.core.parentSet="/Compteur2018/C0.bpo|org.eventb.core.poFile#C0|org.eventb.core.poPredicateSet#EVTIDENTMaximuq" org.eventb.core.poStamp="8">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="cpt&gt;0" org.eventb.core.source="/Compteur2018/C0.bum|org.eventb.core.machineFile#C0|org.eventb.core.event#+|org.eventb.core.guard#'"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="Incrementation/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="8">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Compteur2018/C0.bpo|org.eventb.core.poFile#C0|org.eventb.core.poPredicateSet#EVTALLHYPMaximur"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="cpt+1∈0 ‥ maxi" org.eventb.core.source="/Compteur2018/C0.bum|org.eventb.core.machineFile#C0|org.eventb.core.invariant#)"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Compteur2018/C0.bum|org.eventb.core.machineFile#C0|org.eventb.core.event#,"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Compteur2018/C0.bum|org.eventb.core.machineFile#C0|org.eventb.core.invariant#)"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Compteur2018/C0.bpo|org.eventb.core.poFile#C0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Compteur2018/C0.bpo|org.eventb.core.poFile#C0|org.eventb.core.poSequent#Incrementation\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Compteur2018/C0.bpo|org.eventb.core.poFile#C0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="Incrementation/DLF/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="8">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Compteur2018/C0.bpo|org.eventb.core.poFile#C0|org.eventb.core.poPredicateSet#EVTALLHYPMaximur"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="cpt+1&lt;maxi∨cpt+1&gt;0" org.eventb.core.source="/Compteur2018/C0.bum|org.eventb.core.machineFile#C0|org.eventb.core.invariant#-"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Compteur2018/C0.bum|org.eventb.core.machineFile#C0|org.eventb.core.event#,"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Compteur2018/C0.bum|org.eventb.core.machineFile#C0|org.eventb.core.invariant#-"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Compteur2018/C0.bpo|org.eventb.core.poFile#C0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Compteur2018/C0.bpo|org.eventb.core.poFile#C0|org.eventb.core.poSequent#Incrementation\/DLF\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Compteur2018/C0.bpo|org.eventb.core.poFile#C0|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTMaximur" org.eventb.core.parentSet="/Compteur2018/C0.bpo|org.eventb.core.poFile#C0|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="cpt'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPMaximur" org.eventb.core.parentSet="/Compteur2018/C0.bpo|org.eventb.core.poFile#C0|org.eventb.core.poPredicateSet#EVTIDENTMaximur" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="cpt&lt;maxi" org.eventb.core.source="/Compteur2018/C0.bum|org.eventb.core.machineFile#C0|org.eventb.core.event#,|org.eventb.core.guard#'"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Compteur2018/C0.bpo|org.eventb.core.poFile#C0|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="8">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="cpt∈0 ‥ maxi" org.eventb.core.source="/Compteur2018/C0.bum|org.eventb.core.machineFile#C0|org.eventb.core.invariant#)"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="cpt&lt;maxi∨cpt&gt;0" org.eventb.core.source="/Compteur2018/C0.bum|org.eventb.core.machineFile#C0|org.eventb.core.invariant#-"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

@@ -1,0 +1,579 @@
+
+Alt/Ctrl.alt,2221
+  flow   rate 4,45
+         level 5,71
+  event ddd,9,186
+  event ddd, ddi,9,186
+  event ddd, ddi, ddn,9,186
+  event ddd, ddi, ddn, did,9,186
+  event ddd, ddi, ddn, did, dii,9,186
+  event ddd, ddi, ddn, did, dii, din,9,186
+  event ddd, ddi, ddn, did, dii, din, dnd,9,186
+  event ddd, ddi, ddn, did, dii, din, dnd, dni,9,186
+  event ddd, ddi, ddn, did, dii, din, dnd, dni, dnn,9,186
+        idd,10,239
+        idd, idi,10,239
+        idd, idi, idn,10,239
+        idd, idi, idn, iid,10,239
+        idd, idi, idn, iid, iii,10,239
+        idd, idi, idn, iid, iii, iin,10,239
+        idd, idi, idn, iid, iii, iin, ind,10,239
+        idd, idi, idn, iid, iii, iin, ind, ini,10,239
+        idd, idi, idn, iid, iii, iin, ind, ini, inn,10,239
+	ndd,11,292
+	ndd, ndi,11,292
+	ndd, ndi, ndn,11,292
+	ndd, ndi, ndn, nid,11,292
+	ndd, ndi, ndn, nid, nii,11,292
+	ndd, ndi, ndn, nid, nii, nin,11,292
+	ndd, ndi, ndn, nid, nii, nin, nnd,11,292
+	ndd, ndi, ndn, nid, nii, nin, nnd, nni,11,292
+	ndd, ndi, ndn, nid, nii, nin, nnd, nni, nnn;11,292
+  trans true |- ddd,12,338
+  trans true |- ddd, ddi,12,338
+  trans true |- ddd, ddi, ddn,12,338
+  trans true |- ddd, ddi, ddn, did,12,338
+  trans true |- ddd, ddi, ddn, did, dii,12,338
+  trans true |- ddd, ddi, ddn, did, dii, din,12,338
+  trans true |- ddd, ddi, ddn, did, dii, din, dnd,12,338
+  trans true |- ddd, ddi, ddn, did, dii, din, dnd, dni,12,338
+  trans true |- ddd, ddi, ddn, did, dii, din, dnd, dni, dnn,12,338
+                idd,13,399
+                idd, idi,13,399
+                idd, idi, idn,13,399
+                idd, idi, idn, iid,13,399
+                idd, idi, idn, iid, iii,13,399
+                idd, idi, idn, iid, iii, iin,13,399
+                idd, idi, idn, iid, iii, iin, ind,13,399
+                idd, idi, idn, iid, iii, iin, ind, ini,13,399
+                idd, idi, idn, iid, iii, iin, ind, ini, inn,13,399
+	        ndd,14,460
+	        ndd, ndi,14,460
+	        ndd, ndi, ndn,14,460
+	        ndd, ndi, ndn, nid,14,460
+	        ndd, ndi, ndn, nid, nii,14,460
+	        ndd, ndi, ndn, nid, nii, nin,14,460
+	        ndd, ndi, ndn, nid, nii, nin, nnd,14,460
+	        ndd, ndi, ndn, nid, nii, nin, nnd, nni,14,460
+
+Alt/CtrlVV.alt,4142
+  sub    V : ValveVirtual[ValveVirtual4,92
+  flow   rate 7,157
+         level 8,183
+  assert V[0].rateReal rateReal9,215
+         V[1].rateReal rateReal10,249
+         V[2].rateReal rateReal11,283
+  event ddd,15,400
+  event ddd, ddi,15,400
+  event ddd, ddi, ddn,15,400
+  event ddd, ddi, ddn, did,15,400
+  event ddd, ddi, ddn, did, dii,15,400
+  event ddd, ddi, ddn, did, dii, din,15,400
+  event ddd, ddi, ddn, did, dii, din, dnd,15,400
+  event ddd, ddi, ddn, did, dii, din, dnd, dni,15,400
+  event ddd, ddi, ddn, did, dii, din, dnd, dni, dnn,15,400
+        idd,16,453
+        idd, idi,16,453
+        idd, idi, idn,16,453
+        idd, idi, idn, iid,16,453
+        idd, idi, idn, iid, iii,16,453
+        idd, idi, idn, iid, iii, iin,16,453
+        idd, idi, idn, iid, iii, iin, ind,16,453
+        idd, idi, idn, iid, iii, iin, ind, ini,16,453
+        idd, idi, idn, iid, iii, iin, ind, ini, inn,16,453
+	ndd,17,506
+	ndd, ndi,17,506
+	ndd, ndi, ndn,17,506
+	ndd, ndi, ndn, nid,17,506
+	ndd, ndi, ndn, nid, nii,17,506
+	ndd, ndi, ndn, nid, nii, nin,17,506
+	ndd, ndi, ndn, nid, nii, nin, nnd,17,506
+	ndd, ndi, ndn, nid, nii, nin, nnd, nni,17,506
+	ndd, ndi, ndn, nid, nii, nin, nnd, nni, nnn;17,506
+  trans true |- ddd,18,552
+  trans true |- ddd, ddi,18,552
+  trans true |- ddd, ddi, ddn,18,552
+  trans true |- ddd, ddi, ddn, did,18,552
+  trans true |- ddd, ddi, ddn, did, dii,18,552
+  trans true |- ddd, ddi, ddn, did, dii, din,18,552
+  trans true |- ddd, ddi, ddn, did, dii, din, dnd,18,552
+  trans true |- ddd, ddi, ddn, did, dii, din, dnd, dni,18,552
+  trans true |- ddd, ddi, ddn, did, dii, din, dnd, dni, dnn,18,552
+                idd,19,613
+                idd, idi,19,613
+                idd, idi, idn,19,613
+                idd, idi, idn, iid,19,613
+                idd, idi, idn, iid, iii,19,613
+                idd, idi, idn, iid, iii, iin,19,613
+                idd, idi, idn, iid, iii, iin, ind,19,613
+                idd, idi, idn, iid, iii, iin, ind, ini,19,613
+                idd, idi, idn, iid, iii, iin, ind, ini, inn,19,613
+	        ndd,20,674
+	        ndd, ndi,20,674
+	        ndd, ndi, ndn,20,674
+	        ndd, ndi, ndn, nid,20,674
+	        ndd, ndi, ndn, nid, nii,20,674
+	        ndd, ndi, ndn, nid, nii, nin,20,674
+	        ndd, ndi, ndn, nid, nii, nin, nnd,20,674
+	        ndd, ndi, ndn, nid, nii, nin, nnd, nni,20,674
+  sync  <ddd,ddd22,734
+  sync  <ddd, V[0].dec,dec22,734
+  sync  <ddd, V[0].dec, V[1].dec,dec22,734
+        <ddi,ddi23,779
+        <ddi, V[0].dec,dec23,779
+        <ddi, V[0].dec, V[1].dec,dec23,779
+        <ddn,ddn24,824
+        <ddn, V[0].dec,dec24,824
+        <did,did25,859
+        <did, V[0].dec,dec25,859
+        <did, V[0].dec, V[1].inc,inc25,859
+        <dii,dii26,904
+        <dii, V[0].dec,dec26,904
+        <dii, V[0].dec, V[1].inc,inc26,904
+        <din,din27,949
+        <din, V[0].dec,dec27,949
+        <dnd,dnd28,984
+        <dnd, V[0].dec,dec28,984
+        <dni,dni29,1019
+        <dni, V[0].dec,dec29,1019
+        <dnn,dnn30,1054
+        <idd,idd31,1079
+        <idd, V[0].inc,inc31,1079
+        <idd, V[0].inc, V[1].dec,dec31,1079
+        <idi,idi32,1124
+        <idi, V[0].inc,inc32,1124
+        <idi, V[0].inc, V[1].dec,dec32,1124
+        <idn,idn33,1169
+        <idn, V[0].inc,inc33,1169
+        <iid,iid34,1204
+        <iid, V[0].inc,inc34,1204
+        <iid, V[0].inc, V[1].inc,inc34,1204
+        <iii,iii35,1249
+        <iii, V[0].inc,inc35,1249
+        <iii, V[0].inc, V[1].inc,inc35,1249
+        <iin,iin36,1294
+        <iin, V[0].inc,inc36,1294
+        <ind,ind37,1329
+        <ind, V[0].inc,inc37,1329
+        <ini,ini38,1364
+        <ini, V[0].inc,inc38,1364
+        <inn,inn39,1399
+        <ndd,ndd40,1424
+        <ndd, V[1].dec,dec40,1424
+        <ndi,ndi41,1459
+        <ndi, V[1].dec,dec41,1459
+        <ndn,ndn42,1494
+        <nid,nid43,1519
+        <nid, V[1].inc,inc43,1519
+        <nii,nii44,1554
+        <nii, V[1].inc,inc44,1554
+        <nin,nin45,1589
+        <nnd,nnd46,1614
+        <nni,nni47,1639
+
+Alt/Parameters.alt,46
+const nbSensors 4,83
+const nbFailures 9,230
+
+Alt/System.alt,3181
+  sub   V : Valve[Valve2,36
+        T : Tank;3,58
+	C : NomDuControleur;4,76
+  assert T.input input5,98
+         T.output output6,142
+	 C.rate[rate8,213
+	 C.rate[rate9,238
+	 C.rate[rate10,263
+	 C.level level11,288
+  state ctrl : bool;14,411
+  init  ctrl 15,432
+  event env,16,454
+  event env, cmd;16,454
+  trans ctrl |- cmd -> ctrl 17,472
+        ~ctrl |- env -> ctrl 18,510
+  sync  <env,env19,548
+        <C.ddd,ddd20,571
+        <C.ddd, cmd,20,571
+        <C.ddd, cmd, V[0].dec,dec20,571
+        <C.ddd, cmd, V[0].dec, V[1].dec,dec20,571
+        <C.ddi,ddi21,623
+        <C.ddi, cmd,21,623
+        <C.ddi, cmd, V[0].dec,dec21,623
+        <C.ddi, cmd, V[0].dec, V[1].dec,dec21,623
+        <C.ddn,ddn22,675
+        <C.ddn, cmd,22,675
+        <C.ddn, cmd, V[0].dec,dec22,675
+        <C.did,did23,717
+        <C.did, cmd,23,717
+        <C.did, cmd, V[0].dec,dec23,717
+        <C.did, cmd, V[0].dec, V[1].inc,inc23,717
+        <C.dii,dii24,769
+        <C.dii, cmd,24,769
+        <C.dii, cmd, V[0].dec,dec24,769
+        <C.dii, cmd, V[0].dec, V[1].inc,inc24,769
+        <C.din,din25,821
+        <C.din, cmd,25,821
+        <C.din, cmd, V[0].dec,dec25,821
+        <C.dnd,dnd26,863
+        <C.dnd, cmd,26,863
+        <C.dnd, cmd, V[0].dec,dec26,863
+        <C.dni,dni27,905
+        <C.dni, cmd,27,905
+        <C.dni, cmd, V[0].dec,dec27,905
+        <C.dnn,dnn28,947
+        <C.dnn, cmd,28,947
+        <C.idd,idd29,979
+        <C.idd, cmd,29,979
+        <C.idd, cmd, V[0].inc,inc29,979
+        <C.idd, cmd, V[0].inc, V[1].dec,dec29,979
+        <C.idi,idi30,1031
+        <C.idi, cmd,30,1031
+        <C.idi, cmd, V[0].inc,inc30,1031
+        <C.idi, cmd, V[0].inc, V[1].dec,dec30,1031
+        <C.idn,idn31,1083
+        <C.idn, cmd,31,1083
+        <C.idn, cmd, V[0].inc,inc31,1083
+        <C.iid,iid32,1125
+        <C.iid, cmd,32,1125
+        <C.iid, cmd, V[0].inc,inc32,1125
+        <C.iid, cmd, V[0].inc, V[1].inc,inc32,1125
+        <C.iii,iii33,1177
+        <C.iii, cmd,33,1177
+        <C.iii, cmd, V[0].inc,inc33,1177
+        <C.iii, cmd, V[0].inc, V[1].inc,inc33,1177
+        <C.iin,iin34,1229
+        <C.iin, cmd,34,1229
+        <C.iin, cmd, V[0].inc,inc34,1229
+        <C.ind,ind35,1271
+        <C.ind, cmd,35,1271
+        <C.ind, cmd, V[0].inc,inc35,1271
+        <C.ini,ini36,1313
+        <C.ini, cmd,36,1313
+        <C.ini, cmd, V[0].inc,inc36,1313
+        <C.inn,inn37,1355
+        <C.inn, cmd,37,1355
+        <C.ndd,ndd38,1387
+        <C.ndd, cmd,38,1387
+        <C.ndd, cmd, V[1].dec,dec38,1387
+        <C.ndi,ndi39,1429
+        <C.ndi, cmd,39,1429
+        <C.ndi, cmd, V[1].dec,dec39,1429
+        <C.ndn,ndn40,1471
+        <C.ndn, cmd,40,1471
+        <C.nid,nid41,1503
+        <C.nid, cmd,41,1503
+        <C.nid, cmd, V[1].inc,inc41,1503
+        <C.nii,nii42,1545
+        <C.nii, cmd,42,1545
+        <C.nii, cmd, V[1].inc,inc42,1545
+        <C.nin,nin43,1587
+        <C.nin, cmd,43,1587
+        <C.nnd,nnd44,1619
+        <C.nnd, cmd,44,1619
+        <C.nni,nni45,1651
+        <C.nni, cmd,45,1651
+        <C.nnn,nnn46,1683
+
+Alt/tank.alt,4150
+const nbSensors 4,83
+const nbFailures 9,230
+  state rate : [0,2] : public;11,270
+        stucked : [0,1] : public;12,301
+  init  rate 13,335
+        stucked 14,354
+  event dec,15,376
+  event dec, inc;15,376
+  trans stucked=16,394
+        stucked=17,440
+	stucked=18,486
+	stucked=19,518
+        stucked=21,585
+	stucked=23,680
+  state rate : [0,2] : public;30,863
+  flow  rateReal 35,1052
+  init  rate 36,1078
+  event dec,37,1097
+  event dec, inc;37,1097
+  trans rate=38,1115
+        rate=39,1165
+  state level : [0,nbSensors] : public;42,1230
+  init  level 43,1270
+  flow  input 44,1300
+        output 45,1323
+  event time;46,1347
+  trans input>output |- time -> level 47,1361
+        input<output |- time -> level 48,1413
+        input=49,1465
+        input=50,1509
+        input=51,1571
+        input=52,1615
+	input>output & level=54,1703
+	input<output & level=55,1748
+  sub   V : Valve[Valve58,1826
+        T : Tank;59,1848
+	C : NomDuControleur;60,1866
+  assert T.input input61,1888
+         T.output output62,1932
+	 C.rate[rate64,2003
+	 C.rate[rate65,2028
+	 C.rate[rate66,2053
+	 C.level level67,2078
+  state ctrl : bool;70,2201
+  init  ctrl 71,2222
+  event env,72,2244
+  event env, cmd;72,2244
+  trans ctrl |- cmd -> ctrl 73,2262
+        ~ctrl |- env -> ctrl 74,2300
+  sync  <env,env75,2338
+        <C.ddd,ddd76,2361
+        <C.ddd, cmd,76,2361
+        <C.ddd, cmd, V[0].dec,dec76,2361
+        <C.ddd, cmd, V[0].dec, V[1].dec,dec76,2361
+        <C.ddi,ddi77,2413
+        <C.ddi, cmd,77,2413
+        <C.ddi, cmd, V[0].dec,dec77,2413
+        <C.ddi, cmd, V[0].dec, V[1].dec,dec77,2413
+        <C.ddn,ddn78,2465
+        <C.ddn, cmd,78,2465
+        <C.ddn, cmd, V[0].dec,dec78,2465
+        <C.did,did79,2507
+        <C.did, cmd,79,2507
+        <C.did, cmd, V[0].dec,dec79,2507
+        <C.did, cmd, V[0].dec, V[1].inc,inc79,2507
+        <C.dii,dii80,2559
+        <C.dii, cmd,80,2559
+        <C.dii, cmd, V[0].dec,dec80,2559
+        <C.dii, cmd, V[0].dec, V[1].inc,inc80,2559
+        <C.din,din81,2611
+        <C.din, cmd,81,2611
+        <C.din, cmd, V[0].dec,dec81,2611
+        <C.dnd,dnd82,2653
+        <C.dnd, cmd,82,2653
+        <C.dnd, cmd, V[0].dec,dec82,2653
+        <C.dni,dni83,2695
+        <C.dni, cmd,83,2695
+        <C.dni, cmd, V[0].dec,dec83,2695
+        <C.dnn,dnn84,2737
+        <C.dnn, cmd,84,2737
+        <C.idd,idd85,2769
+        <C.idd, cmd,85,2769
+        <C.idd, cmd, V[0].inc,inc85,2769
+        <C.idd, cmd, V[0].inc, V[1].dec,dec85,2769
+        <C.idi,idi86,2821
+        <C.idi, cmd,86,2821
+        <C.idi, cmd, V[0].inc,inc86,2821
+        <C.idi, cmd, V[0].inc, V[1].dec,dec86,2821
+        <C.idn,idn87,2873
+        <C.idn, cmd,87,2873
+        <C.idn, cmd, V[0].inc,inc87,2873
+        <C.iid,iid88,2915
+        <C.iid, cmd,88,2915
+        <C.iid, cmd, V[0].inc,inc88,2915
+        <C.iid, cmd, V[0].inc, V[1].inc,inc88,2915
+        <C.iii,iii89,2967
+        <C.iii, cmd,89,2967
+        <C.iii, cmd, V[0].inc,inc89,2967
+        <C.iii, cmd, V[0].inc, V[1].inc,inc89,2967
+        <C.iin,iin90,3019
+        <C.iin, cmd,90,3019
+        <C.iin, cmd, V[0].inc,inc90,3019
+        <C.ind,ind91,3061
+        <C.ind, cmd,91,3061
+        <C.ind, cmd, V[0].inc,inc91,3061
+        <C.ini,ini92,3103
+        <C.ini, cmd,92,3103
+        <C.ini, cmd, V[0].inc,inc92,3103
+        <C.inn,inn93,3145
+        <C.inn, cmd,93,3145
+        <C.ndd,ndd94,3177
+        <C.ndd, cmd,94,3177
+        <C.ndd, cmd, V[1].dec,dec94,3177
+        <C.ndi,ndi95,3219
+        <C.ndi, cmd,95,3219
+        <C.ndi, cmd, V[1].dec,dec95,3219
+        <C.ndn,ndn96,3261
+        <C.ndn, cmd,96,3261
+        <C.nid,nid97,3293
+        <C.nid, cmd,97,3293
+        <C.nid, cmd, V[1].inc,inc97,3293
+        <C.nii,nii98,3335
+        <C.nii, cmd,98,3335
+        <C.nii, cmd, V[1].inc,inc98,3335
+        <C.nin,nin99,3377
+        <C.nin, cmd,99,3377
+        <C.nnd,nnd100,3409
+        <C.nnd, cmd,100,3409
+        <C.nni,nni101,3441
+        <C.nni, cmd,101,3441
+        <C.nnn,nnn102,3473
+
+Alt/Tank.alt,364
+  state level : [0,nbSensors] : public;2,10
+  init  level 3,50
+  flow  input 4,80
+        output 5,103
+  event time;6,127
+  trans input>output |- time -> level 7,141
+        input<output |- time -> level 8,193
+        input=9,245
+        input=10,289
+        input=11,351
+        input=12,395
+	input>output & level=14,483
+	input<output & level=15,528
+
+Alt/test.alt,4149
+const nbSensors 4,83
+const nbFailures 9,230
+  state rate : [0,2] : public;11,263
+        stucked : [0,1] : public;12,294
+  init  rate 13,328
+        stucked 14,347
+  event dec,15,369
+  event dec, inc;15,369
+  trans stucked=16,387
+        stucked=17,433
+	stucked=18,479
+	stucked=19,511
+        stucked=21,578
+	stucked=23,673
+  state rate : [0,2] : public;30,856
+  flow  rateReal 35,1045
+  init  rate 36,1071
+  event dec,37,1090
+  event dec, inc;37,1090
+  trans rate=38,1108
+        rate=39,1158
+  state level : [0,nbSensors] : public;42,1223
+  init  level 43,1263
+  flow  input 44,1293
+        output 45,1316
+  event time;46,1340
+  trans input>output |- time -> level 47,1354
+        input<output |- time -> level 48,1406
+        input=49,1458
+        input=50,1502
+        input=51,1564
+        input=52,1608
+	input>output & level=54,1696
+	input<output & level=55,1741
+  sub   V : Valve[Valve58,1811
+        T : Tank;59,1833
+	C : CtrlVV3F3I_Opt;60,1851
+  assert T.input input61,1872
+         T.output output62,1916
+	 C.rate[rate64,1987
+	 C.rate[rate65,2012
+	 C.rate[rate66,2037
+	 C.level level67,2062
+  state ctrl : bool;70,2185
+  init  ctrl 71,2206
+  event env,72,2228
+  event env, cmd;72,2228
+  trans ctrl |- cmd -> ctrl 73,2246
+        ~ctrl |- env -> ctrl 74,2284
+  sync  <env,env75,2322
+        <C.ddd,ddd76,2345
+        <C.ddd, cmd,76,2345
+        <C.ddd, cmd, V[0].dec,dec76,2345
+        <C.ddd, cmd, V[0].dec, V[1].dec,dec76,2345
+        <C.ddi,ddi77,2397
+        <C.ddi, cmd,77,2397
+        <C.ddi, cmd, V[0].dec,dec77,2397
+        <C.ddi, cmd, V[0].dec, V[1].dec,dec77,2397
+        <C.ddn,ddn78,2449
+        <C.ddn, cmd,78,2449
+        <C.ddn, cmd, V[0].dec,dec78,2449
+        <C.did,did79,2491
+        <C.did, cmd,79,2491
+        <C.did, cmd, V[0].dec,dec79,2491
+        <C.did, cmd, V[0].dec, V[1].inc,inc79,2491
+        <C.dii,dii80,2543
+        <C.dii, cmd,80,2543
+        <C.dii, cmd, V[0].dec,dec80,2543
+        <C.dii, cmd, V[0].dec, V[1].inc,inc80,2543
+        <C.din,din81,2595
+        <C.din, cmd,81,2595
+        <C.din, cmd, V[0].dec,dec81,2595
+        <C.dnd,dnd82,2637
+        <C.dnd, cmd,82,2637
+        <C.dnd, cmd, V[0].dec,dec82,2637
+        <C.dni,dni83,2679
+        <C.dni, cmd,83,2679
+        <C.dni, cmd, V[0].dec,dec83,2679
+        <C.dnn,dnn84,2721
+        <C.dnn, cmd,84,2721
+        <C.idd,idd85,2753
+        <C.idd, cmd,85,2753
+        <C.idd, cmd, V[0].inc,inc85,2753
+        <C.idd, cmd, V[0].inc, V[1].dec,dec85,2753
+        <C.idi,idi86,2805
+        <C.idi, cmd,86,2805
+        <C.idi, cmd, V[0].inc,inc86,2805
+        <C.idi, cmd, V[0].inc, V[1].dec,dec86,2805
+        <C.idn,idn87,2857
+        <C.idn, cmd,87,2857
+        <C.idn, cmd, V[0].inc,inc87,2857
+        <C.iid,iid88,2899
+        <C.iid, cmd,88,2899
+        <C.iid, cmd, V[0].inc,inc88,2899
+        <C.iid, cmd, V[0].inc, V[1].inc,inc88,2899
+        <C.iii,iii89,2951
+        <C.iii, cmd,89,2951
+        <C.iii, cmd, V[0].inc,inc89,2951
+        <C.iii, cmd, V[0].inc, V[1].inc,inc89,2951
+        <C.iin,iin90,3003
+        <C.iin, cmd,90,3003
+        <C.iin, cmd, V[0].inc,inc90,3003
+        <C.ind,ind91,3045
+        <C.ind, cmd,91,3045
+        <C.ind, cmd, V[0].inc,inc91,3045
+        <C.ini,ini92,3087
+        <C.ini, cmd,92,3087
+        <C.ini, cmd, V[0].inc,inc92,3087
+        <C.inn,inn93,3129
+        <C.inn, cmd,93,3129
+        <C.ndd,ndd94,3161
+        <C.ndd, cmd,94,3161
+        <C.ndd, cmd, V[1].dec,dec94,3161
+        <C.ndi,ndi95,3203
+        <C.ndi, cmd,95,3203
+        <C.ndi, cmd, V[1].dec,dec95,3203
+        <C.ndn,ndn96,3245
+        <C.ndn, cmd,96,3245
+        <C.nid,nid97,3277
+        <C.nid, cmd,97,3277
+        <C.nid, cmd, V[1].inc,inc97,3277
+        <C.nii,nii98,3319
+        <C.nii, cmd,98,3319
+        <C.nii, cmd, V[1].inc,inc98,3319
+        <C.nin,nin99,3361
+        <C.nin, cmd,99,3361
+        <C.nnd,nnd100,3393
+        <C.nnd, cmd,100,3393
+        <C.nni,nni101,3425
+        <C.nni, cmd,101,3425
+        <C.nnn,nnn102,3457
+
+Alt/Valve.alt,279
+  state rate : [0,2] : public;2,11
+        stucked : [0,1] : public;3,42
+  init  rate 4,76
+        stucked 5,95
+  event dec,6,117
+  event dec, inc;6,117
+  trans stucked=7,135
+        stucked=8,181
+	stucked=9,227
+	stucked=10,259
+        stucked=12,326
+	stucked=14,421
+
+Alt/ValveVirtual.alt,170
+  state rate : [0,2] : public;6,150
+  flow  rateReal 11,339
+  init  rate 12,365
+  event dec,13,384
+  event dec, inc;13,384
+  trans rate=14,402
+        rate=15,452
