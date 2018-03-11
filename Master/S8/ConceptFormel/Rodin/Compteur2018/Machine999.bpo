@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="2">
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="1">
+<org.eventb.core.poIdentifier name="maxi" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poPredicate name="maxj" org.eventb.core.predicate="maxi∈ℕ1" org.eventb.core.source="/Compteur2018/Maximum.buc|org.eventb.core.contextFile#Maximum|org.eventb.core.axiom#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Compteur2018/Machine999.bpo|org.eventb.core.poFile#Machine999|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="2">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="maxi=999" org.eventb.core.source="/Compteur2018/Machine999.buc|org.eventb.core.contextFile#Machine999|org.eventb.core.axiom#)"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

@@ -65,7 +65,7 @@ unsigned max_compute_seq (unsigned nb_iter)
 static int monter_max_omp (int i_d, int j_d, int i_f, int j_f)
 {
   int changement = 0;
-#pragma omp parallel for
+#pragma omp parallel for collapse(2)
   for (int i = i_d; i >= i_f; i--)
     for (int j = j_d; j >= j_f; j--)
       if (cur_img (i,j)) {
@@ -82,7 +82,7 @@ static int monter_max_omp (int i_d, int j_d, int i_f, int j_f)
 static int descendre_max_omp (int i_d, int j_d, int i_f, int j_f)
 {
   int changement = 0;
-#pragma omp parallel for 
+#pragma omp parallel for collapse(2)
   for (int i = i_d; i <= i_f; i++)
     for (int j = j_d; j <= j_f; j++)
       if (cur_img (i,j)) {
@@ -111,8 +111,8 @@ unsigned max_compute_omp (unsigned nb_iter)
 
 #define GRAIN 32
 
-volatile int celluled [GRAIN][GRAIN+1];
-volatile int cellulem [GRAIN][GRAIN+1];
+volatile int celluled [GRAIN+1][GRAIN+1];
+volatile int cellulem [GRAIN+1][GRAIN+1];
 
 
 volatile int cont = 0;
@@ -175,27 +175,33 @@ int max_compute_omp_tiled (unsigned nb_iter)
 {    
   tranche = DIM / GRAIN;
 
-  for (unsigned it = 1; it <= nb_iter; it ++) {
-#pragma omp parallel
+  unsigned it = 0;
+#pragma omp parallel shared(it, cont)
+#pragma omp single nowait
+  {
+    cont = 1;
+  for (it = 1; it <= nb_iter && cont; it ++) {
+
     cont = 0;
 
-#pragma omp single
     for (int i=0; i < GRAIN; i++)
       for (int j=0; j < GRAIN; j++)
-#pragma omp task depend(in : celluled[i-1][j-1], cellulem[i+1][j+1]) depend(out : celluled[i+1][j+1], cellulem[i-1][j-1])
+#pragma omp task firstprivate(i,j) depend(in : celluled[i-1][j], celluled[i][j-1]) depend(out :celluled[i][j])
+	
 	lancer_descente (i, j);
-
-#pragma omp single
+    
+#pragma omp taskwait
+    
     for (int i=0; i < GRAIN; i++)
       for (int j=0; j < GRAIN; j++)
-#pragma omp task depend(in : celluled[i-1][j-1], cellulem[i+1][j+1]) depend(out : celluled[i+1][j+1], cellulem[i-1][j-1])
+#pragma omp task firstprivate(i,j) depend(in : cellulem[i+1][j], cellulem[i][j+1]) depend(out : cellulem[i][j])
+	
 	lancer_monte (GRAIN-i-1, GRAIN-j-1);
-
-    if (!cont)
-      return it;
   }
-  
-  return 0;
+
+  #pragma omp taskwait
+  }
+  return cont == 0 ? it:0;
 }
 
 

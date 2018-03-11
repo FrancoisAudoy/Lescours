@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.scContextFile org.eventb.core.accurate="true" org.eventb.core.configuration="org.eventb.core.fwd;org.animb.valuation.valBase">
+<org.eventb.core.scExtendsContext name="'" org.eventb.core.scTarget="/Compteur2018/Maximum.bcc|org.eventb.core.scContextFile#Maximum" org.eventb.core.source="/Compteur2018/Machine999.buc|org.eventb.core.contextFile#Machine999|org.eventb.core.extendsContext#'"/>
+<org.eventb.core.scInternalContext name="Maximum">
+<org.eventb.core.scAxiom name="'" org.eventb.core.label="axm1" org.eventb.core.predicate="maxi∈ℕ1" org.eventb.core.source="/Compteur2018/Maximum.buc|org.eventb.core.contextFile#Maximum|org.eventb.core.axiom#(" org.eventb.core.theorem="false"/>
+<org.eventb.core.scConstant name="maxi" org.eventb.core.source="/Compteur2018/Maximum.buc|org.eventb.core.contextFile#Maximum|org.eventb.core.constant#'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.scInternalContext>
+<org.eventb.core.scAxiom name="Maximun" org.eventb.core.label="axm1" org.eventb.core.predicate="maxi=999" org.eventb.core.source="/Compteur2018/Machine999.buc|org.eventb.core.contextFile#Machine999|org.eventb.core.axiom#)" org.eventb.core.theorem="false"/>
+</org.eventb.core.scContextFile>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.scMachineFile org.eventb.core.accurate="true" org.eventb.core.configuration="org.eventb.core.fwd">
+<org.eventb.core.scRefinesMachine name="'" org.eventb.core.scTarget="/Compteur2018/C0.bcm" org.eventb.core.source="/Compteur2018/C00.bum|org.eventb.core.machineFile#C00|org.eventb.core.refinesMachine#'"/>
+<org.eventb.core.scSeesContext name="(" org.eventb.core.scTarget="/Compteur2018/Machine999.bcc" org.eventb.core.source="/Compteur2018/C00.bum|org.eventb.core.machineFile#C00|org.eventb.core.seesContext#*"/>
+<org.eventb.core.scInternalContext name="Maximum">
+<org.eventb.core.scAxiom name="'" org.eventb.core.label="axm1" org.eventb.core.predicate="maxi∈ℕ1" org.eventb.core.source="/Compteur2018/Maximum.buc|org.eventb.core.contextFile#Maximum|org.eventb.core.axiom#(" org.eventb.core.theorem="false"/>
+<org.eventb.core.scConstant name="maxi" org.eventb.core.source="/Compteur2018/Maximum.buc|org.eventb.core.contextFile#Maximum|org.eventb.core.constant#'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.scInternalContext>
+<org.eventb.core.scInternalContext name="Machine999">
+<org.eventb.core.scExtendsContext name="'" org.eventb.core.scTarget="/Compteur2018/Maximum.bcc|org.eventb.core.scContextFile#Maximum" org.eventb.core.source="/Compteur2018/Machine999.buc|org.eventb.core.contextFile#Machine999|org.eventb.core.extendsContext#'"/>
+<org.eventb.core.scAxiom name="Maximun" org.eventb.core.label="axm1" org.eventb.core.predicate="maxi=999" org.eventb.core.source="/Compteur2018/Machine999.buc|org.eventb.core.contextFile#Machine999|org.eventb.core.axiom#)" org.eventb.core.theorem="false"/>
+</org.eventb.core.scInternalContext>
+<org.eventb.core.scInvariant name="Maximun" org.eventb.core.label="inv1" org.eventb.core.predicate="cpt∈0 ‥ maxi" org.eventb.core.source="/Compteur2018/C0.bum|org.eventb.core.machineFile#C0|org.eventb.core.invariant#)" org.eventb.core.theorem="false"/>
+<org.eventb.core.scInvariant name="Maximuo" org.eventb.core.label="DLF" org.eventb.core.predicate="cpt&lt;maxi∨cpt&gt;0" org.eventb.core.source="/Compteur2018/C0.bum|org.eventb.core.machineFile#C0|org.eventb.core.invariant#-" org.eventb.core.theorem="false"/>
+<org.eventb.core.scInvariant name="Machine99:" org.eventb.core.label="inv5" org.eventb.core.predicate="u∈0 ‥ 9" org.eventb.core.source="/Compteur2018/C00.bum|org.eventb.core.machineFile#C00|org.eventb.core.invariant#1" org.eventb.core.theorem="false"/>
+<org.eventb.core.scInvariant name="Machine99;" org.eventb.core.label="inv6" org.eventb.core.predicate="d∈0 ‥ 9" org.eventb.core.source="/Compteur2018/C00.bum|org.eventb.core.machineFile#C00|org.eventb.core.invariant#2" org.eventb.core.theorem="false"/>
+<org.eventb.core.scInvariant name="Machine99=" org.eventb.core.label="inv7" org.eventb.core.predicate="c∈0 ‥ 9" org.eventb.core.source="/Compteur2018/C00.bum|org.eventb.core.machineFile#C00|org.eventb.core.invariant#3" org.eventb.core.theorem="false"/>
+<org.eventb.core.scInvariant name="Machine99&gt;" org.eventb.core.label="inv4" org.eventb.core.predicate="cpt=100∗c+10∗d+u" org.eventb.core.source="/Compteur2018/C00.bum|org.eventb.core.machineFile#C00|org.eventb.core.invariant#0" org.eventb.core.theorem="false"/>
+<org.eventb.core.scVariable name="c" org.eventb.core.abstract="false" org.eventb.core.concrete="true" org.eventb.core.source="/Compteur2018/C00.bum|org.eventb.core.machineFile#C00|org.eventb.core.variable#." org.eventb.core.type="ℤ"/>
+<org.eventb.core.scVariable name="cpt" org.eventb.core.abstract="true" org.eventb.core.concrete="false" org.eventb.core.source="/Compteur2018/C0.bum|org.eventb.core.machineFile#C0|org.eventb.core.variable#(" org.eventb.core.type="ℤ"/>
+<org.eventb.core.scVariable name="d" org.eventb.core.abstract="false" org.eventb.core.concrete="true" org.eventb.core.source="/Compteur2018/C00.bum|org.eventb.core.machineFile#C00|org.eventb.core.variable#-" org.eventb.core.type="ℤ"/>
+<org.eventb.core.scVariable name="u" org.eventb.core.abstract="false" org.eventb.core.concrete="true" org.eventb.core.source="/Compteur2018/C00.bum|org.eventb.core.machineFile#C00|org.eventb.core.variable#\/" org.eventb.core.type="ℤ"/>
+<org.eventb.core.scEvent name="Machine99?" org.eventb.core.accurate="true" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION" org.eventb.core.source="/Compteur2018/C00.bum|org.eventb.core.machineFile#C00|org.eventb.core.event#+">
+<org.eventb.core.scRefinesEvent name="'" org.eventb.core.scTarget="/Compteur2018/C0.bcm|org.eventb.core.scMachineFile#C0|org.eventb.core.scEvent#Maximup" org.eventb.core.source="/Compteur2018/C00.bum|org.eventb.core.machineFile#C00|org.eventb.core.event#+"/>
+<org.eventb.core.scAction name="(" org.eventb.core.assignment="u,d,c ≔ 0, 0, 0" org.eventb.core.label="act1" org.eventb.core.source="/Compteur2018/C00.bum|org.eventb.core.machineFile#C00|org.eventb.core.event#+|org.eventb.core.action#'"/>
+</org.eventb.core.scEvent>
+<org.eventb.core.scEvent name="Machine99@" org.eventb.core.accurate="true" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="raz" org.eventb.core.source="/Compteur2018/C00.bum|org.eventb.core.machineFile#C00|org.eventb.core.event#,">
+<org.eventb.core.scRefinesEvent name="'" org.eventb.core.scTarget="/Compteur2018/C0.bcm|org.eventb.core.scMachineFile#C0|org.eventb.core.scEvent#Maximuq" org.eventb.core.source="/Compteur2018/C00.bum|org.eventb.core.machineFile#C00|org.eventb.core.event#,|org.eventb.core.refinesEvent#'"/>
+<org.eventb.core.scGuard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="u&gt;0∨d&gt;0∨c&gt;0" org.eventb.core.source="/Compteur2018/C00.bum|org.eventb.core.machineFile#C00|org.eventb.core.event#,|org.eventb.core.guard#(" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAction name=")" org.eventb.core.assignment="u,d,c ≔ 0, 0, 0" org.eventb.core.label="act1" org.eventb.core.source="/Compteur2018/C00.bum|org.eventb.core.machineFile#C00|org.eventb.core.event#,|org.eventb.core.action#)"/>
+</org.eventb.core.scEvent>
+<org.eventb.core.scEvent name="Machine99A" org.eventb.core.accurate="true" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="IncrementationU" org.eventb.core.source="/Compteur2018/C00.bum|org.eventb.core.machineFile#C00|org.eventb.core.event#4">
+<org.eventb.core.scRefinesEvent name="'" org.eventb.core.scTarget="/Compteur2018/C0.bcm|org.eventb.core.scMachineFile#C0|org.eventb.core.scEvent#Maximur" org.eventb.core.source="/Compteur2018/C00.bum|org.eventb.core.machineFile#C00|org.eventb.core.event#4|org.eventb.core.refinesEvent#'"/>
+<org.eventb.core.scGuard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="u&lt;9" org.eventb.core.source="/Compteur2018/C00.bum|org.eventb.core.machineFile#C00|org.eventb.core.event#4|org.eventb.core.guard#(" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAction name=")" org.eventb.core.assignment="u ≔ u+1" org.eventb.core.label="act1" org.eventb.core.source="/Compteur2018/C00.bum|org.eventb.core.machineFile#C00|org.eventb.core.event#4|org.eventb.core.action#)"/>
+</org.eventb.core.scEvent>
+<org.eventb.core.scEvent name="Machine99B" org.eventb.core.accurate="true" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="IncrementationD" org.eventb.core.source="/Compteur2018/C00.bum|org.eventb.core.machineFile#C00|org.eventb.core.event#5">
+<org.eventb.core.scRefinesEvent name="'" org.eventb.core.scTarget="/Compteur2018/C0.bcm|org.eventb.core.scMachineFile#C0|org.eventb.core.scEvent#Maximur" org.eventb.core.source="/Compteur2018/C00.bum|org.eventb.core.machineFile#C00|org.eventb.core.event#5|org.eventb.core.refinesEvent#'"/>
+<org.eventb.core.scGuard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="u=9∧d&lt;9" org.eventb.core.source="/Compteur2018/C00.bum|org.eventb.core.machineFile#C00|org.eventb.core.event#5|org.eventb.core.guard#(" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAction name=")" org.eventb.core.assignment="d ≔ d+1" org.eventb.core.label="act1" org.eventb.core.source="/Compteur2018/C00.bum|org.eventb.core.machineFile#C00|org.eventb.core.event#5|org.eventb.core.action#)"/>
+<org.eventb.core.scAction name="*" org.eventb.core.assignment="u ≔ 0" org.eventb.core.label="act2" org.eventb.core.source="/Compteur2018/C00.bum|org.eventb.core.machineFile#C00|org.eventb.core.event#5|org.eventb.core.action#*"/>
+</org.eventb.core.scEvent>
+<org.eventb.core.scEvent name="Machine99C" org.eventb.core.accurate="true" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="IncfrementationC" org.eventb.core.source="/Compteur2018/C00.bum|org.eventb.core.machineFile#C00|org.eventb.core.event#6">
+<org.eventb.core.scRefinesEvent name="'" org.eventb.core.scTarget="/Compteur2018/C0.bcm|org.eventb.core.scMachineFile#C0|org.eventb.core.scEvent#Maximur" org.eventb.core.source="/Compteur2018/C00.bum|org.eventb.core.machineFile#C00|org.eventb.core.event#6|org.eventb.core.refinesEvent#'"/>
+<org.eventb.core.scGuard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="u=9∧d=9∧c&lt;9" org.eventb.core.source="/Compteur2018/C00.bum|org.eventb.core.machineFile#C00|org.eventb.core.event#6|org.eventb.core.guard#(" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAction name=")" org.eventb.core.assignment="u ≔ 0" org.eventb.core.label="act1" org.eventb.core.source="/Compteur2018/C00.bum|org.eventb.core.machineFile#C00|org.eventb.core.event#6|org.eventb.core.action#)"/>
+<org.eventb.core.scAction name="*" org.eventb.core.assignment="d ≔ 0" org.eventb.core.label="act2" org.eventb.core.source="/Compteur2018/C00.bum|org.eventb.core.machineFile#C00|org.eventb.core.event#6|org.eventb.core.action#*"/>
+<org.eventb.core.scAction name="+" org.eventb.core.assignment="c ≔ c+1" org.eventb.core.label="act3" org.eventb.core.source="/Compteur2018/C00.bum|org.eventb.core.machineFile#C00|org.eventb.core.event#6|org.eventb.core.action#+"/>
+</org.eventb.core.scEvent>
+</org.eventb.core.scMachineFile>

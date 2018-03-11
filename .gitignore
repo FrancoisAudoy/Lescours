@@ -1,9 +1,9 @@
 *.exe
-*.*~
 *~
 Master/ApprocheObjet/.*/
+.*
 bin/
 *.png
 *.odt
-.*
+*.o
 *.class
