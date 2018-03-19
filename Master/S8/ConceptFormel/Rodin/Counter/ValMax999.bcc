@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.scContextFile org.eventb.core.accurate="true" org.eventb.core.configuration="org.eventb.core.fwd">
+<org.eventb.core.scExtendsContext name="'" org.eventb.core.scTarget="/Counter/ValMax.bcc|org.eventb.core.scContextFile#ValMax" org.eventb.core.source="/Counter/ValMax999.buc|org.eventb.core.contextFile#ValMax999|org.eventb.core.extendsContext#'"/>
+<org.eventb.core.scInternalContext name="ValMax">
+<org.eventb.core.scAxiom name="'" org.eventb.core.label="axm1" org.eventb.core.predicate="maxi∈ℕ1" org.eventb.core.source="/Counter/ValMax.buc|org.eventb.core.contextFile#ValMax|org.eventb.core.axiom#(" org.eventb.core.theorem="false"/>
+<org.eventb.core.scConstant name="maxi" org.eventb.core.source="/Counter/ValMax.buc|org.eventb.core.contextFile#ValMax|org.eventb.core.constant#'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.scInternalContext>
+<org.eventb.core.scAxiom name="ValMay" org.eventb.core.label="axm1" org.eventb.core.predicate="maxi=999" org.eventb.core.source="/Counter/ValMax999.buc|org.eventb.core.contextFile#ValMax999|org.eventb.core.axiom#(" org.eventb.core.theorem="false"/>
+</org.eventb.core.scContextFile>

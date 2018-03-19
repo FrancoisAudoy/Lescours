@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
+<org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="'" org.eventb.core.assignment="i≔0" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.seesContext name="(" org.eventb.core.target="ValMax"/>
+<org.eventb.core.variable name=")" org.eventb.core.identifier="i"/>
+<org.eventb.core.invariant name="*" org.eventb.core.label="inv1" org.eventb.core.predicate="i∈0‥maxi"/>
+<org.eventb.core.event name="+" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="incr">
+<org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="i&lt;maxi"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="i≔i+1" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="," org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="reset">
+<org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="i&gt;0"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="i≔0" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.invariant name="-" org.eventb.core.label="dlf" org.eventb.core.predicate="i&lt;maxi ∨ i&gt;0" org.eventb.core.theorem="true"/>
+</org.eventb.core.machineFile>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="b2n" org.eventb.core.type="ℙ(BOOL×ℤ)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Counter/Boolconv.bpo|org.eventb.core.poFile#Boolconv|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="b2n={TRUE ↦ 1,FALSE ↦ 0}" org.eventb.core.source="/Counter/Boolconv.buc|org.eventb.core.contextFile#Boolconv|org.eventb.core.axiom#("/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

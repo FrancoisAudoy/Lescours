@@ -1,0 +1,101 @@
+\documentclass[10pt,a4paper]{report}
+\usepackage[top=3cm, bottom=2.5cm, left=3cm, right=2.5cm] {geometry}
+\usepackage {bsymb,b2latex}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr,lastpage,color}
+\lhead{\rm An Event-B Specification of Display999}
+\rhead {\rm Page \thepage~of \pageref{LastPage}}
+\lfoot{}\cfoot{}\rfoot{}
+\pagestyle{fancy}
+%---------------------------------------------------------
+\begin{document}
+\thispagestyle{empty}
+\begin{description}
+\BTitle{Display999}{7Mar2013}{10:23:48 AM}
+\MACHINE{Display999}
+\REFINES{C0}
+\SEES{ValMax999}
+\VARIABLES
+	\begin{description}
+		\Item{ u }
+		\Item{ d }
+		\Item{ c }
+	\end{description}
+\INVARIANTS
+	\begin{description}
+		\nItem{ inv1 }{ u \in  0\upto 9 }
+		\nItem{ inv2 }{ d \in  0\upto 9 }
+		\nItem{ inv3 }{ c \in  0\upto 9 }
+		\nItem{ inv4 }{ i=100* c + 10* d + u }
+		\nItem{ PDLF1 }{ i< maxi \limp  (u<  9 \lor  (u=9 \land  d <  9) \lor  (u=9 \land  d = 9 \land  c <  9)) }
+		\nItem{ PDLF2 }{ i> 0 \limp  (u> 0 \lor  d> 0 \lor  c > 0) }
+	\end{description}
+\EVENTS
+	\INITIALISATION
+		\begin{description}
+		\BeginAct
+			\begin{description}
+			\nItem{ act2 }{ u :=  0 }
+			\nItem{ act3 }{ d :=  0 }
+			\nItem{ act4 }{ c :=  0 }
+			\end{description}
+		\EndAct
+		\end{description}
+	\EVT {incru}
+	\REF {incr}
+		\begin{description}
+		\WhenGrd
+			\begin{description}
+			\nItem{ grd1 }{ u< 9 }
+			\end{description}
+		\ThenAct
+			\begin{description}
+			\nItem{ act1 }{ u:= u+1 }
+			\end{description}
+		\EndAct
+		\end{description}
+	\EVT {reset}
+	\REF {reset}
+		\begin{description}
+		\WhenGrd
+			\begin{description}
+			\nItem{ grd2 }{ u> 0 \lor  d> 0 \lor  c> 0 }
+			\end{description}
+		\ThenAct
+			\begin{description}
+			\nItem{ act2 }{ c,d,u := 0,0,0 }
+			\end{description}
+		\EndAct
+		\end{description}
+	\EVT {incrd}
+	\REF {incr}
+		\begin{description}
+		\WhenGrd
+			\begin{description}
+			\nItem{ grd1 }{ u=9 }
+			\nItem{ grd2 }{ d< 9 }
+			\end{description}
+		\ThenAct
+			\begin{description}
+			\nItem{ act1 }{ d,u := d+1,0 }
+			\end{description}
+		\EndAct
+		\end{description}
+	\EVT {incrc}
+	\REF {incr}
+		\begin{description}
+		\WhenGrd
+			\begin{description}
+			\nItem{ grd1 }{ u=9 }
+			\nItem{ grd2 }{ d=9 }
+			\nItem{ grd3 }{ c< 9 }
+			\end{description}
+		\ThenAct
+			\begin{description}
+			\nItem{ act1 }{ c,d,u:= c+1,0,0 }
+			\end{description}
+		\EndAct
+		\end{description}
+\END
+\end{description}
+\end{document}

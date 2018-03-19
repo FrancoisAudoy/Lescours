@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="1">
+<org.eventb.core.poIdentifier name="a" org.eventb.core.type="ℙ(ℤ×ℤ)"/>
+<org.eventb.core.poIdentifier name="n" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="x" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poPredicate name="y" org.eventb.core.predicate="n∈ℕ1" org.eventb.core.source="/Search/Array.buc|org.eventb.core.contextFile#Array|org.eventb.core.axiom#*"/>
+<org.eventb.core.poPredicate name="z" org.eventb.core.predicate="a∈1 ‥ n → ℤ" org.eventb.core.source="/Search/Array.buc|org.eventb.core.contextFile#Array|org.eventb.core.axiom#+"/>
+<org.eventb.core.poPredicate name="{" org.eventb.core.predicate="x∈ℤ" org.eventb.core.source="/Search/Array.buc|org.eventb.core.contextFile#Array|org.eventb.core.axiom#,"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="axm1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Search/SortedArray.bpo|org.eventb.core.poFile#SortedArray|org.eventb.core.poPredicateSet#ABSHYP"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀i⦂ℤ·i∈1 ‥ n − 1⇒i∈dom(a)∧a∈ℤ ⇸ ℤ∧i+1∈dom(a)" org.eventb.core.source="/Search/SortedArray.buc|org.eventb.core.contextFile#SortedArray|org.eventb.core.axiom#("/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Search/SortedArray.buc|org.eventb.core.contextFile#SortedArray|org.eventb.core.axiom#("/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Search/SortedArray.bpo|org.eventb.core.poFile#SortedArray|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Search/SortedArray.bpo|org.eventb.core.poFile#SortedArray|org.eventb.core.poPredicateSet#ABSHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Search/SortedArray.bpo|org.eventb.core.poFile#SortedArray|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="∀i⦂ℤ·i∈1 ‥ n − 1⇒a(i)≤a(i+1)" org.eventb.core.source="/Search/SortedArray.buc|org.eventb.core.contextFile#SortedArray|org.eventb.core.axiom#("/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>
