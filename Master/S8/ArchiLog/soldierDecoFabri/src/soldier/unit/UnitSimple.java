@@ -2,6 +2,7 @@ package soldier.unit;
 
 import soldier.core.BehaviorSoldier;
 import soldier.equipment.Equipement;
+import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 public abstract class UnitSimple {
 
@@ -30,8 +31,25 @@ public abstract class UnitSimple {
 		return soldier.strike();
 	}
 	
-	public void removeEquipement(Equipement e) {
+	public void removeEquipement(Equipement e) throws ImpossibleExtensionException {
+		/*if(stuff == 0)
+			throw new ImpossibleExtensionException("this soldier got no stuff");
 		
+		BehaviorExtension current, last = (BehaviorExtension) soldier;
+		
+		if(e.getExtension().getClass() == last.getClass())
+			soldier = last.parent();
+			
+		for(int i = 0; i < stuff; ++i) {
+			current = (BehaviorExtension) last.parent();
+			if(e.getExtension().getClass() == current.getClass()) {
+				last.reparent(current.parent());
+				break;
+			}
+			last = current;
+		}*/
+		
+		throw new NotImplementedException();
 		
 	}
 	

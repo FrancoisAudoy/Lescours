@@ -8,11 +8,11 @@ public class BehaviorExtension implements BehaviorSoldier {
 	    soldier = s;
 	}
 	
-	BehaviorSoldier parent() {
+	public BehaviorSoldier parent() {
 		return soldier;
 	}
 
-	void reparent(BehaviorSoldier newParent) {
+	public void reparent(BehaviorSoldier newParent) {
 		soldier = newParent;
 	}
 	

@@ -15,15 +15,19 @@ public class UniSimpleGame {
 		  try { 
 		    im.parry(hm.strike());
 		    im.addEquipement(sw);
-		    hm.addEquipement(sw); // Lève une exception car l'arme est déjà attaché
-		  }catch(ImpossibleExtensionException e) {}
+		    //hm.addEquipement(sw); // Lève une exception car l'arme est déjà attaché
+		  }catch(ImpossibleExtensionException e) {
+			  e.printStackTrace();
+		  }
 
 		  try {
 		   im.removeEquipement(sw);
 		   hm.addEquipement(sw);
 		   hm.addEquipement(sh);    
 		   hm.addEquipement(sw2); // Lève une exception car deux armes maximum
-		  }catch(ImpossibleExtensionException e) {}
+		  }catch(ImpossibleExtensionException e) {
+			  e.printStackTrace();
+		  }
 		}
 
 }
