@@ -143,13 +143,22 @@ __kernel void transpose_naif (__global unsigned *in, __global unsigned *out)
   int x = get_global_id (0);
   int y = get_global_id (1);
 
-  out [x * DIM + y] = in [y * DIM + x];
+  out [x * DIM + y] = in [y * DIM + x] = in[y * DIM + x] ;
 }
 
 
 __kernel void transpose (__global unsigned *in, __global unsigned *out)
 {
-  // TODO
+  __local float tile [TILEY][TILEX + 1];
+  int x = get_global_id(0);
+  int y = get_global_id(1);
+  int loc_x = get_local_id(0);
+  int loc_y = get_local_id(1);
+
+  tile[loc_x][loc_y] = in[y * get_global_size(0) + x];
+  //barrier(CLK_LOCAL_MEM_FENCE);
+  out[(x - loc_x + loc_y) * get_global_size(1) + (y - loc_y + loc_x)] = tile[loc_y][loc_x];
+
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -176,7 +185,8 @@ __kernel void tiles (__global unsigned *in, __global unsigned *out)
 
   barrier (CLK_LOCAL_MEM_FENCE); // pas utile si PIX_BLOC <= 16
 
-  out [y * DIM + x] = couleur [yloc & mask][xloc & mask];
+  //  out [y * DIM + x] = couleur [yloc & mask][xloc & mask];
+    out [y * DIM + x] = couleur [yloc / PIX_BLOC][xloc / PIX_BLOC];
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -185,9 +195,56 @@ __kernel void tiles (__global unsigned *in, __global unsigned *out)
 
 __kernel void pixellize (__global unsigned *in, __global unsigned *out)
 {
-  // TODO
+
+  int x = get_global_id(0);
+  int y = get_global_id(1);
+  int xloc = get_local_id(0);
+  int yloc = get_local_id(1);
+
+  __local unsigned tile[PIX_BLOC][PIX_BLOC];
+
+  tile[yloc][xloc] = in[y * DIM +x];
+
+  unsigned m = 1, ym = 0;
+
+  for(int d =1; d < PIX_BLOC; d*=2){
+    barrier(CLK_LOCAL_MEM_FENCE);
+
+    if((xloc & m) == 0)
+      if((yloc & ym) == 0)
+	tile[yloc][xloc] = color_mean(tile[yloc][xloc],
+				      tile[yloc][xloc + d]);
+
+    barrier(CLK_LOCAL_MEM_FENCE);
+    if((yloc & m) == 0)
+      tile[yloc][xloc] = color_mean(tile[yloc][xloc],
+				    tile[yloc + d][xloc]);
+
+    ym = m;
+    m = (m << 1) | 1;
+    
+  }
+  barrier(CLK_LOCAL_MEM_FENCE);
+  out[y*DIM + x] = tile[0][0];
+       
 }
 
+__kernel void pixellize3 (__global unsigned* in, __global unsigned* out){
+
+  int x = get_global_id(0);
+  int y = get_global_id(1);
+  int xloc = get_local_id(0);
+  int yloc = get_local_id(1);
+  __local unsigned tile[PIX_BLOC][PIX_BLOC];
+  int4 sum = 0;
+  __local int4 color[TILEY / PIX_BLOC][TILEX / PIX_BLOC];
+
+  for(int l = 0; l < PIX_BLOC; ++l){
+    tile[xloc] = in[(y+l) * DIM +x];
+    barrier(CLK_LOCAL_MEM_FENCE);
+  
+  
+}
 
 ////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////// blur
