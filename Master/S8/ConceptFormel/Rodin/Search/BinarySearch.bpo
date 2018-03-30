@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="17">
+<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="1">
+<org.eventb.core.poIdentifier name="a" org.eventb.core.type="ℙ(ℤ×ℤ)"/>
+<org.eventb.core.poIdentifier name="n" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="x" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poPredicate name="y" org.eventb.core.predicate="n∈ℕ1" org.eventb.core.source="/Search/Array.buc|org.eventb.core.contextFile#Array|org.eventb.core.axiom#*"/>
+<org.eventb.core.poPredicate name="z" org.eventb.core.predicate="a∈1 ‥ n → ℤ" org.eventb.core.source="/Search/Array.buc|org.eventb.core.contextFile#Array|org.eventb.core.axiom#+"/>
+<org.eventb.core.poPredicate name="{" org.eventb.core.predicate="x∈ℤ" org.eventb.core.source="/Search/Array.buc|org.eventb.core.contextFile#Array|org.eventb.core.axiom#,"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/Search/BinarySearch.bpo|org.eventb.core.poFile#BinarySearch|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="5">
+<org.eventb.core.poIdentifier name="end" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="middle" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="result" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="start" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poPredicate name="resulu" org.eventb.core.predicate="result∈0 ‥ n" org.eventb.core.source="/Search/S0.bum|org.eventb.core.machineFile#S0|org.eventb.core.invariant#."/>
+<org.eventb.core.poPredicate name="resulv" org.eventb.core.predicate="(∃r⦂ℤ·r∈1 ‥ n∧a(r)=x)∨(∀i⦂ℤ·i∈1 ‥ n⇒a(i)≠x)" org.eventb.core.source="/Search/S0.bum|org.eventb.core.machineFile#S0|org.eventb.core.invariant#\/"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="INITIALISATION/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="17">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Search/BinarySearch.bpo|org.eventb.core.poFile#BinarySearch|org.eventb.core.poPredicateSet#EVTALLHYPresulu"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="1∈1 ‥ n" org.eventb.core.source="/Search/BinarySearch.bum|org.eventb.core.machineFile#BinarySearch|org.eventb.core.invariant#0"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Search/S0.bum|org.eventb.core.machineFile#S0|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Search/BinarySearch.bum|org.eventb.core.machineFile#BinarySearch|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Search/BinarySearch.bum|org.eventb.core.machineFile#BinarySearch|org.eventb.core.invariant#0"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Search/BinarySearch.bpo|org.eventb.core.poFile#BinarySearch|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Search/BinarySearch.bpo|org.eventb.core.poFile#BinarySearch|org.eventb.core.poSequent#INITIALISATION\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Search/BinarySearch.bpo|org.eventb.core.poFile#BinarySearch|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="17">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Search/BinarySearch.bpo|org.eventb.core.poFile#BinarySearch|org.eventb.core.poPredicateSet#EVTALLHYPresulu"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="n∈(n+1) ÷ 2 ‥ n" org.eventb.core.source="/Search/BinarySearch.bum|org.eventb.core.machineFile#BinarySearch|org.eventb.core.invariant#2"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Search/S0.bum|org.eventb.core.machineFile#S0|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Search/BinarySearch.bum|org.eventb.core.machineFile#BinarySearch|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Search/BinarySearch.bum|org.eventb.core.machineFile#BinarySearch|org.eventb.core.invariant#2"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Search/BinarySearch.bpo|org.eventb.core.poFile#BinarySearch|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Search/BinarySearch.bpo|org.eventb.core.poFile#BinarySearch|org.eventb.core.poSequent#INITIALISATION\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Search/BinarySearch.bpo|org.eventb.core.poFile#BinarySearch|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="17">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Search/BinarySearch.bpo|org.eventb.core.poFile#BinarySearch|org.eventb.core.poPredicateSet#EVTALLHYPresulu"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(n+1) ÷ 2∈1 ‥ n" org.eventb.core.source="/Search/BinarySearch.bum|org.eventb.core.machineFile#BinarySearch|org.eventb.core.invariant#3"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Search/S0.bum|org.eventb.core.machineFile#S0|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Search/BinarySearch.bum|org.eventb.core.machineFile#BinarySearch|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Search/BinarySearch.bum|org.eventb.core.machineFile#BinarySearch|org.eventb.core.invariant#3"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Search/BinarySearch.bpo|org.eventb.core.poFile#BinarySearch|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Search/BinarySearch.bpo|org.eventb.core.poFile#BinarySearch|org.eventb.core.poSequent#INITIALISATION\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Search/BinarySearch.bpo|org.eventb.core.poFile#BinarySearch|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="17">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Search/BinarySearch.bpo|org.eventb.core.poFile#BinarySearch|org.eventb.core.poPredicateSet#EVTALLHYPresulu"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀i⦂ℤ·i∈1 ‥ n⇒i∈1 ‥ n" org.eventb.core.source="/Search/BinarySearch.bum|org.eventb.core.machineFile#BinarySearch|org.eventb.core.invariant#5"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Search/S0.bum|org.eventb.core.machineFile#S0|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Search/BinarySearch.bum|org.eventb.core.machineFile#BinarySearch|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Search/BinarySearch.bum|org.eventb.core.machineFile#BinarySearch|org.eventb.core.invariant#5"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Search/BinarySearch.bpo|org.eventb.core.poFile#BinarySearch|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Search/BinarySearch.bpo|org.eventb.core.poFile#BinarySearch|org.eventb.core.poSequent#INITIALISATION\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Search/BinarySearch.bpo|org.eventb.core.poFile#BinarySearch|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/act3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="5">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Search/BinarySearch.bpo|org.eventb.core.poFile#BinarySearch|org.eventb.core.poPredicateSet#EVTALLHYPresulu"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="2≠0" org.eventb.core.source="/Search/BinarySearch.bum|org.eventb.core.machineFile#BinarySearch|org.eventb.core.event#'|org.eventb.core.action#("/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Search/BinarySearch.bum|org.eventb.core.machineFile#BinarySearch|org.eventb.core.event#'|org.eventb.core.action#("/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Search/BinarySearch.bpo|org.eventb.core.poFile#BinarySearch|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Search/BinarySearch.bpo|org.eventb.core.poFile#BinarySearch|org.eventb.core.poPredicateSet#EVTALLHYPresulu"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTresulu" org.eventb.core.parentSet="/Search/BinarySearch.bpo|org.eventb.core.poFile#BinarySearch|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="5">
+<org.eventb.core.poIdentifier name="end'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="result'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="middle'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="start'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPresulu" org.eventb.core.parentSet="/Search/BinarySearch.bpo|org.eventb.core.poFile#BinarySearch|org.eventb.core.poPredicateSet#EVTIDENTresulu" org.eventb.core.poStamp="5"/>
+<org.eventb.core.poSequent name="SplitLeft/grd1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="17">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Search/BinarySearch.bpo|org.eventb.core.poFile#BinarySearch|org.eventb.core.poPredicateSet#EVTIDENTresulv"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="middle∈dom(a)∧a∈ℤ ⇸ ℤ" org.eventb.core.source="/Search/BinarySearch.bum|org.eventb.core.machineFile#BinarySearch|org.eventb.core.event#4|org.eventb.core.guard#'"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Search/BinarySearch.bum|org.eventb.core.machineFile#BinarySearch|org.eventb.core.event#4|org.eventb.core.guard#'"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Search/BinarySearch.bpo|org.eventb.core.poFile#BinarySearch|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Search/BinarySearch.bpo|org.eventb.core.poFile#BinarySearch|org.eventb.core.poPredicateSet#EVTIDENTresulv"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="SplitLeft/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="17">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Search/BinarySearch.bpo|org.eventb.core.poFile#BinarySearch|org.eventb.core.poPredicateSet#EVTALLHYPresulv"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="middle∈start+(end − start) ÷ 2 ‥ n" org.eventb.core.source="/Search/BinarySearch.bum|org.eventb.core.machineFile#BinarySearch|org.eventb.core.invariant#2"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Search/BinarySearch.bum|org.eventb.core.machineFile#BinarySearch|org.eventb.core.event#4"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Search/BinarySearch.bum|org.eventb.core.machineFile#BinarySearch|org.eventb.core.invariant#2"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Search/BinarySearch.bpo|org.eventb.core.poFile#BinarySearch|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Search/BinarySearch.bpo|org.eventb.core.poFile#BinarySearch|org.eventb.core.poSequent#SplitLeft\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Search/BinarySearch.bpo|org.eventb.core.poFile#BinarySearch|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="SplitLeft/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="17">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Search/BinarySearch.bpo|org.eventb.core.poFile#BinarySearch|org.eventb.core.poPredicateSet#EVTALLHYPresulv"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="start+(end − start) ÷ 2∈start ‥ n" org.eventb.core.source="/Search/BinarySearch.bum|org.eventb.core.machineFile#BinarySearch|org.eventb.core.invariant#3"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Search/BinarySearch.bum|org.eventb.core.machineFile#BinarySearch|org.eventb.core.event#4"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Search/BinarySearch.bum|org.eventb.core.machineFile#BinarySearch|org.eventb.core.invariant#3"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Search/BinarySearch.bpo|org.eventb.core.poFile#BinarySearch|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Search/BinarySearch.bpo|org.eventb.core.poFile#BinarySearch|org.eventb.core.poSequent#SplitLeft\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Search/BinarySearch.bpo|org.eventb.core.poFile#BinarySearch|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="SplitLeft/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="17">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Search/BinarySearch.bpo|org.eventb.core.poFile#BinarySearch|org.eventb.core.poPredicateSet#EVTALLHYPresulv"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀i⦂ℤ·i∈1 ‥ n⇒i∈start ‥ middle" org.eventb.core.source="/Search/BinarySearch.bum|org.eventb.core.machineFile#BinarySearch|org.eventb.core.invariant#5"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Search/BinarySearch.bum|org.eventb.core.machineFile#BinarySearch|org.eventb.core.event#4"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Search/BinarySearch.bum|org.eventb.core.machineFile#BinarySearch|org.eventb.core.invariant#5"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Search/BinarySearch.bpo|org.eventb.core.poFile#BinarySearch|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Search/BinarySearch.bpo|org.eventb.core.poFile#BinarySearch|org.eventb.core.poSequent#SplitLeft\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Search/BinarySearch.bpo|org.eventb.core.poFile#BinarySearch|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="SplitLeft/act2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="17">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Search/BinarySearch.bpo|org.eventb.core.poFile#BinarySearch|org.eventb.core.poPredicateSet#EVTALLHYPresulv"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="2≠0" org.eventb.core.source="/Search/BinarySearch.bum|org.eventb.core.machineFile#BinarySearch|org.eventb.core.event#4|org.eventb.core.action#)"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Search/BinarySearch.bum|org.eventb.core.machineFile#BinarySearch|org.eventb.core.event#4|org.eventb.core.action#)"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Search/BinarySearch.bpo|org.eventb.core.poFile#BinarySearch|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Search/BinarySearch.bpo|org.eventb.core.poFile#BinarySearch|org.eventb.core.poPredicateSet#EVTALLHYPresulv"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTresulv" org.eventb.core.parentSet="/Search/BinarySearch.bpo|org.eventb.core.poFile#BinarySearch|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="17">
+<org.eventb.core.poIdentifier name="end'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="middle'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPresulv" org.eventb.core.parentSet="/Search/BinarySearch.bpo|org.eventb.core.poFile#BinarySearch|org.eventb.core.poPredicateSet#EVTIDENTresulv" org.eventb.core.poStamp="17">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="a(middle)&gt;x" org.eventb.core.source="/Search/BinarySearch.bum|org.eventb.core.machineFile#BinarySearch|org.eventb.core.event#4|org.eventb.core.guard#'"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="SplitRight/grd1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="17">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Search/BinarySearch.bpo|org.eventb.core.poFile#BinarySearch|org.eventb.core.poPredicateSet#EVTIDENTresulw"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="middle∈dom(a)∧a∈ℤ ⇸ ℤ" org.eventb.core.source="/Search/BinarySearch.bum|org.eventb.core.machineFile#BinarySearch|org.eventb.core.event#6|org.eventb.core.guard#'"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Search/BinarySearch.bum|org.eventb.core.machineFile#BinarySearch|org.eventb.core.event#6|org.eventb.core.guard#'"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Search/BinarySearch.bpo|org.eventb.core.poFile#BinarySearch|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Search/BinarySearch.bpo|org.eventb.core.poFile#BinarySearch|org.eventb.core.poPredicateSet#EVTIDENTresulw"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="SplitRight/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="17">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Search/BinarySearch.bpo|org.eventb.core.poFile#BinarySearch|org.eventb.core.poPredicateSet#EVTALLHYPresulw"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="middle∈1 ‥ n" org.eventb.core.source="/Search/BinarySearch.bum|org.eventb.core.machineFile#BinarySearch|org.eventb.core.invariant#0"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Search/BinarySearch.bum|org.eventb.core.machineFile#BinarySearch|org.eventb.core.event#6"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Search/BinarySearch.bum|org.eventb.core.machineFile#BinarySearch|org.eventb.core.invariant#0"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Search/BinarySearch.bpo|org.eventb.core.poFile#BinarySearch|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Search/BinarySearch.bpo|org.eventb.core.poFile#BinarySearch|org.eventb.core.poSequent#SplitRight\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Search/BinarySearch.bpo|org.eventb.core.poFile#BinarySearch|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="SplitRight/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="17">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Search/BinarySearch.bpo|org.eventb.core.poFile#BinarySearch|org.eventb.core.poPredicateSet#EVTALLHYPresulw"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="end∈start+(end − start) ÷ 2 ‥ n" org.eventb.core.source="/Search/BinarySearch.bum|org.eventb.core.machineFile#BinarySearch|org.eventb.core.invariant#2"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Search/BinarySearch.bum|org.eventb.core.machineFile#BinarySearch|org.eventb.core.event#6"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Search/BinarySearch.bum|org.eventb.core.machineFile#BinarySearch|org.eventb.core.invariant#2"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Search/BinarySearch.bpo|org.eventb.core.poFile#BinarySearch|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Search/BinarySearch.bpo|org.eventb.core.poFile#BinarySearch|org.eventb.core.poSequent#SplitRight\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Search/BinarySearch.bpo|org.eventb.core.poFile#BinarySearch|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="SplitRight/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="17">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Search/BinarySearch.bpo|org.eventb.core.poFile#BinarySearch|org.eventb.core.poPredicateSet#EVTALLHYPresulw"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="start+(end − start) ÷ 2∈middle ‥ n" org.eventb.core.source="/Search/BinarySearch.bum|org.eventb.core.machineFile#BinarySearch|org.eventb.core.invariant#3"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Search/BinarySearch.bum|org.eventb.core.machineFile#BinarySearch|org.eventb.core.event#6"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Search/BinarySearch.bum|org.eventb.core.machineFile#BinarySearch|org.eventb.core.invariant#3"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Search/BinarySearch.bpo|org.eventb.core.poFile#BinarySearch|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Search/BinarySearch.bpo|org.eventb.core.poFile#BinarySearch|org.eventb.core.poSequent#SplitRight\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Search/BinarySearch.bpo|org.eventb.core.poFile#BinarySearch|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="SplitRight/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="17">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Search/BinarySearch.bpo|org.eventb.core.poFile#BinarySearch|org.eventb.core.poPredicateSet#EVTALLHYPresulw"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀i⦂ℤ·i∈1 ‥ n⇒i∈middle ‥ end" org.eventb.core.source="/Search/BinarySearch.bum|org.eventb.core.machineFile#BinarySearch|org.eventb.core.invariant#5"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Search/BinarySearch.bum|org.eventb.core.machineFile#BinarySearch|org.eventb.core.event#6"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Search/BinarySearch.bum|org.eventb.core.machineFile#BinarySearch|org.eventb.core.invariant#5"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Search/BinarySearch.bpo|org.eventb.core.poFile#BinarySearch|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Search/BinarySearch.bpo|org.eventb.core.poFile#BinarySearch|org.eventb.core.poSequent#SplitRight\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Search/BinarySearch.bpo|org.eventb.core.poFile#BinarySearch|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="SplitRight/act2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="17">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Search/BinarySearch.bpo|org.eventb.core.poFile#BinarySearch|org.eventb.core.poPredicateSet#EVTALLHYPresulw"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="2≠0" org.eventb.core.source="/Search/BinarySearch.bum|org.eventb.core.machineFile#BinarySearch|org.eventb.core.event#6|org.eventb.core.action#)"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Search/BinarySearch.bum|org.eventb.core.machineFile#BinarySearch|org.eventb.core.event#6|org.eventb.core.action#)"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Search/BinarySearch.bpo|org.eventb.core.poFile#BinarySearch|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Search/BinarySearch.bpo|org.eventb.core.poFile#BinarySearch|org.eventb.core.poPredicateSet#EVTALLHYPresulw"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTresulw" org.eventb.core.parentSet="/Search/BinarySearch.bpo|org.eventb.core.poFile#BinarySearch|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="17">
+<org.eventb.core.poIdentifier name="middle'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="start'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPresulw" org.eventb.core.parentSet="/Search/BinarySearch.bpo|org.eventb.core.poFile#BinarySearch|org.eventb.core.poPredicateSet#EVTIDENTresulw" org.eventb.core.poStamp="17">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="a(middle)&lt;x" org.eventb.core.source="/Search/BinarySearch.bum|org.eventb.core.machineFile#BinarySearch|org.eventb.core.event#6|org.eventb.core.guard#'"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="SUCCESS/grd1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="17">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Search/BinarySearch.bpo|org.eventb.core.poFile#BinarySearch|org.eventb.core.poPredicateSet#EVTIDENTresulx"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="middle∈dom(a)∧a∈ℤ ⇸ ℤ" org.eventb.core.source="/Search/BinarySearch.bum|org.eventb.core.machineFile#BinarySearch|org.eventb.core.event#,|org.eventb.core.guard#internal1"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Search/BinarySearch.bum|org.eventb.core.machineFile#BinarySearch|org.eventb.core.event#,|org.eventb.core.guard#internal1"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Search/BinarySearch.bpo|org.eventb.core.poFile#BinarySearch|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Search/BinarySearch.bpo|org.eventb.core.poFile#BinarySearch|org.eventb.core.poPredicateSet#EVTIDENTresulx"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="SUCCESS/grd1/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="17">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Search/BinarySearch.bpo|org.eventb.core.poFile#BinarySearch|org.eventb.core.poPredicateSet#EVTALLHYPresulx"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="middle∈1 ‥ n" org.eventb.core.source="/Search/S0.bum|org.eventb.core.machineFile#S0|org.eventb.core.event#+|org.eventb.core.guard#("/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Search/S0.bum|org.eventb.core.machineFile#S0|org.eventb.core.event#+"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Search/S0.bum|org.eventb.core.machineFile#S0|org.eventb.core.event#+|org.eventb.core.guard#("/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Search/BinarySearch.bum|org.eventb.core.machineFile#BinarySearch|org.eventb.core.event#,"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Search/BinarySearch.bpo|org.eventb.core.poFile#BinarySearch|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Search/BinarySearch.bpo|org.eventb.core.poFile#BinarySearch|org.eventb.core.poSequent#SUCCESS\/grd1\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="SUCCESS/grd2/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="17">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Search/BinarySearch.bpo|org.eventb.core.poFile#BinarySearch|org.eventb.core.poPredicateSet#EVTALLHYPresulx"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="a(middle)=x" org.eventb.core.source="/Search/S0.bum|org.eventb.core.machineFile#S0|org.eventb.core.event#+|org.eventb.core.guard#)"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Search/S0.bum|org.eventb.core.machineFile#S0|org.eventb.core.event#+"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Search/S0.bum|org.eventb.core.machineFile#S0|org.eventb.core.event#+|org.eventb.core.guard#)"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Search/BinarySearch.bum|org.eventb.core.machineFile#BinarySearch|org.eventb.core.event#,"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Search/BinarySearch.bpo|org.eventb.core.poFile#BinarySearch|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Search/BinarySearch.bpo|org.eventb.core.poFile#BinarySearch|org.eventb.core.poSequent#SUCCESS\/grd2\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="SUCCESS/act1/SIM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Action simulation" org.eventb.core.poStamp="17">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Search/BinarySearch.bpo|org.eventb.core.poFile#BinarySearch|org.eventb.core.poPredicateSet#EVTALLHYPresulx"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="middle=middle" org.eventb.core.source="/Search/S0.bum|org.eventb.core.machineFile#S0|org.eventb.core.event#+|org.eventb.core.action#*"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Search/S0.bum|org.eventb.core.machineFile#S0|org.eventb.core.event#+"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Search/S0.bum|org.eventb.core.machineFile#S0|org.eventb.core.event#+|org.eventb.core.action#*"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Search/BinarySearch.bum|org.eventb.core.machineFile#BinarySearch|org.eventb.core.event#,"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Search/BinarySearch.bpo|org.eventb.core.poFile#BinarySearch|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Search/BinarySearch.bpo|org.eventb.core.poFile#BinarySearch|org.eventb.core.poSequent#SUCCESS\/act1\/SIM|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTresulx" org.eventb.core.parentSet="/Search/BinarySearch.bpo|org.eventb.core.poFile#BinarySearch|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="17">
+<org.eventb.core.poIdentifier name="r" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="result'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPresulx" org.eventb.core.parentSet="/Search/BinarySearch.bpo|org.eventb.core.poFile#BinarySearch|org.eventb.core.poPredicateSet#EVTIDENTresulx" org.eventb.core.poStamp="17">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="a(middle)=x" org.eventb.core.source="/Search/BinarySearch.bum|org.eventb.core.machineFile#BinarySearch|org.eventb.core.event#,|org.eventb.core.guard#internal1"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="Failure/grd1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="17">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Search/BinarySearch.bpo|org.eventb.core.poFile#BinarySearch|org.eventb.core.poPredicateSet#ALLHYP"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="start=end⇒start∈dom(a)∧a∈ℤ ⇸ ℤ" org.eventb.core.source="/Search/BinarySearch.bum|org.eventb.core.machineFile#BinarySearch|org.eventb.core.event#-|org.eventb.core.guard#'"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Search/BinarySearch.bum|org.eventb.core.machineFile#BinarySearch|org.eventb.core.event#-|org.eventb.core.guard#'"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Search/BinarySearch.bpo|org.eventb.core.poFile#BinarySearch|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Search/BinarySearch.bpo|org.eventb.core.poFile#BinarySearch|org.eventb.core.poPredicateSet#ALLHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="Failure/grd1/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="17">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Search/BinarySearch.bpo|org.eventb.core.poFile#BinarySearch|org.eventb.core.poPredicateSet#EVTALLHYPresuly"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀i⦂ℤ·i∈1 ‥ n⇒a(i)≠x" org.eventb.core.source="/Search/S0.bum|org.eventb.core.machineFile#S0|org.eventb.core.event#,|org.eventb.core.guard#'"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Search/S0.bum|org.eventb.core.machineFile#S0|org.eventb.core.event#,"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Search/S0.bum|org.eventb.core.machineFile#S0|org.eventb.core.event#,|org.eventb.core.guard#'"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Search/BinarySearch.bum|org.eventb.core.machineFile#BinarySearch|org.eventb.core.event#-"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Search/BinarySearch.bpo|org.eventb.core.poFile#BinarySearch|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Search/BinarySearch.bpo|org.eventb.core.poFile#BinarySearch|org.eventb.core.poSequent#Failure\/grd1\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTALLHYPresuly" org.eventb.core.parentSet="/Search/BinarySearch.bpo|org.eventb.core.poFile#BinarySearch|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="17">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="start=end∧a(start)≠x" org.eventb.core.source="/Search/BinarySearch.bum|org.eventb.core.machineFile#BinarySearch|org.eventb.core.event#-|org.eventb.core.guard#'"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Search/BinarySearch.bpo|org.eventb.core.poFile#BinarySearch|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="17">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="start∈1 ‥ n" org.eventb.core.source="/Search/BinarySearch.bum|org.eventb.core.machineFile#BinarySearch|org.eventb.core.invariant#0"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="end∈middle ‥ n" org.eventb.core.source="/Search/BinarySearch.bum|org.eventb.core.machineFile#BinarySearch|org.eventb.core.invariant#2"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="middle∈start ‥ n" org.eventb.core.source="/Search/BinarySearch.bum|org.eventb.core.machineFile#BinarySearch|org.eventb.core.invariant#3"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="∀i⦂ℤ·i∈1 ‥ n⇒i∈start ‥ end" org.eventb.core.source="/Search/BinarySearch.bum|org.eventb.core.machineFile#BinarySearch|org.eventb.core.invariant#5"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

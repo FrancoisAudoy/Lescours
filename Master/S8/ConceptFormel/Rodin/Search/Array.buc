@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd" version="3">
+<org.eventb.core.constant name="'" org.eventb.core.comment="array size" org.eventb.core.identifier="n"/>
+<org.eventb.core.constant name="(" org.eventb.core.comment="the array to saerch in" org.eventb.core.identifier="a"/>
+<org.eventb.core.constant name=")" org.eventb.core.comment="value to search in a" org.eventb.core.identifier="x"/>
+<org.eventb.core.axiom name="*" org.eventb.core.label="axm1" org.eventb.core.predicate="n∈ℕ1 "/>
+<org.eventb.core.axiom name="+" org.eventb.core.label="axm2" org.eventb.core.predicate="a∈1‥n → ℤ "/>
+<org.eventb.core.axiom name="," org.eventb.core.label="axm3" org.eventb.core.predicate="x∈ℤ "/>
+</org.eventb.core.contextFile>

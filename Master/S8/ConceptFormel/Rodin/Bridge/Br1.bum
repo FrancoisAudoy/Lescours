@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
+<org.eventb.core.refinesMachine name="'" org.eventb.core.target="Br0"/>
+<org.eventb.core.seesContext name="(" org.eventb.core.target="Maximum"/>
+<org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="'" org.eventb.core.assignment="nb_M2I,nb_I2M,nb_I ≔ 0,0,0" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="+" org.eventb.core.comment="A car leaves the mainland" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Main_out">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="Main_out"/>
+<org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="nb_M2I + nb_I &lt;maxi"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="nb_M2I ≔ nb_M2I + 1" org.eventb.core.label="act1"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd2" org.eventb.core.predicate="nb_I2M=0"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="," org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Main_in">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="Main_in"/>
+<org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="nb_I2M &gt; 0"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="nb_I2M ≔ nb_I2M − 1" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name="-" org.eventb.core.comment="cars on the bridge, from mainland to the island" org.eventb.core.identifier="nb_M2I"/>
+<org.eventb.core.variable name="." org.eventb.core.comment="cars on the bridge, from island to mainland" org.eventb.core.identifier="nb_I2M"/>
+<org.eventb.core.invariant name="/" org.eventb.core.label="inv1" org.eventb.core.predicate="nb_M2I ∈ 0‥maxi"/>
+<org.eventb.core.variable name="0" org.eventb.core.comment="cars staying on the island" org.eventb.core.identifier="nb_I"/>
+<org.eventb.core.invariant name="1" org.eventb.core.label="inv2" org.eventb.core.predicate="nb_I2M ∈ 0‥maxi"/>
+<org.eventb.core.invariant name="2" org.eventb.core.label="inv3" org.eventb.core.predicate="nb_I ∈ 0‥maxi"/>
+<org.eventb.core.invariant name="3" org.eventb.core.label="inv4" org.eventb.core.predicate="nb_M2I + nb_I2M + nb_I = nb_cars"/>
+<org.eventb.core.invariant name="4" org.eventb.core.comment="security !" org.eventb.core.label="inv5" org.eventb.core.predicate="nb_M2I = 0 ∨ nb_I2M = 0"/>
+<org.eventb.core.event name="5" org.eventb.core.convergence="1" org.eventb.core.extended="false" org.eventb.core.label="Island_in ">
+<org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="nb_M2I&gt;0"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="nb_M2I ≔ nb_M2I − 1" org.eventb.core.label="act1"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="nb_I ≔ nb_I + 1" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="6" org.eventb.core.convergence="1" org.eventb.core.extended="false" org.eventb.core.label="Island_out ">
+<org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="nb_I&gt;0"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd2" org.eventb.core.predicate="nb_M2I = 0"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="nb_I ≔ nb_I −1" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="nb_I2M ≔ nb_I2M + 1" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.invariant name="7" org.eventb.core.label="DLF" org.eventb.core.predicate="(nb_M2I + nb_I &lt;maxi ∧ nb_I2M=0) ∨ &#10;nb_I2M &gt; 0 ∨ nb_M2I&gt;0&#10;∨ (nb_I&gt;0 ∧ nb_M2I = 0)&#10;" org.eventb.core.theorem="true"/>
+<org.eventb.core.variant name="8" org.eventb.core.expression="4∗nb_M2I + 2∗nb_I + nb_I2M"/>
+</org.eventb.core.machineFile>
