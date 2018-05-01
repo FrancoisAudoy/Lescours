@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="1">
+<org.eventb.core.poFile org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="maxi" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poPredicate name="maxj" org.eventb.core.predicate="maxi∈ℕ1" org.eventb.core.source="/Counter/ValMax.buc|org.eventb.core.contextFile#ValMax|org.eventb.core.axiom#("/>
@@ -25,7 +25,7 @@
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Counter/Display999.bum|org.eventb.core.machineFile#Display999|org.eventb.core.invariant#7"/>
 <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Counter/Display999.bpo|org.eventb.core.poFile#Display999|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Counter/Display999.bpo|org.eventb.core.poFile#Display999|org.eventb.core.poPredicateSet#HYPValMax99?"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="INITIALISATION/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="1">
+<org.eventb.core.poSequent name="INITIALISATION/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Counter/Display999.bpo|org.eventb.core.poFile#Display999|org.eventb.core.poPredicateSet#EVTALLHYPValMax99A"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0∈0 ‥ 9" org.eventb.core.source="/Counter/Display999.bum|org.eventb.core.machineFile#Display999|org.eventb.core.invariant#."/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Counter/C0.bum|org.eventb.core.machineFile#C0|org.eventb.core.event#'"/>
@@ -34,7 +34,7 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Counter/Display999.bpo|org.eventb.core.poFile#Display999|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Counter/Display999.bpo|org.eventb.core.poFile#Display999|org.eventb.core.poSequent#INITIALISATION\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Counter/Display999.bpo|org.eventb.core.poFile#Display999|org.eventb.core.poPredicateSet#HYPValMax99&gt;|org.eventb.core.poPredicate#PRD0"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="INITIALISATION/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="1">
+<org.eventb.core.poSequent name="INITIALISATION/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Counter/Display999.bpo|org.eventb.core.poFile#Display999|org.eventb.core.poPredicateSet#EVTALLHYPValMax99A"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0∈0 ‥ 9" org.eventb.core.source="/Counter/Display999.bum|org.eventb.core.machineFile#Display999|org.eventb.core.invariant#0"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Counter/C0.bum|org.eventb.core.machineFile#C0|org.eventb.core.event#'"/>
@@ -43,7 +43,7 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Counter/Display999.bpo|org.eventb.core.poFile#Display999|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Counter/Display999.bpo|org.eventb.core.poFile#Display999|org.eventb.core.poSequent#INITIALISATION\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Counter/Display999.bpo|org.eventb.core.poFile#Display999|org.eventb.core.poPredicateSet#HYPValMax99&gt;|org.eventb.core.poPredicate#PRD1"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="INITIALISATION/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="1">
+<org.eventb.core.poSequent name="INITIALISATION/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Counter/Display999.bpo|org.eventb.core.poFile#Display999|org.eventb.core.poPredicateSet#EVTALLHYPValMax99A"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0∈0 ‥ 9" org.eventb.core.source="/Counter/Display999.bum|org.eventb.core.machineFile#Display999|org.eventb.core.invariant#2"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Counter/C0.bum|org.eventb.core.machineFile#C0|org.eventb.core.event#'"/>
@@ -52,7 +52,7 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Counter/Display999.bpo|org.eventb.core.poFile#Display999|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Counter/Display999.bpo|org.eventb.core.poFile#Display999|org.eventb.core.poSequent#INITIALISATION\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Counter/Display999.bpo|org.eventb.core.poFile#Display999|org.eventb.core.poPredicateSet#HYPValMax99&gt;|org.eventb.core.poPredicate#PRD2"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="INITIALISATION/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="1">
+<org.eventb.core.poSequent name="INITIALISATION/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Counter/Display999.bpo|org.eventb.core.poFile#Display999|org.eventb.core.poPredicateSet#EVTALLHYPValMax99A"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0=100∗0+10∗0+0" org.eventb.core.source="/Counter/Display999.bum|org.eventb.core.machineFile#Display999|org.eventb.core.invariant#3"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Counter/C0.bum|org.eventb.core.machineFile#C0|org.eventb.core.event#'"/>
@@ -61,14 +61,14 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Counter/Display999.bpo|org.eventb.core.poFile#Display999|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Counter/Display999.bpo|org.eventb.core.poFile#Display999|org.eventb.core.poSequent#INITIALISATION\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Counter/Display999.bpo|org.eventb.core.poFile#Display999|org.eventb.core.poPredicateSet#HYPValMax99&gt;|org.eventb.core.poPredicate#PRD3"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poPredicateSet name="EVTIDENTValMax99A" org.eventb.core.parentSet="/Counter/Display999.bpo|org.eventb.core.poFile#Display999|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="EVTIDENTValMax99A" org.eventb.core.parentSet="/Counter/Display999.bpo|org.eventb.core.poFile#Display999|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="c'" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="u'" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="d'" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="i'" org.eventb.core.type="ℤ"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPValMax99A" org.eventb.core.parentSet="/Counter/Display999.bpo|org.eventb.core.poFile#Display999|org.eventb.core.poPredicateSet#EVTIDENTValMax99A" org.eventb.core.poStamp="1"/>
-<org.eventb.core.poSequent name="incru/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="EVTALLHYPValMax99A" org.eventb.core.parentSet="/Counter/Display999.bpo|org.eventb.core.poFile#Display999|org.eventb.core.poPredicateSet#EVTIDENTValMax99A" org.eventb.core.poStamp="0"/>
+<org.eventb.core.poSequent name="incru/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Counter/Display999.bpo|org.eventb.core.poFile#Display999|org.eventb.core.poPredicateSet#EVTALLHYPValMax99B"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="u+1∈0 ‥ 9" org.eventb.core.source="/Counter/Display999.bum|org.eventb.core.machineFile#Display999|org.eventb.core.invariant#."/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Counter/C0.bum|org.eventb.core.machineFile#C0|org.eventb.core.event#+"/>
@@ -77,7 +77,7 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Counter/Display999.bpo|org.eventb.core.poFile#Display999|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Counter/Display999.bpo|org.eventb.core.poFile#Display999|org.eventb.core.poSequent#incru\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Counter/Display999.bpo|org.eventb.core.poFile#Display999|org.eventb.core.poPredicateSet#HYPValMax99&gt;|org.eventb.core.poPredicate#PRD0"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="incru/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="1">
+<org.eventb.core.poSequent name="incru/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Counter/Display999.bpo|org.eventb.core.poFile#Display999|org.eventb.core.poPredicateSet#EVTALLHYPValMax99B"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="i+1=100∗c+10∗d+(u+1)" org.eventb.core.source="/Counter/Display999.bum|org.eventb.core.machineFile#Display999|org.eventb.core.invariant#3"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Counter/C0.bum|org.eventb.core.machineFile#C0|org.eventb.core.event#+"/>
@@ -86,7 +86,7 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Counter/Display999.bpo|org.eventb.core.poFile#Display999|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Counter/Display999.bpo|org.eventb.core.poFile#Display999|org.eventb.core.poSequent#incru\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Counter/Display999.bpo|org.eventb.core.poFile#Display999|org.eventb.core.poPredicateSet#HYPValMax99&gt;|org.eventb.core.poPredicate#PRD3"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="incru/grd1/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="1">
+<org.eventb.core.poSequent name="incru/grd1/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Counter/Display999.bpo|org.eventb.core.poFile#Display999|org.eventb.core.poPredicateSet#EVTALLHYPValMax99B"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="i&lt;maxi" org.eventb.core.source="/Counter/C0.bum|org.eventb.core.machineFile#C0|org.eventb.core.event#+|org.eventb.core.guard#'"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Counter/C0.bum|org.eventb.core.machineFile#C0|org.eventb.core.event#+"/>
@@ -94,14 +94,14 @@
 <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Counter/Display999.bum|org.eventb.core.machineFile#Display999|org.eventb.core.event#+"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Counter/Display999.bpo|org.eventb.core.poFile#Display999|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Counter/Display999.bpo|org.eventb.core.poFile#Display999|org.eventb.core.poSequent#incru\/grd1\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poPredicateSet name="EVTIDENTValMax99B" org.eventb.core.parentSet="/Counter/Display999.bpo|org.eventb.core.poFile#Display999|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="EVTIDENTValMax99B" org.eventb.core.parentSet="/Counter/Display999.bpo|org.eventb.core.poFile#Display999|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="u'" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="i'" org.eventb.core.type="ℤ"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPValMax99B" org.eventb.core.parentSet="/Counter/Display999.bpo|org.eventb.core.poFile#Display999|org.eventb.core.poPredicateSet#EVTIDENTValMax99B" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="EVTALLHYPValMax99B" org.eventb.core.parentSet="/Counter/Display999.bpo|org.eventb.core.poFile#Display999|org.eventb.core.poPredicateSet#EVTIDENTValMax99B" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="u&lt;9" org.eventb.core.source="/Counter/Display999.bum|org.eventb.core.machineFile#Display999|org.eventb.core.event#+|org.eventb.core.guard#'"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="reset/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="1">
+<org.eventb.core.poSequent name="reset/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Counter/Display999.bpo|org.eventb.core.poFile#Display999|org.eventb.core.poPredicateSet#EVTALLHYPValMax99C"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0∈0 ‥ 9" org.eventb.core.source="/Counter/Display999.bum|org.eventb.core.machineFile#Display999|org.eventb.core.invariant#."/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Counter/C0.bum|org.eventb.core.machineFile#C0|org.eventb.core.event#,"/>
@@ -110,7 +110,7 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Counter/Display999.bpo|org.eventb.core.poFile#Display999|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Counter/Display999.bpo|org.eventb.core.poFile#Display999|org.eventb.core.poSequent#reset\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Counter/Display999.bpo|org.eventb.core.poFile#Display999|org.eventb.core.poPredicateSet#HYPValMax99&gt;|org.eventb.core.poPredicate#PRD0"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="reset/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="1">
+<org.eventb.core.poSequent name="reset/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Counter/Display999.bpo|org.eventb.core.poFile#Display999|org.eventb.core.poPredicateSet#EVTALLHYPValMax99C"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0∈0 ‥ 9" org.eventb.core.source="/Counter/Display999.bum|org.eventb.core.machineFile#Display999|org.eventb.core.invariant#0"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Counter/C0.bum|org.eventb.core.machineFile#C0|org.eventb.core.event#,"/>
@@ -119,7 +119,7 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Counter/Display999.bpo|org.eventb.core.poFile#Display999|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Counter/Display999.bpo|org.eventb.core.poFile#Display999|org.eventb.core.poSequent#reset\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Counter/Display999.bpo|org.eventb.core.poFile#Display999|org.eventb.core.poPredicateSet#HYPValMax99&gt;|org.eventb.core.poPredicate#PRD1"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="reset/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="1">
+<org.eventb.core.poSequent name="reset/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Counter/Display999.bpo|org.eventb.core.poFile#Display999|org.eventb.core.poPredicateSet#EVTALLHYPValMax99C"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0∈0 ‥ 9" org.eventb.core.source="/Counter/Display999.bum|org.eventb.core.machineFile#Display999|org.eventb.core.invariant#2"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Counter/C0.bum|org.eventb.core.machineFile#C0|org.eventb.core.event#,"/>
@@ -128,7 +128,7 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Counter/Display999.bpo|org.eventb.core.poFile#Display999|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Counter/Display999.bpo|org.eventb.core.poFile#Display999|org.eventb.core.poSequent#reset\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Counter/Display999.bpo|org.eventb.core.poFile#Display999|org.eventb.core.poPredicateSet#HYPValMax99&gt;|org.eventb.core.poPredicate#PRD2"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="reset/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="1">
+<org.eventb.core.poSequent name="reset/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Counter/Display999.bpo|org.eventb.core.poFile#Display999|org.eventb.core.poPredicateSet#EVTALLHYPValMax99C"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0=100∗0+10∗0+0" org.eventb.core.source="/Counter/Display999.bum|org.eventb.core.machineFile#Display999|org.eventb.core.invariant#3"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Counter/C0.bum|org.eventb.core.machineFile#C0|org.eventb.core.event#,"/>
@@ -137,7 +137,7 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Counter/Display999.bpo|org.eventb.core.poFile#Display999|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Counter/Display999.bpo|org.eventb.core.poFile#Display999|org.eventb.core.poSequent#reset\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Counter/Display999.bpo|org.eventb.core.poFile#Display999|org.eventb.core.poPredicateSet#HYPValMax99&gt;|org.eventb.core.poPredicate#PRD3"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="reset/grd1/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="1">
+<org.eventb.core.poSequent name="reset/grd1/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Counter/Display999.bpo|org.eventb.core.poFile#Display999|org.eventb.core.poPredicateSet#EVTALLHYPValMax99C"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="i&gt;0" org.eventb.core.source="/Counter/C0.bum|org.eventb.core.machineFile#C0|org.eventb.core.event#,|org.eventb.core.guard#'"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Counter/C0.bum|org.eventb.core.machineFile#C0|org.eventb.core.event#,"/>
@@ -145,16 +145,16 @@
 <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Counter/Display999.bum|org.eventb.core.machineFile#Display999|org.eventb.core.event#,"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Counter/Display999.bpo|org.eventb.core.poFile#Display999|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Counter/Display999.bpo|org.eventb.core.poFile#Display999|org.eventb.core.poSequent#reset\/grd1\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poPredicateSet name="EVTIDENTValMax99C" org.eventb.core.parentSet="/Counter/Display999.bpo|org.eventb.core.poFile#Display999|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="EVTIDENTValMax99C" org.eventb.core.parentSet="/Counter/Display999.bpo|org.eventb.core.poFile#Display999|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="c'" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="u'" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="d'" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="i'" org.eventb.core.type="ℤ"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPValMax99C" org.eventb.core.parentSet="/Counter/Display999.bpo|org.eventb.core.poFile#Display999|org.eventb.core.poPredicateSet#EVTIDENTValMax99C" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="EVTALLHYPValMax99C" org.eventb.core.parentSet="/Counter/Display999.bpo|org.eventb.core.poFile#Display999|org.eventb.core.poPredicateSet#EVTIDENTValMax99C" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="u&gt;0∨d&gt;0∨c&gt;0" org.eventb.core.source="/Counter/Display999.bum|org.eventb.core.machineFile#Display999|org.eventb.core.event#,|org.eventb.core.guard#("/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="incrd/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="1">
+<org.eventb.core.poSequent name="incrd/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Counter/Display999.bpo|org.eventb.core.poFile#Display999|org.eventb.core.poPredicateSet#EVTALLHYPValMax99D"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0∈0 ‥ 9" org.eventb.core.source="/Counter/Display999.bum|org.eventb.core.machineFile#Display999|org.eventb.core.invariant#."/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Counter/C0.bum|org.eventb.core.machineFile#C0|org.eventb.core.event#+"/>
@@ -163,7 +163,7 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Counter/Display999.bpo|org.eventb.core.poFile#Display999|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Counter/Display999.bpo|org.eventb.core.poFile#Display999|org.eventb.core.poSequent#incrd\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Counter/Display999.bpo|org.eventb.core.poFile#Display999|org.eventb.core.poPredicateSet#HYPValMax99&gt;|org.eventb.core.poPredicate#PRD0"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="incrd/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="1">
+<org.eventb.core.poSequent name="incrd/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Counter/Display999.bpo|org.eventb.core.poFile#Display999|org.eventb.core.poPredicateSet#EVTALLHYPValMax99D"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="d+1∈0 ‥ 9" org.eventb.core.source="/Counter/Display999.bum|org.eventb.core.machineFile#Display999|org.eventb.core.invariant#0"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Counter/C0.bum|org.eventb.core.machineFile#C0|org.eventb.core.event#+"/>
@@ -172,7 +172,7 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Counter/Display999.bpo|org.eventb.core.poFile#Display999|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Counter/Display999.bpo|org.eventb.core.poFile#Display999|org.eventb.core.poSequent#incrd\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Counter/Display999.bpo|org.eventb.core.poFile#Display999|org.eventb.core.poPredicateSet#HYPValMax99&gt;|org.eventb.core.poPredicate#PRD1"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="incrd/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="1">
+<org.eventb.core.poSequent name="incrd/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Counter/Display999.bpo|org.eventb.core.poFile#Display999|org.eventb.core.poPredicateSet#EVTALLHYPValMax99D"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="i+1=100∗c+10∗(d+1)+0" org.eventb.core.source="/Counter/Display999.bum|org.eventb.core.machineFile#Display999|org.eventb.core.invariant#3"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Counter/C0.bum|org.eventb.core.machineFile#C0|org.eventb.core.event#+"/>
@@ -181,7 +181,7 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Counter/Display999.bpo|org.eventb.core.poFile#Display999|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Counter/Display999.bpo|org.eventb.core.poFile#Display999|org.eventb.core.poSequent#incrd\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Counter/Display999.bpo|org.eventb.core.poFile#Display999|org.eventb.core.poPredicateSet#HYPValMax99&gt;|org.eventb.core.poPredicate#PRD3"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="incrd/grd1/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="1">
+<org.eventb.core.poSequent name="incrd/grd1/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Counter/Display999.bpo|org.eventb.core.poFile#Display999|org.eventb.core.poPredicateSet#EVTALLHYPValMax99D"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="i&lt;maxi" org.eventb.core.source="/Counter/C0.bum|org.eventb.core.machineFile#C0|org.eventb.core.event#+|org.eventb.core.guard#'"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Counter/C0.bum|org.eventb.core.machineFile#C0|org.eventb.core.event#+"/>
@@ -189,16 +189,16 @@
 <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Counter/Display999.bum|org.eventb.core.machineFile#Display999|org.eventb.core.event#4"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Counter/Display999.bpo|org.eventb.core.poFile#Display999|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Counter/Display999.bpo|org.eventb.core.poFile#Display999|org.eventb.core.poSequent#incrd\/grd1\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poPredicateSet name="EVTIDENTValMax99D" org.eventb.core.parentSet="/Counter/Display999.bpo|org.eventb.core.poFile#Display999|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="EVTIDENTValMax99D" org.eventb.core.parentSet="/Counter/Display999.bpo|org.eventb.core.poFile#Display999|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="u'" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="d'" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="i'" org.eventb.core.type="ℤ"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPValMax99D" org.eventb.core.parentSet="/Counter/Display999.bpo|org.eventb.core.poFile#Display999|org.eventb.core.poPredicateSet#EVTIDENTValMax99D" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="EVTALLHYPValMax99D" org.eventb.core.parentSet="/Counter/Display999.bpo|org.eventb.core.poFile#Display999|org.eventb.core.poPredicateSet#EVTIDENTValMax99D" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="u=9" org.eventb.core.source="/Counter/Display999.bum|org.eventb.core.machineFile#Display999|org.eventb.core.event#4|org.eventb.core.guard#("/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="d&lt;9" org.eventb.core.source="/Counter/Display999.bum|org.eventb.core.machineFile#Display999|org.eventb.core.event#4|org.eventb.core.guard#)"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="incrc/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="1">
+<org.eventb.core.poSequent name="incrc/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Counter/Display999.bpo|org.eventb.core.poFile#Display999|org.eventb.core.poPredicateSet#EVTALLHYPValMax99E"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0∈0 ‥ 9" org.eventb.core.source="/Counter/Display999.bum|org.eventb.core.machineFile#Display999|org.eventb.core.invariant#."/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Counter/C0.bum|org.eventb.core.machineFile#C0|org.eventb.core.event#+"/>
@@ -207,7 +207,7 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Counter/Display999.bpo|org.eventb.core.poFile#Display999|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Counter/Display999.bpo|org.eventb.core.poFile#Display999|org.eventb.core.poSequent#incrc\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Counter/Display999.bpo|org.eventb.core.poFile#Display999|org.eventb.core.poPredicateSet#HYPValMax99&gt;|org.eventb.core.poPredicate#PRD0"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="incrc/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="1">
+<org.eventb.core.poSequent name="incrc/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Counter/Display999.bpo|org.eventb.core.poFile#Display999|org.eventb.core.poPredicateSet#EVTALLHYPValMax99E"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0∈0 ‥ 9" org.eventb.core.source="/Counter/Display999.bum|org.eventb.core.machineFile#Display999|org.eventb.core.invariant#0"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Counter/C0.bum|org.eventb.core.machineFile#C0|org.eventb.core.event#+"/>
@@ -216,7 +216,7 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Counter/Display999.bpo|org.eventb.core.poFile#Display999|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Counter/Display999.bpo|org.eventb.core.poFile#Display999|org.eventb.core.poSequent#incrc\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Counter/Display999.bpo|org.eventb.core.poFile#Display999|org.eventb.core.poPredicateSet#HYPValMax99&gt;|org.eventb.core.poPredicate#PRD1"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="incrc/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="1">
+<org.eventb.core.poSequent name="incrc/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Counter/Display999.bpo|org.eventb.core.poFile#Display999|org.eventb.core.poPredicateSet#EVTALLHYPValMax99E"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="c+1∈0 ‥ 9" org.eventb.core.source="/Counter/Display999.bum|org.eventb.core.machineFile#Display999|org.eventb.core.invariant#2"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Counter/C0.bum|org.eventb.core.machineFile#C0|org.eventb.core.event#+"/>
@@ -225,7 +225,7 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Counter/Display999.bpo|org.eventb.core.poFile#Display999|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Counter/Display999.bpo|org.eventb.core.poFile#Display999|org.eventb.core.poSequent#incrc\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Counter/Display999.bpo|org.eventb.core.poFile#Display999|org.eventb.core.poPredicateSet#HYPValMax99&gt;|org.eventb.core.poPredicate#PRD2"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="incrc/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="1">
+<org.eventb.core.poSequent name="incrc/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Counter/Display999.bpo|org.eventb.core.poFile#Display999|org.eventb.core.poPredicateSet#EVTALLHYPValMax99E"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="i+1=100∗(c+1)+10∗0+0" org.eventb.core.source="/Counter/Display999.bum|org.eventb.core.machineFile#Display999|org.eventb.core.invariant#3"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Counter/C0.bum|org.eventb.core.machineFile#C0|org.eventb.core.event#+"/>
@@ -234,7 +234,7 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Counter/Display999.bpo|org.eventb.core.poFile#Display999|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Counter/Display999.bpo|org.eventb.core.poFile#Display999|org.eventb.core.poSequent#incrc\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Counter/Display999.bpo|org.eventb.core.poFile#Display999|org.eventb.core.poPredicateSet#HYPValMax99&gt;|org.eventb.core.poPredicate#PRD3"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="incrc/grd1/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="1">
+<org.eventb.core.poSequent name="incrc/grd1/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Counter/Display999.bpo|org.eventb.core.poFile#Display999|org.eventb.core.poPredicateSet#EVTALLHYPValMax99E"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="i&lt;maxi" org.eventb.core.source="/Counter/C0.bum|org.eventb.core.machineFile#C0|org.eventb.core.event#+|org.eventb.core.guard#'"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Counter/C0.bum|org.eventb.core.machineFile#C0|org.eventb.core.event#+"/>
@@ -242,13 +242,13 @@
 <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Counter/Display999.bum|org.eventb.core.machineFile#Display999|org.eventb.core.event#5"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Counter/Display999.bpo|org.eventb.core.poFile#Display999|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Counter/Display999.bpo|org.eventb.core.poFile#Display999|org.eventb.core.poSequent#incrc\/grd1\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poPredicateSet name="EVTIDENTValMax99E" org.eventb.core.parentSet="/Counter/Display999.bpo|org.eventb.core.poFile#Display999|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="EVTIDENTValMax99E" org.eventb.core.parentSet="/Counter/Display999.bpo|org.eventb.core.poFile#Display999|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="c'" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="u'" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="d'" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="i'" org.eventb.core.type="ℤ"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPValMax99E" org.eventb.core.parentSet="/Counter/Display999.bpo|org.eventb.core.poFile#Display999|org.eventb.core.poPredicateSet#EVTIDENTValMax99E" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="EVTALLHYPValMax99E" org.eventb.core.parentSet="/Counter/Display999.bpo|org.eventb.core.poFile#Display999|org.eventb.core.poPredicateSet#EVTIDENTValMax99E" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="u=9" org.eventb.core.source="/Counter/Display999.bum|org.eventb.core.machineFile#Display999|org.eventb.core.event#5|org.eventb.core.guard#'"/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="d=9" org.eventb.core.source="/Counter/Display999.bum|org.eventb.core.machineFile#Display999|org.eventb.core.event#5|org.eventb.core.guard#("/>
 <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="c&lt;9" org.eventb.core.source="/Counter/Display999.bum|org.eventb.core.machineFile#Display999|org.eventb.core.event#5|org.eventb.core.guard#)"/>

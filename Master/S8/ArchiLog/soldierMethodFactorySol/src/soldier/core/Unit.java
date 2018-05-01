@@ -15,6 +15,8 @@ public interface Unit extends Subject {
 	public Iterator<Equipment> getWeapons();
 	public int nbWeapons();
 	
+	public void accept(Visitor v);
+	
 	public void addSoldier(Unit s);
 	public void removeSoldier(Unit s);
 	public Iterator<Unit> getChildren();

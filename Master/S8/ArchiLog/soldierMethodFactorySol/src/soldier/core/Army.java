@@ -138,4 +138,11 @@ public class Army extends UnitSubject {
 		return soldiers.iterator();
 	}
 
+	public void accept(Visitor v) {
+		v.visit(this);
+		
+		for(Unit u : (ArrayList<Unit>)soldiers.clone())
+			u.accept(v);
+	}
+	
 }

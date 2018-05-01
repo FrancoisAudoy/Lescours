@@ -32,7 +32,7 @@
 // shader-based point-based rendering.
 //
 
-#define _SPHERE_MODE_
+//#define _SPHERE_MODE_
 
 #define DISPLAY_XSIZE 1024
 #define DISPLAY_YSIZE 768

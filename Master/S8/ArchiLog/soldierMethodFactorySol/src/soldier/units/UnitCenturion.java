@@ -1,11 +1,12 @@
 /**
  * D. Auber & P. Narbel
- * Solution TD Architecture Logicielle 2016 Université Bordeaux.
+ * Solution TD Architecture Logicielle 2016 Universitï¿½ Bordeaux.
  */
 package soldier.units;
 
 import soldier.core.EquipmentException;
 import soldier.core.UnitInfantry;
+import soldier.core.Visitor;
 import soldier.core.Equipment;
 
 public class UnitCenturion extends UnitInfantry {
@@ -19,9 +20,12 @@ public class UnitCenturion extends UnitInfantry {
 	 */
 	@Override
 	public void addEquipment(Equipment w) {
-		if (nbWeapons() > 1)
-			throw new EquipmentException();
-		super.addEquipment(w);
+		if (nbWeapons() < 1)
+			super.addEquipment(w);
 	}
 
+	public void accept(Visitor v) {
+		v.visit(this);
+	}
+	
 }
