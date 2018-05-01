@@ -30,6 +30,7 @@ public abstract class UnitSimple extends UnitSubject{
 
 	public void heal() {
 		behavior.heal();
+		Notify();
 	}
 
 	public float parry(float force) {
@@ -97,4 +98,5 @@ public abstract class UnitSimple extends UnitSubject{
 	public Iterator<Unit> getChildren(){
 		throw new UnsupportedOperationException();
 	}
+	
 }

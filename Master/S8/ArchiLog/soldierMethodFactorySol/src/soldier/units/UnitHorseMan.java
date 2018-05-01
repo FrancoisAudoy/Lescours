@@ -1,11 +1,11 @@
 /**
  * D. Auber & P. Narbel
- * Solution TD Architecture Logicielle 2016 Université Bordeaux.
+ * Solution TD Architecture Logicielle 2016 Universitï¿½ Bordeaux.
  */
 package soldier.units;
 
-import soldier.core.EquipmentException;
 import soldier.core.UnitRider;
+import soldier.core.Visitor;
 import soldier.core.Equipment;
 
 public class UnitHorseMan extends UnitRider {
@@ -20,11 +20,13 @@ public class UnitHorseMan extends UnitRider {
 	@Override
 	public void addEquipment(Equipment w) {
 		int nbW = nbWeapons();
-		if (nbW > 1)
-			throw new EquipmentException();
-		if (nbW == 1 && getWeapons().next().getClass() == w.getClass())
-			throw new EquipmentException();
-		super.addEquipment(w);
+		if (nbW < 2)
+		if ( getWeapons().getClass() != w.getClass())
+			super.addEquipment(w);
 	}
 
+	public void accept(Visitor v) {
+		v.visit(this);
+	}
+	
 }
