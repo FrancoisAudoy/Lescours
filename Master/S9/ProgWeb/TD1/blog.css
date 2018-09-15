@@ -37,7 +37,10 @@
 
 article {
     float : left;
-    clear : left;
-    margin: 2%;
+    margin : 5%;
+    padding : 5%;
 }
 
+article:after {
+    clear : left;
+}
