@@ -1,64 +1,52 @@
-let toilette;
-
-function onSuccess(resp) {
-    let data = JSON.stringify(resp);
-    let parsed = JSON.parse(data);
-    console.log(parsed);
-    parsed.d.forEach(function(element) {
-	console.log(element.nom);
-	$("#data-list").append("<li>"+ element.nom+ "</li>");
-    });
+class request{
     
+    constructor(url, callbackFunction){
+	this._url = url;
+	this._callback = callbackFunction;
+	this.getJson = this.getJson.bind(this);
+    }
+
+    getJson(){
+	$.getJSON(this._url, this._callback);
+    }
 }
 
-function onError() {
-    console.log("error");
-}
+class App{
 
-let url_test = "https://randomuser.me/api/?results=10&format=json";
+    constructor(){
+	this.reqToilets = new request('http://odata.bordeaux.fr/v1/databordeaux/sigsanitaire/?format=json&callback=?', this.fillList);
+	this.reqKidArea = new request('http://odata.bordeaux.fr/v1/databordeaux/airejeux/?format=json&callback=?', this.fillList);
+    }
+    
+    start(){
+	$( "#btn-toilets").on("click",this.reqToilets.getJson);
+	$( "#btn-kidareas").click(this.reqKidArea.getJson);
+    }
 
-let myheaderBDX = new Headers();
-myheaderBDX.append('Accept', 'application/json, text/plain, text/json, */*');
-myheaderBDX.append("Content-Type", "application/json");
-myheaderBDX.append("Access-Control-Allow-Origin", "origin");
-
-let initBDX = {method : 'GET' ,
-	    headers : myheaderBDX,
-	    mode : 'no-cors',
-	    cache : 'default'
-	   };
-
-async function doFetch(url, init){
-    return fetch(url, init)
-	.then(onSuccess)
-	.catch(function(error){
-	    console.log(error);
+    fillList(response){
+	if(response.status < 200 || response.status >= 300){
+	    this.fail(response.status);
+	    return;
+	}
+	
+	let data = JSON.stringify(response);
+	let parsed = JSON.parse(data);
+	
+	$("#data-list").html('');
+	parsed.d.forEach(function(element) {
+	    $("#data-list").append("<li>"+ element.num_quartier + " : " + element.nom+ "</li>");
 	});
-}
+    }
 
-function get_test (){
-    rep = doFetch(url_test, {method : 'GET' ,
-			     headers : myheaderBDX,
-			     mode : 'cors',
-			     cache : 'default'
-			    });
-
-}
-
-
-function get_toilettes_location (event){
-    let url_toilettes = 'http://odata.bordeaux.fr/v1/databordeaux/sigsanitaire/?format=json&callback=?';
-    $.getJSON(url_toilettes, onSuccess);
-}
-
-function get_kid_area_location (event){
-    let url_play_area = 'http://odata.bordeaux.fr/v1/databordeaux/airejeux/?format=json&callback=?'
-    $.getJSON(url_play_area, onSuccess);
+    fail(codeError){
+	console.log("Error : " + codeError);
+    }
 }
 
 
 /*---------
    MAIN
 ----------*/
-$( "#btn-toilets").on("click",get_toilettes_location);
-$( "#btn-kidareas").click(get_kid_area_location);
+
+let application = new App();
+application.start();
