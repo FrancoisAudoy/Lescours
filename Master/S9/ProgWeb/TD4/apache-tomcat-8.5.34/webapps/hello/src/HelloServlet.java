@@ -21,22 +21,26 @@ public class HelloServlet extends HttpServlet{
 		
 		if(paramValue != null )
 			req.getSession().setAttribute("name", paramValue);
-		else
-			paramValue = (String) req.getSession().getAttribute("name");
+//		else
+//			paramValue = (String) req.getSession().getAttribute("name");
 		
-		resp.setContentType("text/html");
-        PrintWriter out = resp.getWriter();
-        
-        out.println("<html>");
-        out.println("<head>");
-		out.println(" <link rel=\"stylesheet\" href=\"table.css\"/>");
-		out.println("</head>");
-        printHeaders(req, out);
-        out.println("<body>");
-        out.println("Hello " + paramValue + " !");
-        out.println("</body>");
-        out.println("</html>");
+		req.getRequestDispatcher("/forw").forward(req, resp);
+		
+//		resp.setContentType("text/html");
+//        PrintWriter out = resp.getWriter();
+//        
+//        out.println("<html>");
+//        out.println("<head>");
+//		out.println(" <link rel=\"stylesheet\" href=\"table.css\"/>");
+//		out.println("</head>");
+//        printHeaders(req, out);
+//        out.println("<body>");
+//        out.println("Hello " + paramValue + " !");
+//        out.println("</body>");
+//        out.println("</html>");
 	}
+	
+	
 	
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
