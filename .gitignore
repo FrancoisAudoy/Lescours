@@ -7,3 +7,10 @@ bin/
 *.o
 *.class
 Rodin/
+
+#TomCat
+*.log
+
+#eclipse exclusion
+.classpath
+.project
