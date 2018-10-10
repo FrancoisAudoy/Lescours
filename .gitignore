@@ -9,7 +9,9 @@ bin/
 Rodin/
 
 #TomCat
-*.log
+#*.log
+#*.out
+#ProgWeb/TD4/apache-tomcat-8.5.34/logs/*
 
 #eclipse exclusion
 .classpath

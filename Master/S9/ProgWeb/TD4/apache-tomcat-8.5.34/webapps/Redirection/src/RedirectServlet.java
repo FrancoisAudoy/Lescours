@@ -17,7 +17,7 @@ public class RedirectServlet extends HttpServlet {
 		String paramValue = req.getParameter("request");
 
 		PrintWriter out = resp.getWriter();
-		if(paramValue == null) {
+		if(paramValue == "" ||paramValue == null) {
 			out.println("<html>");
 			out.println("<head>");
 			out.println("</head>");
@@ -27,5 +27,8 @@ public class RedirectServlet extends HttpServlet {
 			out.println("</body>");
 			out.println("</html>");
 		}			
+		else {
+			resp.sendRedirect("http://google.fr/#q="+paramValue);
+		}
 	}
 }
