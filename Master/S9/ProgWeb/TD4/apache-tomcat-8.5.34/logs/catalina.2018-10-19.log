@@ -1,0 +1,310 @@
+19-Oct-2018 11:21:10.936 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.5.34
+19-Oct-2018 11:21:10.939 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Sep 4 2018 22:28:22 UTC
+19-Oct-2018 11:21:10.939 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         8.5.34.0
+19-Oct-2018 11:21:10.939 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+19-Oct-2018 11:21:10.939 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            4.9.0-8-amd64
+19-Oct-2018 11:21:10.939 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+19-Oct-2018 11:21:10.939 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/oracle-java8-jdk-amd64/jre
+19-Oct-2018 11:21:10.940 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_162-b12
+19-Oct-2018 11:21:10.940 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+19-Oct-2018 11:21:10.940 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34
+19-Oct-2018 11:21:10.940 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34
+19-Oct-2018 11:21:10.940 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/net/cremi/faudoy/espaces/travail/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/conf/logging.properties
+19-Oct-2018 11:21:10.940 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+19-Oct-2018 11:21:10.940 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+19-Oct-2018 11:21:10.941 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+19-Oct-2018 11:21:10.941 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+19-Oct-2018 11:21:10.941 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+19-Oct-2018 11:21:10.941 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/net/cremi/faudoy/espaces/travail/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34
+19-Oct-2018 11:21:10.941 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/net/cremi/faudoy/espaces/travail/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34
+19-Oct-2018 11:21:10.942 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/net/cremi/faudoy/espaces/travail/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/temp
+19-Oct-2018 11:21:10.942 INFOS [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+19-Oct-2018 11:21:11.092 INFOS [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+19-Oct-2018 11:21:11.105 INFOS [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+19-Oct-2018 11:21:11.113 INFOS [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+19-Oct-2018 11:21:11.114 INFOS [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+19-Oct-2018 11:21:11.114 INFOS [main] org.apache.catalina.startup.Catalina.load Initialization processed in 1128 ms
+19-Oct-2018 11:21:11.159 INFOS [main] org.apache.catalina.core.StandardService.startInternal Démarrage du service [Catalina]
+19-Oct-2018 11:21:11.159 INFOS [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.5.34
+19-Oct-2018 11:21:11.222 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Déploiement de l'archive [/autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/HelloWorld.war] de l'application web
+19-Oct-2018 11:21:12.180 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/HelloWorld.war] has finished in [956] ms
+19-Oct-2018 11:21:12.192 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Déploiement de l'archive [/autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/TP.war] de l'application web
+19-Oct-2018 11:21:12.253 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/TP.war] has finished in [61] ms
+19-Oct-2018 11:21:12.254 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire [/autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/ROOT] de l'application web
+19-Oct-2018 11:21:12.314 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/ROOT] has finished in [60] ms
+19-Oct-2018 11:21:12.314 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire [/autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/docs] de l'application web
+19-Oct-2018 11:21:12.371 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/docs] has finished in [57] ms
+19-Oct-2018 11:21:12.371 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire [/autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/examples] de l'application web
+19-Oct-2018 11:21:13.315 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/examples] has finished in [943] ms
+19-Oct-2018 11:21:13.315 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire [/autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/host-manager] de l'application web
+19-Oct-2018 11:21:13.400 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/host-manager] has finished in [84] ms
+19-Oct-2018 11:21:13.400 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire [/autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/manager] de l'application web
+19-Oct-2018 11:21:13.464 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/manager] has finished in [63] ms
+19-Oct-2018 11:21:13.464 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire [/autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/bin] de l'application web
+19-Oct-2018 11:21:13.504 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/bin] has finished in [40] ms
+19-Oct-2018 11:21:13.504 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire [/autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/hello] de l'application web
+19-Oct-2018 11:21:13.732 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/hello] has finished in [228] ms
+19-Oct-2018 11:21:13.732 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire [/autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/Redirection] de l'application web
+19-Oct-2018 11:21:13.819 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/Redirection] has finished in [87] ms
+19-Oct-2018 11:21:13.828 INFOS [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+19-Oct-2018 11:21:13.844 INFOS [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-nio-8009"]
+19-Oct-2018 11:21:13.847 INFOS [main] org.apache.catalina.startup.Catalina.start Server startup in 2732 ms
+19-Oct-2018 11:24:13.004 INFOS [http-nio-8080-exec-10] org.apache.catalina.startup.HostConfig.undeploy Repli (undeploy) de l'application web ayant pour chemin de contexte [/TP]
+19-Oct-2018 11:24:20.106 INFOS [http-nio-8080-exec-1] org.apache.catalina.startup.HostConfig.undeploy Repli (undeploy) de l'application web ayant pour chemin de contexte [/HelloWorld]
+19-Oct-2018 11:24:35.855 INFOS [http-nio-8080-exec-7] org.apache.catalina.startup.HostConfig.deployWAR Déploiement de l'archive [/autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/HelloWorld-0.0.1-SNAPSHOT.war] de l'application web
+19-Oct-2018 11:24:37.032 INFOS [http-nio-8080-exec-7] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Oct-2018 11:24:37.933 INFOS [http-nio-8080-exec-7] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/HelloWorld-0.0.1-SNAPSHOT.war] has finished in [2 078] ms
+19-Oct-2018 11:26:30.211 INFOS [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+19-Oct-2018 11:26:30.213 INFOS [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+19-Oct-2018 11:26:30.270 INFOS [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["ajp-nio-8009"]
+19-Oct-2018 11:26:30.320 INFOS [main] org.apache.catalina.core.StandardService.stopInternal Arrêt du service [Catalina]
+19-Oct-2018 11:26:30.446 INFOS [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+19-Oct-2018 11:26:30.451 INFOS [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["ajp-nio-8009"]
+19-Oct-2018 11:26:30.452 INFOS [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+19-Oct-2018 11:26:30.453 INFOS [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["ajp-nio-8009"]
+19-Oct-2018 11:26:34.376 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.5.34
+19-Oct-2018 11:26:34.379 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Sep 4 2018 22:28:22 UTC
+19-Oct-2018 11:26:34.379 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         8.5.34.0
+19-Oct-2018 11:26:34.379 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+19-Oct-2018 11:26:34.379 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            4.9.0-8-amd64
+19-Oct-2018 11:26:34.379 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+19-Oct-2018 11:26:34.379 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/oracle-java8-jdk-amd64/jre
+19-Oct-2018 11:26:34.379 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_162-b12
+19-Oct-2018 11:26:34.379 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+19-Oct-2018 11:26:34.380 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34
+19-Oct-2018 11:26:34.380 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34
+19-Oct-2018 11:26:34.380 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/net/cremi/faudoy/espaces/travail/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/conf/logging.properties
+19-Oct-2018 11:26:34.380 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+19-Oct-2018 11:26:34.380 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+19-Oct-2018 11:26:34.380 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+19-Oct-2018 11:26:34.380 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+19-Oct-2018 11:26:34.381 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+19-Oct-2018 11:26:34.381 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/net/cremi/faudoy/espaces/travail/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34
+19-Oct-2018 11:26:34.381 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/net/cremi/faudoy/espaces/travail/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34
+19-Oct-2018 11:26:34.381 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/net/cremi/faudoy/espaces/travail/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/temp
+19-Oct-2018 11:26:34.381 INFOS [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+19-Oct-2018 11:26:34.528 INFOS [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+19-Oct-2018 11:26:34.541 INFOS [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+19-Oct-2018 11:26:34.548 INFOS [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+19-Oct-2018 11:26:34.549 INFOS [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+19-Oct-2018 11:26:34.549 INFOS [main] org.apache.catalina.startup.Catalina.load Initialization processed in 595 ms
+19-Oct-2018 11:26:34.579 INFOS [main] org.apache.catalina.core.StandardService.startInternal Démarrage du service [Catalina]
+19-Oct-2018 11:26:34.580 INFOS [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.5.34
+19-Oct-2018 11:26:34.612 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Déploiement de l'archive [/autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/HelloWorld-0.0.1-SNAPSHOT.war] de l'application web
+19-Oct-2018 11:26:35.509 INFOS [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Oct-2018 11:26:36.438 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/HelloWorld-0.0.1-SNAPSHOT.war] has finished in [1 826] ms
+19-Oct-2018 11:26:36.439 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire [/autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/ROOT] de l'application web
+19-Oct-2018 11:26:36.455 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/ROOT] has finished in [16] ms
+19-Oct-2018 11:26:36.455 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire [/autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/docs] de l'application web
+19-Oct-2018 11:26:36.470 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/docs] has finished in [15] ms
+19-Oct-2018 11:26:36.470 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire [/autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/examples] de l'application web
+19-Oct-2018 11:26:36.794 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/examples] has finished in [324] ms
+19-Oct-2018 11:26:36.794 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire [/autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/host-manager] de l'application web
+19-Oct-2018 11:26:36.817 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/host-manager] has finished in [23] ms
+19-Oct-2018 11:26:36.817 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire [/autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/manager] de l'application web
+19-Oct-2018 11:26:36.919 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/manager] has finished in [102] ms
+19-Oct-2018 11:26:36.919 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire [/autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/bin] de l'application web
+19-Oct-2018 11:26:36.932 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/bin] has finished in [13] ms
+19-Oct-2018 11:26:36.933 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire [/autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/hello] de l'application web
+19-Oct-2018 11:26:36.954 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/hello] has finished in [21] ms
+19-Oct-2018 11:26:36.954 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire [/autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/Redirection] de l'application web
+19-Oct-2018 11:26:36.974 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/Redirection] has finished in [20] ms
+19-Oct-2018 11:26:36.978 INFOS [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+19-Oct-2018 11:26:36.986 INFOS [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-nio-8009"]
+19-Oct-2018 11:26:36.988 INFOS [main] org.apache.catalina.startup.Catalina.start Server startup in 2438 ms
+19-Oct-2018 11:50:04.341 INFOS [http-nio-8080-exec-10] org.apache.catalina.startup.HostConfig.undeploy Repli (undeploy) de l'application web ayant pour chemin de contexte [/HelloWorld-0.0.1-SNAPSHOT]
+19-Oct-2018 11:50:11.737 INFOS [http-nio-8080-exec-8] org.apache.catalina.startup.HostConfig.deployWAR Déploiement de l'archive [/autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/HelloWorld.war] de l'application web
+19-Oct-2018 11:50:12.388 INFOS [http-nio-8080-exec-8] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Oct-2018 11:50:13.199 INFOS [http-nio-8080-exec-8] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/HelloWorld.war] has finished in [1 461] ms
+19-Oct-2018 11:50:24.318 INFOS [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+19-Oct-2018 11:50:24.319 INFOS [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+19-Oct-2018 11:50:24.374 INFOS [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["ajp-nio-8009"]
+19-Oct-2018 11:50:24.425 INFOS [main] org.apache.catalina.core.StandardService.stopInternal Arrêt du service [Catalina]
+19-Oct-2018 11:50:24.509 INFOS [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+19-Oct-2018 11:50:24.511 INFOS [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["ajp-nio-8009"]
+19-Oct-2018 11:50:24.512 INFOS [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+19-Oct-2018 11:50:24.513 INFOS [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["ajp-nio-8009"]
+19-Oct-2018 11:50:26.676 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.5.34
+19-Oct-2018 11:50:26.679 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Sep 4 2018 22:28:22 UTC
+19-Oct-2018 11:50:26.679 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         8.5.34.0
+19-Oct-2018 11:50:26.679 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+19-Oct-2018 11:50:26.679 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            4.9.0-8-amd64
+19-Oct-2018 11:50:26.679 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+19-Oct-2018 11:50:26.679 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/oracle-java8-jdk-amd64/jre
+19-Oct-2018 11:50:26.679 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_162-b12
+19-Oct-2018 11:50:26.679 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+19-Oct-2018 11:50:26.679 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34
+19-Oct-2018 11:50:26.680 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34
+19-Oct-2018 11:50:26.680 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/net/cremi/faudoy/espaces/travail/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/conf/logging.properties
+19-Oct-2018 11:50:26.680 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+19-Oct-2018 11:50:26.680 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+19-Oct-2018 11:50:26.680 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+19-Oct-2018 11:50:26.680 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+19-Oct-2018 11:50:26.680 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+19-Oct-2018 11:50:26.681 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/net/cremi/faudoy/espaces/travail/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34
+19-Oct-2018 11:50:26.681 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/net/cremi/faudoy/espaces/travail/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34
+19-Oct-2018 11:50:26.681 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/net/cremi/faudoy/espaces/travail/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/temp
+19-Oct-2018 11:50:26.681 INFOS [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+19-Oct-2018 11:50:26.827 INFOS [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+19-Oct-2018 11:50:26.840 INFOS [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+19-Oct-2018 11:50:26.847 INFOS [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+19-Oct-2018 11:50:26.849 INFOS [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+19-Oct-2018 11:50:26.849 INFOS [main] org.apache.catalina.startup.Catalina.load Initialization processed in 574 ms
+19-Oct-2018 11:50:26.879 INFOS [main] org.apache.catalina.core.StandardService.startInternal Démarrage du service [Catalina]
+19-Oct-2018 11:50:26.879 INFOS [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.5.34
+19-Oct-2018 11:50:26.921 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Déploiement de l'archive [/autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/HelloWorld.war] de l'application web
+19-Oct-2018 11:50:27.875 INFOS [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Oct-2018 11:50:28.834 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/HelloWorld.war] has finished in [1 912] ms
+19-Oct-2018 11:50:28.835 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire [/autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/ROOT] de l'application web
+19-Oct-2018 11:50:28.862 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/ROOT] has finished in [27] ms
+19-Oct-2018 11:50:28.862 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire [/autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/docs] de l'application web
+19-Oct-2018 11:50:28.879 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/docs] has finished in [16] ms
+19-Oct-2018 11:50:28.879 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire [/autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/examples] de l'application web
+19-Oct-2018 11:50:29.230 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/examples] has finished in [351] ms
+19-Oct-2018 11:50:29.231 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire [/autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/host-manager] de l'application web
+19-Oct-2018 11:50:29.255 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/host-manager] has finished in [24] ms
+19-Oct-2018 11:50:29.256 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire [/autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/manager] de l'application web
+19-Oct-2018 11:50:29.362 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/manager] has finished in [106] ms
+19-Oct-2018 11:50:29.363 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire [/autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/bin] de l'application web
+19-Oct-2018 11:50:29.377 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/bin] has finished in [15] ms
+19-Oct-2018 11:50:29.377 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire [/autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/hello] de l'application web
+19-Oct-2018 11:50:29.400 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/hello] has finished in [23] ms
+19-Oct-2018 11:50:29.400 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire [/autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/Redirection] de l'application web
+19-Oct-2018 11:50:29.421 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/Redirection] has finished in [21] ms
+19-Oct-2018 11:50:29.425 INFOS [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+19-Oct-2018 11:50:29.433 INFOS [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-nio-8009"]
+19-Oct-2018 11:50:29.435 INFOS [main] org.apache.catalina.startup.Catalina.start Server startup in 2585 ms
+19-Oct-2018 11:50:30.355 INFOS [http-nio-8080-exec-1] org.apache.coyote.http11.Http11Processor.service Error parsing HTTP request header
+ Note: further occurrences of HTTP header parsing errors will be logged at DEBUG level.
+ java.lang.IllegalArgumentException: Invalid character found in method name. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:428)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:684)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+19-Oct-2018 11:59:53.151 INFOS [http-nio-8080-exec-6] org.apache.catalina.startup.HostConfig.undeploy Repli (undeploy) de l'application web ayant pour chemin de contexte [/HelloWorld]
+19-Oct-2018 12:00:09.426 INFOS [http-nio-8080-exec-2] org.apache.catalina.startup.HostConfig.deployWAR Déploiement de l'archive [/autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/HelloWorld.war] de l'application web
+19-Oct-2018 12:00:10.191 INFOS [http-nio-8080-exec-2] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Oct-2018 12:00:11.031 INFOS [http-nio-8080-exec-2] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/HelloWorld.war] has finished in [1 604] ms
+19-Oct-2018 18:19:52.011 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.5.34
+19-Oct-2018 18:19:52.020 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Sep 4 2018 22:28:22 UTC
+19-Oct-2018 18:19:52.020 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         8.5.34.0
+19-Oct-2018 18:19:52.020 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+19-Oct-2018 18:19:52.021 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            4.9.0-8-amd64
+19-Oct-2018 18:19:52.021 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+19-Oct-2018 18:19:52.021 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/oracle-java8-jdk-amd64/jre
+19-Oct-2018 18:19:52.021 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_162-b12
+19-Oct-2018 18:19:52.021 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+19-Oct-2018 18:19:52.021 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34
+19-Oct-2018 18:19:52.021 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34
+19-Oct-2018 18:19:52.022 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/conf/logging.properties
+19-Oct-2018 18:19:52.022 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+19-Oct-2018 18:19:52.022 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+19-Oct-2018 18:19:52.022 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+19-Oct-2018 18:19:52.022 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+19-Oct-2018 18:19:52.022 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+19-Oct-2018 18:19:52.022 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34
+19-Oct-2018 18:19:52.023 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34
+19-Oct-2018 18:19:52.023 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/temp
+19-Oct-2018 18:19:52.023 INFOS [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+19-Oct-2018 18:19:52.113 INFOS [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+19-Oct-2018 18:19:52.157 INFOS [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+19-Oct-2018 18:19:52.174 INFOS [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+19-Oct-2018 18:19:52.177 INFOS [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+19-Oct-2018 18:19:52.178 INFOS [main] org.apache.catalina.startup.Catalina.load Initialization processed in 534 ms
+19-Oct-2018 18:19:52.238 INFOS [main] org.apache.catalina.core.StandardService.startInternal Démarrage du service [Catalina]
+19-Oct-2018 18:19:52.238 INFOS [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.5.34
+19-Oct-2018 18:19:52.351 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Déploiement de l'archive [/autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/HelloWorld.war] de l'application web
+19-Oct-2018 18:19:54.421 INFOS [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Oct-2018 18:19:54.923 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/HelloWorld.war] has finished in [2 573] ms
+19-Oct-2018 18:19:54.924 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire [/autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/ROOT] de l'application web
+19-Oct-2018 18:19:54.943 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/ROOT] has finished in [19] ms
+19-Oct-2018 18:19:54.943 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire [/autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/docs] de l'application web
+19-Oct-2018 18:19:54.965 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/docs] has finished in [22] ms
+19-Oct-2018 18:19:54.965 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire [/autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/examples] de l'application web
+19-Oct-2018 18:19:56.158 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/examples] has finished in [1 193] ms
+19-Oct-2018 18:19:56.158 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire [/autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/host-manager] de l'application web
+19-Oct-2018 18:19:56.216 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/host-manager] has finished in [58] ms
+19-Oct-2018 18:19:56.217 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire [/autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/manager] de l'application web
+19-Oct-2018 18:19:56.272 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/manager] has finished in [55] ms
+19-Oct-2018 18:19:56.272 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire [/autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/bin] de l'application web
+19-Oct-2018 18:19:56.288 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/bin] has finished in [15] ms
+19-Oct-2018 18:19:56.288 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire [/autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/hello] de l'application web
+19-Oct-2018 18:19:56.335 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/hello] has finished in [47] ms
+19-Oct-2018 18:19:56.335 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire [/autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/Redirection] de l'application web
+19-Oct-2018 18:19:56.388 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/Redirection] has finished in [53] ms
+19-Oct-2018 18:19:56.390 INFOS [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+19-Oct-2018 18:19:56.393 INFOS [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-nio-8009"]
+19-Oct-2018 18:19:56.394 INFOS [main] org.apache.catalina.startup.Catalina.start Server startup in 4215 ms
+19-Oct-2018 18:26:45.413 INFOS [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+19-Oct-2018 18:26:45.414 INFOS [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+19-Oct-2018 18:26:45.466 INFOS [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["ajp-nio-8009"]
+19-Oct-2018 18:26:45.517 INFOS [main] org.apache.catalina.core.StandardService.stopInternal Arrêt du service [Catalina]
+19-Oct-2018 18:26:45.574 INFOS [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+19-Oct-2018 18:26:45.575 INFOS [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["ajp-nio-8009"]
+19-Oct-2018 18:26:45.576 INFOS [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+19-Oct-2018 18:26:45.576 INFOS [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["ajp-nio-8009"]
+19-Oct-2018 18:44:32.930 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.5.34
+19-Oct-2018 18:44:32.948 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Sep 4 2018 22:28:22 UTC
+19-Oct-2018 18:44:32.948 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         8.5.34.0
+19-Oct-2018 18:44:32.948 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+19-Oct-2018 18:44:32.949 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            4.9.0-8-amd64
+19-Oct-2018 18:44:32.949 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+19-Oct-2018 18:44:32.949 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/oracle-java8-jdk-amd64/jre
+19-Oct-2018 18:44:32.949 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_162-b12
+19-Oct-2018 18:44:32.949 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+19-Oct-2018 18:44:32.949 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34
+19-Oct-2018 18:44:32.949 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34
+19-Oct-2018 18:44:32.950 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/net/cremi/faudoy/espaces/travail/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/conf/logging.properties
+19-Oct-2018 18:44:32.950 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+19-Oct-2018 18:44:32.950 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+19-Oct-2018 18:44:32.950 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+19-Oct-2018 18:44:32.950 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+19-Oct-2018 18:44:32.950 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+19-Oct-2018 18:44:32.950 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/net/cremi/faudoy/espaces/travail/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34
+19-Oct-2018 18:44:32.951 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/net/cremi/faudoy/espaces/travail/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34
+19-Oct-2018 18:44:32.951 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/net/cremi/faudoy/espaces/travail/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/temp
+19-Oct-2018 18:44:32.951 INFOS [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+19-Oct-2018 18:44:33.130 INFOS [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+19-Oct-2018 18:44:33.166 INFOS [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+19-Oct-2018 18:44:33.181 INFOS [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+19-Oct-2018 18:44:33.184 INFOS [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+19-Oct-2018 18:44:33.185 INFOS [main] org.apache.catalina.startup.Catalina.load Initialization processed in 713 ms
+19-Oct-2018 18:44:33.231 INFOS [main] org.apache.catalina.core.StandardService.startInternal Démarrage du service [Catalina]
+19-Oct-2018 18:44:33.231 INFOS [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.5.34
+19-Oct-2018 18:44:33.303 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Déploiement de l'archive [/autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/HelloWorld.war] de l'application web
+19-Oct-2018 18:44:35.497 INFOS [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+19-Oct-2018 18:44:36.045 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/HelloWorld.war] has finished in [2 742] ms
+19-Oct-2018 18:44:36.046 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire [/autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/ROOT] de l'application web
+19-Oct-2018 18:44:36.064 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/ROOT] has finished in [18] ms
+19-Oct-2018 18:44:36.064 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire [/autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/docs] de l'application web
+19-Oct-2018 18:44:36.092 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/docs] has finished in [28] ms
+19-Oct-2018 18:44:36.092 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire [/autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/examples] de l'application web
+19-Oct-2018 18:44:37.104 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/examples] has finished in [1 012] ms
+19-Oct-2018 18:44:37.105 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire [/autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/host-manager] de l'application web
+19-Oct-2018 18:44:37.147 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/host-manager] has finished in [42] ms
+19-Oct-2018 18:44:37.147 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire [/autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/manager] de l'application web
+19-Oct-2018 18:44:37.182 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/manager] has finished in [35] ms
+19-Oct-2018 18:44:37.182 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire [/autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/bin] de l'application web
+19-Oct-2018 18:44:37.190 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/bin] has finished in [8] ms
+19-Oct-2018 18:44:37.191 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire [/autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/hello] de l'application web
+19-Oct-2018 18:44:37.224 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/hello] has finished in [33] ms
+19-Oct-2018 18:44:37.224 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire [/autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/Redirection] de l'application web
+19-Oct-2018 18:44:37.298 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/autofs/netapp/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/Redirection] has finished in [74] ms
+19-Oct-2018 18:44:37.307 INFOS [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+19-Oct-2018 18:44:37.318 INFOS [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-nio-8009"]
+19-Oct-2018 18:44:37.320 INFOS [main] org.apache.catalina.startup.Catalina.start Server startup in 4135 ms
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  19-Oct-2018 19:14:30.886 INFOS [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+19-Oct-2018 19:14:30.887 INFOS [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+19-Oct-2018 19:14:30.939 INFOS [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["ajp-nio-8009"]
+19-Oct-2018 19:14:30.990 INFOS [main] org.apache.catalina.core.StandardService.stopInternal Arrêt du service [Catalina]
+19-Oct-2018 19:14:31.079 INFOS [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+19-Oct-2018 19:14:31.081 INFOS [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["ajp-nio-8009"]
+19-Oct-2018 19:14:31.082 INFOS [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+19-Oct-2018 19:14:31.082 INFOS [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["ajp-nio-8009"]

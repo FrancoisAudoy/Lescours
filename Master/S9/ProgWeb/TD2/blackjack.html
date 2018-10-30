@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+  
+  <head>
+    <meta charset='utf-8'/>
+    <link rel="stylesheet" href="blackjack.css"/>
+    <title>Black Jack</title>
+    <script src="blackjack.js" defer></script>
+  </head>
+
+  <body>
+    <h1>Black Jack</h1>
+    Votre argent : <strong id="playerMoney" class="money player">10</strong> Celui de la banque : <strong id="bankMoney" class="money bank">10</strong>
+
+    <h2> Les cartes de la banque</h2>
+    <span> Points de la Banque : <em id="bankPoints" class="bank point"></em>
+    <span id="bankCards"></span>
+    <h2>Vos cartes </h2>
+    <span>
+      Vos points : <strong id="playerPoint" class="point player"></strong>
+      <input type="button" id="NewCard" class="btn" value="Nouvelle carte"/>
+      <input type="button" id="StopCard" class="btn" value="Stop"/>
+    </span>
+    <br/>
+    <span id="playerCards"></span>
+  </body>
+</html>

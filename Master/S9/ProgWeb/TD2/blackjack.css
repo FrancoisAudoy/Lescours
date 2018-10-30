@@ -1,0 +1,18 @@
+.money {
+    text-decoration : underline;
+    padding : 1%;
+}
+
+.player {
+    color : red;
+}
+
+.bank {
+    color : blue;
+}
+
+.btn {
+    padding : 8px;
+    background : #86d1f0;
+    border-radius : 4px;
+}
