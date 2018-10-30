@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.psFile>
-<org.eventb.core.psStatus name="dlf/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="true"/>
-<org.eventb.core.psStatus name="dlf/THM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="INITIALISATION/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="SUCCESS/grd2/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="SUCCESS/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="Failure/grd1/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
-</org.eventb.core.psFile>

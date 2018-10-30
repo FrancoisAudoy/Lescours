@@ -1,3 +1,0 @@
-node SchedulerRandom
-     sub PJ : PoolOfJobs[3];
-edon

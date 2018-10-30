@@ -6,13 +6,17 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+<<<<<<< HEAD
 import javax.servlet.http.HttpSession;
+=======
+>>>>>>> 289c1efce6a277f98c494470431ed77089382c4d
 
 @SuppressWarnings("serial")
 @WebServlet(urlPatterns="/redir")
 public class RedirectServlet extends HttpServlet {
 
 	@Override
+<<<<<<< HEAD
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		PrintWriter out = resp.getWriter();
@@ -63,6 +67,25 @@ public class RedirectServlet extends HttpServlet {
 			else {
 				resp.sendRedirect("http://google.fr/#q="+paramValue);
 			}
+=======
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		resp.setContentType("text/html");
+		String paramValue = req.getParameter("request");
+
+		PrintWriter out = resp.getWriter();
+		if(paramValue == "" ||paramValue == null) {
+			out.println("<html>");
+			out.println("<head>");
+			out.println("</head>");
+			out.println("<body>");
+			out.println("Your request is empty please enter your request");
+			out.println("<a href=\"index.html\"> <button type=\"button\" id=\"btn-back\"> Back </button></a>");
+			out.println("</body>");
+			out.println("</html>");
+		}			
+		else {
+			resp.sendRedirect("http://google.fr/#q="+paramValue);
+>>>>>>> 289c1efce6a277f98c494470431ed77089382c4d
 		}
 	}
 }

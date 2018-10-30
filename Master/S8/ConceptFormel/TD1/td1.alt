@@ -1,8 +1,0 @@
-node Fifo_V2
-state nbMessages: [0,3]; init nbMessages = 0;
-event put, get;
-trans
-	true |- put ->nbMessages:=nbMessages+1;
-	true |- get->nbMessages:=nbMessages-1;
-
-edon

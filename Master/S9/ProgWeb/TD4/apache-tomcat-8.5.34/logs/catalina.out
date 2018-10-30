@@ -509,6 +509,7 @@
 10-Oct-2018 12:13:30.825 INFOS [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
 10-Oct-2018 12:17:21.067 INFOS [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/Redirection] a démarré
 10-Oct-2018 12:17:21.094 INFOS [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+<<<<<<< HEAD
 12-Oct-2018 10:19:49.706 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.5.34
 12-Oct-2018 10:19:49.736 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Sep 4 2018 22:28:22 UTC
 12-Oct-2018 10:19:49.736 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         8.5.34.0
@@ -6875,3 +6876,5 @@ Caused by: java.net.ConnectException: Connexion refusée (Connection refused)
 23-Oct-2018 11:55:10.948 INFOS [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["ajp-nio-8009"]
 23-Oct-2018 11:55:10.950 INFOS [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
 23-Oct-2018 11:55:10.951 INFOS [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["ajp-nio-8009"]
+=======
+>>>>>>> 289c1efce6a277f98c494470431ed77089382c4d

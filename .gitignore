@@ -3,11 +3,13 @@
 Master/ApprocheObjet/.*/
 .*
 bin/
-*.png
 *.odt
 *.o
 *.class
-Rodin/Cat
+
+Rodin/
+
+#TomCat
 #*.log
 #*.out
 #ProgWeb/TD4/apache-tomcat-8.5.34/logs/*
