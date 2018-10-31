@@ -1,10 +1,9 @@
 package fr.ub.m2gl;
 
-import java.net.URI;
-import java.net.URISyntaxException;
-
 import javax.ws.rs.*;
-import javax.ws.rs.core.Response;
+import javax.ws.rs.core.MediaType;
+
+import org.bson.BSON;
 import org.bson.Document;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -33,9 +32,10 @@ public class UserResource {
 		return mapper.writeValueAsString(user);
 	}
 
-	@POST
-	public Response AddUser (@FormParam("firstname") String firstname, 
-			@FormParam("lastname") String lastname){
+	@PUT
+	@Produces(MediaType.APPLICATION_JSON)
+	public User AddUser (@PathParam("firstname") String firstname, 
+			@PathParam("lastname") String lastname){
 
 		try {
 
@@ -43,27 +43,36 @@ public class UserResource {
 			MongoCollection<Document> collection = bdd.getCollection("user");
 
 			ObjectMapper mapper = new ObjectMapper();
-
-			String jsonString = mapper.writeValueAsString(new User(firstname, lastname));
+			User user = new User(firstname, lastname);
+			String jsonString = mapper.writeValueAsString(user);
+			
 			Document doc = Document.parse(jsonString);
 			collection.insertOne(doc);
-			return Response.seeOther(new URI("/Contact/")).build();
+			
+			return user;
 		} catch (JsonProcessingException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-			return Response.serverError().build();
+			return null;
 
-		} catch (URISyntaxException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-			return Response.serverError().build();
 		} finally {
 			mc.close();
 		}
-
-
 	}
 
+	@POST
+	@Produces(MediaType.APPLICATION_JSON)
+	public User ChangeUser(@PathParam("firstname") String firstname, 
+			@PathParam("lastname") String lastname, 
+			@PathParam("newfirstname") String newFirstName, @PathParam("newlastname") String newLastName) {
+		MongoDatabase bdd = mc.getDatabase("application");
+		ObjectMapper mapper = new ObjectMapper();
+		MongoCollection<Document> collection = bdd.getCollection("user"); 
+		FindIterable<Document> doc = collection.find();
+		
+		return null;
+	}
+	
 	@GET
 	@Produces("application/json")
 	public String GetUser (){
