@@ -81,9 +81,10 @@ public class UserResource {
 			@PathParam("lastname") String lastname){
 	}
 	
+	@Path("all")
 	@GET
 	@Produces("application/json")
-	public String GetUser (){
+	public String GetAllUsers (){
 
 		try {
 			MongoDatabase bdd = mc.getDatabase("application");

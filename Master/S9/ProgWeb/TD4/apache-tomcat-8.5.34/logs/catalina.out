@@ -1,388 +1,45 @@
-31-Oct-2018 13:37:47.415 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.5.34
-31-Oct-2018 13:37:47.417 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Sep 4 2018 22:28:22 UTC
-31-Oct-2018 13:37:47.417 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         8.5.34.0
-31-Oct-2018 13:37:47.417 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
-31-Oct-2018 13:37:47.417 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            4.9.0-8-amd64
-31-Oct-2018 13:37:47.417 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
-31-Oct-2018 13:37:47.417 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/oracle-java8-jdk-amd64/jre
-31-Oct-2018 13:37:47.417 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_162-b12
-31-Oct-2018 13:37:47.417 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
-31-Oct-2018 13:37:47.417 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /autofs/unitytravail/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34
-31-Oct-2018 13:37:47.417 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /autofs/unitytravail/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34
-31-Oct-2018 13:37:47.418 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/net/cremi/faudoy/espaces/travail/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/conf/logging.properties
-31-Oct-2018 13:37:47.418 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
-31-Oct-2018 13:37:47.418 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
-31-Oct-2018 13:37:47.418 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
-31-Oct-2018 13:37:47.418 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
-31-Oct-2018 13:37:47.418 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
-31-Oct-2018 13:37:47.418 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/net/cremi/faudoy/espaces/travail/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34
-31-Oct-2018 13:37:47.418 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/net/cremi/faudoy/espaces/travail/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34
-31-Oct-2018 13:37:47.418 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/net/cremi/faudoy/espaces/travail/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/temp
-31-Oct-2018 13:37:47.418 INFOS [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
-31-Oct-2018 13:37:47.489 INFOS [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
-31-Oct-2018 13:37:47.495 INFOS [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
-31-Oct-2018 13:37:47.499 INFOS [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
-31-Oct-2018 13:37:47.499 INFOS [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
-31-Oct-2018 13:37:47.500 INFOS [main] org.apache.catalina.startup.Catalina.load Initialization processed in 286 ms
-31-Oct-2018 13:37:47.513 INFOS [main] org.apache.catalina.core.StandardService.startInternal Démarrage du service [Catalina]
-31-Oct-2018 13:37:47.513 INFOS [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.5.34
-31-Oct-2018 13:37:47.523 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire [/autofs/unitytravail/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/ROOT] de l'application web
-31-Oct-2018 13:37:47.726 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/autofs/unitytravail/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/ROOT] has finished in [202] ms
-31-Oct-2018 13:37:47.726 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire [/autofs/unitytravail/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/examples] de l'application web
-31-Oct-2018 13:37:47.954 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/autofs/unitytravail/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/examples] has finished in [228] ms
-31-Oct-2018 13:37:47.954 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire [/autofs/unitytravail/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/host-manager] de l'application web
-31-Oct-2018 13:37:47.973 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/autofs/unitytravail/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/host-manager] has finished in [19] ms
-31-Oct-2018 13:37:47.973 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire [/autofs/unitytravail/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/manager] de l'application web
-31-Oct-2018 13:37:47.988 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/autofs/unitytravail/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/manager] has finished in [15] ms
-31-Oct-2018 13:37:47.988 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire [/autofs/unitytravail/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/docs] de l'application web
-31-Oct-2018 13:37:48.000 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/autofs/unitytravail/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/docs] has finished in [12] ms
-31-Oct-2018 13:37:48.002 INFOS [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
-31-Oct-2018 13:37:48.005 INFOS [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-nio-8009"]
-31-Oct-2018 13:37:48.006 INFOS [main] org.apache.catalina.startup.Catalina.start Server startup in 505 ms
-31-Oct-2018 13:38:18.044 INFOS [localhost-startStop-2] org.apache.catalina.startup.HostConfig.deployWAR Déploiement de l'archive [/autofs/unitytravail/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/Contact.war] de l'application web
-31-Oct-2018 13:38:19.408 INFOS [localhost-startStop-2] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
-31-Oct-2018 13:38:19.971 INFOS [localhost-startStop-2] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/autofs/unitytravail/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/Contact.war] has finished in [1 927] ms
-31-Oct-2018 13:39:34.510 INFOS [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
-31-Oct-2018 13:39:34.511 INFOS [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
-31-Oct-2018 13:39:34.563 INFOS [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["ajp-nio-8009"]
-31-Oct-2018 13:39:34.615 INFOS [main] org.apache.catalina.core.StandardService.stopInternal Arrêt du service [Catalina]
-31-Oct-2018 13:39:34.790 INFOS [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
-31-Oct-2018 13:39:34.793 INFOS [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["ajp-nio-8009"]
-31-Oct-2018 13:39:34.795 INFOS [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
-31-Oct-2018 13:39:34.796 INFOS [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["ajp-nio-8009"]
-31-Oct-2018 13:39:36.708 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.5.34
-31-Oct-2018 13:39:36.709 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Sep 4 2018 22:28:22 UTC
-31-Oct-2018 13:39:36.709 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         8.5.34.0
-31-Oct-2018 13:39:36.709 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
-31-Oct-2018 13:39:36.710 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            4.9.0-8-amd64
-31-Oct-2018 13:39:36.710 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
-31-Oct-2018 13:39:36.710 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/oracle-java8-jdk-amd64/jre
-31-Oct-2018 13:39:36.710 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_162-b12
-31-Oct-2018 13:39:36.710 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
-31-Oct-2018 13:39:36.710 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /autofs/unitytravail/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34
-31-Oct-2018 13:39:36.710 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /autofs/unitytravail/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34
-31-Oct-2018 13:39:36.710 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/net/cremi/faudoy/espaces/travail/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/conf/logging.properties
-31-Oct-2018 13:39:36.710 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
-31-Oct-2018 13:39:36.710 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
-31-Oct-2018 13:39:36.710 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
-31-Oct-2018 13:39:36.710 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
-31-Oct-2018 13:39:36.710 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
-31-Oct-2018 13:39:36.710 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/net/cremi/faudoy/espaces/travail/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34
-31-Oct-2018 13:39:36.710 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/net/cremi/faudoy/espaces/travail/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34
-31-Oct-2018 13:39:36.710 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/net/cremi/faudoy/espaces/travail/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/temp
-31-Oct-2018 13:39:36.710 INFOS [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
-31-Oct-2018 13:39:36.853 INFOS [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
-31-Oct-2018 13:39:36.861 INFOS [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
-31-Oct-2018 13:39:36.867 INFOS [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
-31-Oct-2018 13:39:36.868 INFOS [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
-31-Oct-2018 13:39:36.868 INFOS [main] org.apache.catalina.startup.Catalina.load Initialization processed in 419 ms
-31-Oct-2018 13:39:36.888 INFOS [main] org.apache.catalina.core.StandardService.startInternal Démarrage du service [Catalina]
-31-Oct-2018 13:39:36.888 INFOS [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.5.34
-31-Oct-2018 13:39:36.920 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Déploiement de l'archive [/autofs/unitytravail/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/Contact.war] de l'application web
-31-Oct-2018 13:39:38.204 INFOS [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
-31-Oct-2018 13:39:38.823 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/autofs/unitytravail/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/Contact.war] has finished in [1 903] ms
-31-Oct-2018 13:39:38.823 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire [/autofs/unitytravail/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/ROOT] de l'application web
-31-Oct-2018 13:39:38.868 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/autofs/unitytravail/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/ROOT] has finished in [45] ms
-31-Oct-2018 13:39:38.868 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire [/autofs/unitytravail/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/examples] de l'application web
-31-Oct-2018 13:39:40.008 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/autofs/unitytravail/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/examples] has finished in [1 140] ms
-31-Oct-2018 13:39:40.010 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire [/autofs/unitytravail/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/host-manager] de l'application web
-31-Oct-2018 13:39:40.101 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/autofs/unitytravail/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/host-manager] has finished in [91] ms
-31-Oct-2018 13:39:40.101 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire [/autofs/unitytravail/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/manager] de l'application web
-31-Oct-2018 13:39:40.167 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/autofs/unitytravail/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/manager] has finished in [65] ms
-31-Oct-2018 13:39:40.167 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire [/autofs/unitytravail/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/docs] de l'application web
-31-Oct-2018 13:39:40.204 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/autofs/unitytravail/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/docs] has finished in [37] ms
-31-Oct-2018 13:39:40.208 INFOS [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
-31-Oct-2018 13:39:40.218 INFOS [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-nio-8009"]
-31-Oct-2018 13:39:40.220 INFOS [main] org.apache.catalina.startup.Catalina.start Server startup in 3352 ms
-31-Oct-2018 13:39:49.417 INFOS [http-nio-8080-exec-7] com.mongodb.diagnostics.logging.JULLogger.log Cluster created with settings {hosts=[ds137913.mlab.com:37913], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
-31-Oct-2018 13:39:49.479 INFOS [http-nio-8080-exec-7] com.mongodb.diagnostics.logging.JULLogger.log No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, all=[ServerDescription{address=ds137913.mlab.com:37913, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
-31-Oct-2018 13:39:51.944 INFOS [cluster-ClusterId{value='5bd9a2952884375146a75b00', description='null'}-ds137913.mlab.com:37913] com.mongodb.diagnostics.logging.JULLogger.log Opened connection [connectionId{localValue:1, serverValue:97787}] to ds137913.mlab.com:37913
-31-Oct-2018 13:39:51.980 INFOS [cluster-ClusterId{value='5bd9a2952884375146a75b00', description='null'}-ds137913.mlab.com:37913] com.mongodb.diagnostics.logging.JULLogger.log Monitor thread successfully connected to server with description ServerDescription{address=ds137913.mlab.com:37913, type=REPLICA_SET_PRIMARY, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 6, 8]}, minWireVersion=0, maxWireVersion=6, maxDocumentSize=16777216, roundTripTimeNanos=35646996, setName='rs-ds137913', canonicalAddress=ds137913-a.mlab.com:37913, hosts=[ds137913-a.mlab.com:37913], passives=[], arbiters=[], primary='ds137913-a.mlab.com:37913', tagSet=TagSet{[]}, electionId=7fffffff0000000000000001, setVersion=1}
-31-Oct-2018 13:39:52.248 INFOS [http-nio-8080-exec-7] com.mongodb.diagnostics.logging.JULLogger.log Opened connection [connectionId{localValue:2, serverValue:97788}] to ds137913.mlab.com:37913
-31-Oct-2018 14:11:34.336 INFOS [http-nio-8080-exec-9] com.mongodb.diagnostics.logging.JULLogger.log Cluster created with settings {hosts=[ds137913.mlab.com:37913], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
-31-Oct-2018 14:11:34.354 INFOS [http-nio-8080-exec-9] com.mongodb.diagnostics.logging.JULLogger.log Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
-31-Oct-2018 14:11:34.355 INFOS [cluster-ClusterId{value='5bd9aa062884375146a75b02', description='null'}-127.0.0.1:27017] com.mongodb.diagnostics.logging.JULLogger.log Exception in monitor thread while connecting to server 127.0.0.1:27017
- com.mongodb.MongoSocketOpenException: Exception opening socket
-	at com.mongodb.connection.SocketStream.open(SocketStream.java:63)
-	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:114)
-	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:128)
-	at java.lang.Thread.run(Thread.java:748)
-Caused by: java.net.ConnectException: Connexion refusée (Connection refused)
-	at java.net.PlainSocketImpl.socketConnect(Native Method)
-	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
-	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
-	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
-	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
-	at java.net.Socket.connect(Socket.java:589)
-	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:50)
-	at com.mongodb.connection.SocketStream.open(SocketStream.java:58)
-	... 3 more
-
-31-Oct-2018 14:11:34.362 INFOS [http-nio-8080-exec-9] com.mongodb.diagnostics.logging.JULLogger.log No server chosen by WritableServerSelector from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, all=[ServerDescription{address=ds137913.mlab.com:37913, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
-31-Oct-2018 14:11:37.006 INFOS [cluster-ClusterId{value='5bd9aa062884375146a75b01', description='null'}-ds137913.mlab.com:37913] com.mongodb.diagnostics.logging.JULLogger.log Opened connection [connectionId{localValue:3, serverValue:97885}] to ds137913.mlab.com:37913
-31-Oct-2018 14:11:37.043 INFOS [cluster-ClusterId{value='5bd9aa062884375146a75b01', description='null'}-ds137913.mlab.com:37913] com.mongodb.diagnostics.logging.JULLogger.log Monitor thread successfully connected to server with description ServerDescription{address=ds137913.mlab.com:37913, type=REPLICA_SET_PRIMARY, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 6, 8]}, minWireVersion=0, maxWireVersion=6, maxDocumentSize=16777216, roundTripTimeNanos=35151911, setName='rs-ds137913', canonicalAddress=ds137913-a.mlab.com:37913, hosts=[ds137913-a.mlab.com:37913], passives=[], arbiters=[], primary='ds137913-a.mlab.com:37913', tagSet=TagSet{[]}, electionId=7fffffff0000000000000001, setVersion=1}
-31-Oct-2018 14:11:37.323 INFOS [http-nio-8080-exec-9] com.mongodb.diagnostics.logging.JULLogger.log Opened connection [connectionId{localValue:5, serverValue:97886}] to ds137913.mlab.com:37913
-31-Oct-2018 14:11:37.400 INFOS [http-nio-8080-exec-9] com.mongodb.diagnostics.logging.JULLogger.log Closed connection [connectionId{localValue:5, serverValue:97886}] to ds137913.mlab.com:37913 because the pool has been closed.
-31-Oct-2018 14:11:37.615 INFOS [http-nio-8080-exec-10] com.mongodb.diagnostics.logging.JULLogger.log Cluster created with settings {hosts=[ds137913.mlab.com:37913], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
-31-Oct-2018 14:11:37.619 INFOS [http-nio-8080-exec-10] com.mongodb.diagnostics.logging.JULLogger.log No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, all=[ServerDescription{address=ds137913.mlab.com:37913, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
-31-Oct-2018 14:11:37.897 INFOS [cluster-ClusterId{value='5bd9aa092884375146a75b04', description='null'}-ds137913.mlab.com:37913] com.mongodb.diagnostics.logging.JULLogger.log Opened connection [connectionId{localValue:6, serverValue:97887}] to ds137913.mlab.com:37913
-31-Oct-2018 14:11:37.933 INFOS [cluster-ClusterId{value='5bd9aa092884375146a75b04', description='null'}-ds137913.mlab.com:37913] com.mongodb.diagnostics.logging.JULLogger.log Monitor thread successfully connected to server with description ServerDescription{address=ds137913.mlab.com:37913, type=REPLICA_SET_PRIMARY, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 6, 8]}, minWireVersion=0, maxWireVersion=6, maxDocumentSize=16777216, roundTripTimeNanos=34655513, setName='rs-ds137913', canonicalAddress=ds137913-a.mlab.com:37913, hosts=[ds137913-a.mlab.com:37913], passives=[], arbiters=[], primary='ds137913-a.mlab.com:37913', tagSet=TagSet{[]}, electionId=7fffffff0000000000000001, setVersion=1}
-31-Oct-2018 14:11:38.216 INFOS [http-nio-8080-exec-10] com.mongodb.diagnostics.logging.JULLogger.log Opened connection [connectionId{localValue:7, serverValue:97888}] to ds137913.mlab.com:37913
-31-Oct-2018 14:18:25.649 INFOS [http-nio-8080-exec-4] com.mongodb.diagnostics.logging.JULLogger.log Cluster created with settings {hosts=[ds137913.mlab.com:37913], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
-31-Oct-2018 14:18:25.652 INFOS [http-nio-8080-exec-4] com.mongodb.diagnostics.logging.JULLogger.log No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, all=[ServerDescription{address=ds137913.mlab.com:37913, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
-31-Oct-2018 14:18:26.027 INFOS [cluster-ClusterId{value='5bd9aba12884375146a75b05', description='null'}-ds137913.mlab.com:37913] com.mongodb.diagnostics.logging.JULLogger.log Opened connection [connectionId{localValue:49, serverValue:97902}] to ds137913.mlab.com:37913
-31-Oct-2018 14:18:26.062 INFOS [cluster-ClusterId{value='5bd9aba12884375146a75b05', description='null'}-ds137913.mlab.com:37913] com.mongodb.diagnostics.logging.JULLogger.log Monitor thread successfully connected to server with description ServerDescription{address=ds137913.mlab.com:37913, type=REPLICA_SET_PRIMARY, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 6, 8]}, minWireVersion=0, maxWireVersion=6, maxDocumentSize=16777216, roundTripTimeNanos=34608441, setName='rs-ds137913', canonicalAddress=ds137913-a.mlab.com:37913, hosts=[ds137913-a.mlab.com:37913], passives=[], arbiters=[], primary='ds137913-a.mlab.com:37913', tagSet=TagSet{[]}, electionId=7fffffff0000000000000001, setVersion=1}
-31-Oct-2018 14:18:26.321 INFOS [http-nio-8080-exec-4] com.mongodb.diagnostics.logging.JULLogger.log Opened connection [connectionId{localValue:50, serverValue:97903}] to ds137913.mlab.com:37913
-31-Oct-2018 14:18:30.923 INFOS [http-nio-8080-exec-5] com.mongodb.diagnostics.logging.JULLogger.log Cluster created with settings {hosts=[ds137913.mlab.com:37913], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
-31-Oct-2018 14:18:30.925 INFOS [http-nio-8080-exec-5] com.mongodb.diagnostics.logging.JULLogger.log Cluster created with settings {hosts=[127.0.0.1:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
-31-Oct-2018 14:18:30.926 INFOS [cluster-ClusterId{value='5bd9aba62884375146a75b07', description='null'}-127.0.0.1:27017] com.mongodb.diagnostics.logging.JULLogger.log Exception in monitor thread while connecting to server 127.0.0.1:27017
- com.mongodb.MongoSocketOpenException: Exception opening socket
-	at com.mongodb.connection.SocketStream.open(SocketStream.java:63)
-	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:114)
-	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:128)
-	at java.lang.Thread.run(Thread.java:748)
-Caused by: java.net.ConnectException: Connexion refusée (Connection refused)
-	at java.net.PlainSocketImpl.socketConnect(Native Method)
-	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
-	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
-	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
-	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
-	at java.net.Socket.connect(Socket.java:589)
-	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:50)
-	at com.mongodb.connection.SocketStream.open(SocketStream.java:58)
-	... 3 more
-
-31-Oct-2018 14:18:30.926 INFOS [http-nio-8080-exec-5] com.mongodb.diagnostics.logging.JULLogger.log No server chosen by WritableServerSelector from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, all=[ServerDescription{address=ds137913.mlab.com:37913, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
-31-Oct-2018 14:18:31.208 INFOS [cluster-ClusterId{value='5bd9aba62884375146a75b06', description='null'}-ds137913.mlab.com:37913] com.mongodb.diagnostics.logging.JULLogger.log Opened connection [connectionId{localValue:51, serverValue:97904}] to ds137913.mlab.com:37913
-31-Oct-2018 14:18:31.243 INFOS [cluster-ClusterId{value='5bd9aba62884375146a75b06', description='null'}-ds137913.mlab.com:37913] com.mongodb.diagnostics.logging.JULLogger.log Monitor thread successfully connected to server with description ServerDescription{address=ds137913.mlab.com:37913, type=REPLICA_SET_PRIMARY, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 6, 8]}, minWireVersion=0, maxWireVersion=6, maxDocumentSize=16777216, roundTripTimeNanos=34622013, setName='rs-ds137913', canonicalAddress=ds137913-a.mlab.com:37913, hosts=[ds137913-a.mlab.com:37913], passives=[], arbiters=[], primary='ds137913-a.mlab.com:37913', tagSet=TagSet{[]}, electionId=7fffffff0000000000000001, setVersion=1}
-31-Oct-2018 14:18:31.526 INFOS [http-nio-8080-exec-5] com.mongodb.diagnostics.logging.JULLogger.log Opened connection [connectionId{localValue:53, serverValue:97905}] to ds137913.mlab.com:37913
-31-Oct-2018 14:18:31.562 INFOS [http-nio-8080-exec-5] com.mongodb.diagnostics.logging.JULLogger.log Closed connection [connectionId{localValue:53, serverValue:97905}] to ds137913.mlab.com:37913 because the pool has been closed.
-31-Oct-2018 14:18:31.611 INFOS [http-nio-8080-exec-6] com.mongodb.diagnostics.logging.JULLogger.log Cluster created with settings {hosts=[ds137913.mlab.com:37913], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
-31-Oct-2018 14:18:31.613 INFOS [http-nio-8080-exec-6] com.mongodb.diagnostics.logging.JULLogger.log No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, all=[ServerDescription{address=ds137913.mlab.com:37913, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
-31-Oct-2018 14:18:31.893 INFOS [cluster-ClusterId{value='5bd9aba72884375146a75b09', description='null'}-ds137913.mlab.com:37913] com.mongodb.diagnostics.logging.JULLogger.log Opened connection [connectionId{localValue:54, serverValue:97906}] to ds137913.mlab.com:37913
-31-Oct-2018 14:18:31.928 INFOS [cluster-ClusterId{value='5bd9aba72884375146a75b09', description='null'}-ds137913.mlab.com:37913] com.mongodb.diagnostics.logging.JULLogger.log Monitor thread successfully connected to server with description ServerDescription{address=ds137913.mlab.com:37913, type=REPLICA_SET_PRIMARY, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 6, 8]}, minWireVersion=0, maxWireVersion=6, maxDocumentSize=16777216, roundTripTimeNanos=34584492, setName='rs-ds137913', canonicalAddress=ds137913-a.mlab.com:37913, hosts=[ds137913-a.mlab.com:37913], passives=[], arbiters=[], primary='ds137913-a.mlab.com:37913', tagSet=TagSet{[]}, electionId=7fffffff0000000000000001, setVersion=1}
-31-Oct-2018 14:18:32.213 INFOS [http-nio-8080-exec-6] com.mongodb.diagnostics.logging.JULLogger.log Opened connection [connectionId{localValue:55, serverValue:97907}] to ds137913.mlab.com:37913
-31-Oct-2018 14:18:32.309 INFOS [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.startup.HostConfig.undeploy Repli (undeploy) de l'application web ayant pour chemin de contexte [/Contact]
-31-Oct-2018 14:18:32.337 AVERTISSEMENT [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Contact] appears to have started a thread named [cluster-ClusterId{value='5bd9a2952884375146a75b00', description='null'}-ds137913.mlab.com:37913] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
- sun.misc.Unsafe.park(Native Method)
- java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
- java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
- com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.waitForSignalOrTimeout(DefaultServerMonitor.java:238)
- com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.waitForNext(DefaultServerMonitor.java:219)
- com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:168)
- java.lang.Thread.run(Thread.java:748)
-31-Oct-2018 14:18:32.338 AVERTISSEMENT [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Contact] appears to have started a thread named [pool-2-thread-1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
- sun.misc.Unsafe.park(Native Method)
- java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
- java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
- java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
- java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
- java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
- java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
- java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
- java.lang.Thread.run(Thread.java:748)
-31-Oct-2018 14:18:32.339 AVERTISSEMENT [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Contact] appears to have started a thread named [cluster-ClusterId{value='5bd9aa062884375146a75b02', description='null'}-127.0.0.1:27017] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
- sun.misc.Unsafe.park(Native Method)
- java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
- java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
- com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.waitForSignalOrTimeout(DefaultServerMonitor.java:238)
- com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.waitForNext(DefaultServerMonitor.java:219)
- com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:168)
- java.lang.Thread.run(Thread.java:748)
-31-Oct-2018 14:18:32.340 AVERTISSEMENT [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Contact] appears to have started a thread named [pool-4-thread-1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
- sun.misc.Unsafe.park(Native Method)
- java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
- java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
- java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
- java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
- java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
- java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
- java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
- java.lang.Thread.run(Thread.java:748)
-31-Oct-2018 14:18:32.341 AVERTISSEMENT [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Contact] appears to have started a thread named [cluster-ClusterId{value='5bd9aa092884375146a75b04', description='null'}-ds137913.mlab.com:37913] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
- sun.misc.Unsafe.park(Native Method)
- java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
- java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
- com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.waitForSignalOrTimeout(DefaultServerMonitor.java:238)
- com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.waitForNext(DefaultServerMonitor.java:219)
- com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:168)
- java.lang.Thread.run(Thread.java:748)
-31-Oct-2018 14:18:32.342 AVERTISSEMENT [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Contact] appears to have started a thread named [pool-5-thread-1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
- sun.misc.Unsafe.park(Native Method)
- java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
- java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
- java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
- java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
- java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
- java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
- java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
- java.lang.Thread.run(Thread.java:748)
-31-Oct-2018 14:18:32.342 AVERTISSEMENT [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Contact] appears to have started a thread named [cluster-ClusterId{value='5bd9aba12884375146a75b05', description='null'}-ds137913.mlab.com:37913] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
- sun.misc.Unsafe.park(Native Method)
- java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
- java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
- com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.waitForSignalOrTimeout(DefaultServerMonitor.java:238)
- com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.waitForNext(DefaultServerMonitor.java:219)
- com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:168)
- java.lang.Thread.run(Thread.java:748)
-31-Oct-2018 14:18:32.343 AVERTISSEMENT [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Contact] appears to have started a thread named [pool-6-thread-1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
- sun.misc.Unsafe.park(Native Method)
- java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
- java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
- java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
- java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
- java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
- java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
- java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
- java.lang.Thread.run(Thread.java:748)
-31-Oct-2018 14:18:32.344 AVERTISSEMENT [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Contact] appears to have started a thread named [cluster-ClusterId{value='5bd9aba62884375146a75b07', description='null'}-127.0.0.1:27017] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
- sun.misc.Unsafe.park(Native Method)
- java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
- java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
- com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.waitForSignalOrTimeout(DefaultServerMonitor.java:238)
- com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.waitForNext(DefaultServerMonitor.java:219)
- com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:168)
- java.lang.Thread.run(Thread.java:748)
-31-Oct-2018 14:18:32.344 AVERTISSEMENT [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Contact] appears to have started a thread named [pool-8-thread-1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
- sun.misc.Unsafe.park(Native Method)
- java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
- java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
- java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
- java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
- java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
- java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
- java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
- java.lang.Thread.run(Thread.java:748)
-31-Oct-2018 14:18:32.345 AVERTISSEMENT [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Contact] appears to have started a thread named [cluster-ClusterId{value='5bd9aba72884375146a75b09', description='null'}-ds137913.mlab.com:37913] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
- sun.misc.Unsafe.park(Native Method)
- java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
- java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
- com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.waitForSignalOrTimeout(DefaultServerMonitor.java:238)
- com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.waitForNext(DefaultServerMonitor.java:219)
- com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:168)
- java.lang.Thread.run(Thread.java:748)
-31-Oct-2018 14:18:32.346 AVERTISSEMENT [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Contact] appears to have started a thread named [pool-9-thread-1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
- sun.misc.Unsafe.park(Native Method)
- java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
- java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
- java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
- java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
- java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
- java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
- java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
- java.lang.Thread.run(Thread.java:748)
-31-Oct-2018 14:18:32.509 INFOS [localhost-startStop-2] org.apache.catalina.startup.HostConfig.deployWAR Déploiement de l'archive [/autofs/unitytravail/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/Contact.war] de l'application web
-31-Oct-2018 14:18:33.449 INFOS [localhost-startStop-2] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
-31-Oct-2018 14:18:34.001 INFOS [localhost-startStop-2] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/autofs/unitytravail/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/Contact.war] has finished in [1 492] ms
-31-Oct-2018 14:20:54.113 INFOS [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.startup.HostConfig.undeploy Repli (undeploy) de l'application web ayant pour chemin de contexte [/Contact]
-31-Oct-2018 14:20:54.379 INFOS [localhost-startStop-3] org.apache.catalina.startup.HostConfig.deployWAR Déploiement de l'archive [/autofs/unitytravail/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/Contact.war] de l'application web
-31-Oct-2018 14:20:55.168 INFOS [localhost-startStop-3] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
-31-Oct-2018 14:20:55.646 INFOS [localhost-startStop-3] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/autofs/unitytravail/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/Contact.war] has finished in [1 267] ms
-31-Oct-2018 14:21:07.300 INFOS [http-nio-8080-exec-8] com.mongodb.diagnostics.logging.JULLogger.log Cluster created with settings {hosts=[ds137913.mlab.com:37913], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
-31-Oct-2018 14:21:07.355 INFOS [http-nio-8080-exec-8] com.mongodb.diagnostics.logging.JULLogger.log No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, all=[ServerDescription{address=ds137913.mlab.com:37913, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
-31-Oct-2018 14:21:07.723 INFOS [cluster-ClusterId{value='5bd9ac4328843751462ccdcf', description='null'}-ds137913.mlab.com:37913] com.mongodb.diagnostics.logging.JULLogger.log Opened connection [connectionId{localValue:1, serverValue:97914}] to ds137913.mlab.com:37913
-31-Oct-2018 14:21:07.761 INFOS [cluster-ClusterId{value='5bd9ac4328843751462ccdcf', description='null'}-ds137913.mlab.com:37913] com.mongodb.diagnostics.logging.JULLogger.log Monitor thread successfully connected to server with description ServerDescription{address=ds137913.mlab.com:37913, type=REPLICA_SET_PRIMARY, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 6, 8]}, minWireVersion=0, maxWireVersion=6, maxDocumentSize=16777216, roundTripTimeNanos=35630155, setName='rs-ds137913', canonicalAddress=ds137913-a.mlab.com:37913, hosts=[ds137913-a.mlab.com:37913], passives=[], arbiters=[], primary='ds137913-a.mlab.com:37913', tagSet=TagSet{[]}, electionId=7fffffff0000000000000001, setVersion=1}
-31-Oct-2018 14:21:08.052 INFOS [http-nio-8080-exec-8] com.mongodb.diagnostics.logging.JULLogger.log Opened connection [connectionId{localValue:2, serverValue:97915}] to ds137913.mlab.com:37913
-31-Oct-2018 14:21:10.686 INFOS [http-nio-8080-exec-4] com.mongodb.diagnostics.logging.JULLogger.log Cluster created with settings {hosts=[ds137913.mlab.com:37913], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
-31-Oct-2018 14:21:10.687 INFOS [http-nio-8080-exec-4] com.mongodb.diagnostics.logging.JULLogger.log No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, all=[ServerDescription{address=ds137913.mlab.com:37913, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
-31-Oct-2018 14:21:10.970 INFOS [cluster-ClusterId{value='5bd9ac4628843751462ccdd0', description='null'}-ds137913.mlab.com:37913] com.mongodb.diagnostics.logging.JULLogger.log Opened connection [connectionId{localValue:3, serverValue:97916}] to ds137913.mlab.com:37913
-31-Oct-2018 14:21:11.006 INFOS [cluster-ClusterId{value='5bd9ac4628843751462ccdd0', description='null'}-ds137913.mlab.com:37913] com.mongodb.diagnostics.logging.JULLogger.log Monitor thread successfully connected to server with description ServerDescription{address=ds137913.mlab.com:37913, type=REPLICA_SET_PRIMARY, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 6, 8]}, minWireVersion=0, maxWireVersion=6, maxDocumentSize=16777216, roundTripTimeNanos=35215909, setName='rs-ds137913', canonicalAddress=ds137913-a.mlab.com:37913, hosts=[ds137913-a.mlab.com:37913], passives=[], arbiters=[], primary='ds137913-a.mlab.com:37913', tagSet=TagSet{[]}, electionId=7fffffff0000000000000001, setVersion=1}
-31-Oct-2018 14:21:11.288 INFOS [http-nio-8080-exec-4] com.mongodb.diagnostics.logging.JULLogger.log Opened connection [connectionId{localValue:4, serverValue:97917}] to ds137913.mlab.com:37913
-31-Oct-2018 14:22:15.994 INFOS [http-nio-8080-exec-14] com.mongodb.diagnostics.logging.JULLogger.log Cluster created with settings {hosts=[ds137913.mlab.com:37913], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
-31-Oct-2018 14:22:15.996 INFOS [http-nio-8080-exec-14] com.mongodb.diagnostics.logging.JULLogger.log No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, all=[ServerDescription{address=ds137913.mlab.com:37913, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
-31-Oct-2018 14:22:16.282 INFOS [cluster-ClusterId{value='5bd9ac8728843751462ccdd1', description='null'}-ds137913.mlab.com:37913] com.mongodb.diagnostics.logging.JULLogger.log Opened connection [connectionId{localValue:5, serverValue:97918}] to ds137913.mlab.com:37913
-31-Oct-2018 14:22:16.318 INFOS [cluster-ClusterId{value='5bd9ac8728843751462ccdd1', description='null'}-ds137913.mlab.com:37913] com.mongodb.diagnostics.logging.JULLogger.log Monitor thread successfully connected to server with description ServerDescription{address=ds137913.mlab.com:37913, type=REPLICA_SET_PRIMARY, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 6, 8]}, minWireVersion=0, maxWireVersion=6, maxDocumentSize=16777216, roundTripTimeNanos=35619583, setName='rs-ds137913', canonicalAddress=ds137913-a.mlab.com:37913, hosts=[ds137913-a.mlab.com:37913], passives=[], arbiters=[], primary='ds137913-a.mlab.com:37913', tagSet=TagSet{[]}, electionId=7fffffff0000000000000001, setVersion=1}
-31-Oct-2018 14:22:16.600 INFOS [http-nio-8080-exec-14] com.mongodb.diagnostics.logging.JULLogger.log Opened connection [connectionId{localValue:6, serverValue:97919}] to ds137913.mlab.com:37913
-31-Oct-2018 14:28:25.957 INFOS [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.startup.HostConfig.undeploy Repli (undeploy) de l'application web ayant pour chemin de contexte [/Contact]
-31-Oct-2018 14:28:25.981 AVERTISSEMENT [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Contact] appears to have started a thread named [cluster-ClusterId{value='5bd9ac4328843751462ccdcf', description='null'}-ds137913.mlab.com:37913] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
- sun.misc.Unsafe.park(Native Method)
- java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
- java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
- com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.waitForSignalOrTimeout(DefaultServerMonitor.java:238)
- com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.waitForNext(DefaultServerMonitor.java:219)
- com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:168)
- java.lang.Thread.run(Thread.java:748)
-31-Oct-2018 14:28:25.981 AVERTISSEMENT [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Contact] appears to have started a thread named [pool-2-thread-1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
- sun.misc.Unsafe.park(Native Method)
- java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
- java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
- java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
- java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
- java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
- java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
- java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
- java.lang.Thread.run(Thread.java:748)
-31-Oct-2018 14:28:25.981 AVERTISSEMENT [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Contact] appears to have started a thread named [cluster-ClusterId{value='5bd9ac4628843751462ccdd0', description='null'}-ds137913.mlab.com:37913] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
- sun.misc.Unsafe.park(Native Method)
- java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
- java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
- com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.waitForSignalOrTimeout(DefaultServerMonitor.java:238)
- com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.waitForNext(DefaultServerMonitor.java:219)
- com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:168)
- java.lang.Thread.run(Thread.java:748)
-31-Oct-2018 14:28:25.981 AVERTISSEMENT [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Contact] appears to have started a thread named [pool-3-thread-1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
- sun.misc.Unsafe.park(Native Method)
- java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
- java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
- java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
- java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
- java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
- java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
- java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
- java.lang.Thread.run(Thread.java:748)
-31-Oct-2018 14:28:25.982 AVERTISSEMENT [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Contact] appears to have started a thread named [cluster-ClusterId{value='5bd9ac8728843751462ccdd1', description='null'}-ds137913.mlab.com:37913] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
- sun.misc.Unsafe.park(Native Method)
- java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
- java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
- com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.waitForSignalOrTimeout(DefaultServerMonitor.java:238)
- com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.waitForNext(DefaultServerMonitor.java:219)
- com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:168)
- java.lang.Thread.run(Thread.java:748)
-31-Oct-2018 14:28:25.982 AVERTISSEMENT [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Contact] appears to have started a thread named [pool-4-thread-1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
- sun.misc.Unsafe.park(Native Method)
- java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
- java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
- java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
- java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
- java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
- java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
- java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
- java.lang.Thread.run(Thread.java:748)
-31-Oct-2018 14:28:26.136 INFOS [localhost-startStop-4] org.apache.catalina.startup.HostConfig.deployWAR Déploiement de l'archive [/autofs/unitytravail/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/Contact.war] de l'application web
-31-Oct-2018 14:28:26.932 INFOS [localhost-startStop-4] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
-31-Oct-2018 14:28:27.427 INFOS [localhost-startStop-4] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/autofs/unitytravail/travail/faudoy/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/Contact.war] has finished in [1 291] ms
-31-Oct-2018 14:28:29.234 INFOS [http-nio-8080-exec-19] com.mongodb.diagnostics.logging.JULLogger.log Cluster created with settings {hosts=[ds137913.mlab.com:37913], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
-31-Oct-2018 14:28:29.289 INFOS [http-nio-8080-exec-19] com.mongodb.diagnostics.logging.JULLogger.log No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, all=[ServerDescription{address=ds137913.mlab.com:37913, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
-31-Oct-2018 14:28:29.696 INFOS [cluster-ClusterId{value='5bd9adfd2884375146d4aa46', description='null'}-ds137913.mlab.com:37913] com.mongodb.diagnostics.logging.JULLogger.log Opened connection [connectionId{localValue:1, serverValue:97940}] to ds137913.mlab.com:37913
-31-Oct-2018 14:28:29.734 INFOS [cluster-ClusterId{value='5bd9adfd2884375146d4aa46', description='null'}-ds137913.mlab.com:37913] com.mongodb.diagnostics.logging.JULLogger.log Monitor thread successfully connected to server with description ServerDescription{address=ds137913.mlab.com:37913, type=REPLICA_SET_PRIMARY, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 6, 8]}, minWireVersion=0, maxWireVersion=6, maxDocumentSize=16777216, roundTripTimeNanos=35603124, setName='rs-ds137913', canonicalAddress=ds137913-a.mlab.com:37913, hosts=[ds137913-a.mlab.com:37913], passives=[], arbiters=[], primary='ds137913-a.mlab.com:37913', tagSet=TagSet{[]}, electionId=7fffffff0000000000000001, setVersion=1}
-31-Oct-2018 14:28:30.028 INFOS [http-nio-8080-exec-19] com.mongodb.diagnostics.logging.JULLogger.log Opened connection [connectionId{localValue:2, serverValue:97941}] to ds137913.mlab.com:37913
-31-Oct-2018 14:28:32.270 INFOS [http-nio-8080-exec-23] com.mongodb.diagnostics.logging.JULLogger.log Cluster created with settings {hosts=[ds137913.mlab.com:37913], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
-31-Oct-2018 14:28:32.272 INFOS [http-nio-8080-exec-23] com.mongodb.diagnostics.logging.JULLogger.log No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, all=[ServerDescription{address=ds137913.mlab.com:37913, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
-31-Oct-2018 14:28:32.555 INFOS [cluster-ClusterId{value='5bd9ae002884375146d4aa47', description='null'}-ds137913.mlab.com:37913] com.mongodb.diagnostics.logging.JULLogger.log Opened connection [connectionId{localValue:3, serverValue:97942}] to ds137913.mlab.com:37913
-31-Oct-2018 14:28:32.590 INFOS [cluster-ClusterId{value='5bd9ae002884375146d4aa47', description='null'}-ds137913.mlab.com:37913] com.mongodb.diagnostics.logging.JULLogger.log Monitor thread successfully connected to server with description ServerDescription{address=ds137913.mlab.com:37913, type=REPLICA_SET_PRIMARY, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 6, 8]}, minWireVersion=0, maxWireVersion=6, maxDocumentSize=16777216, roundTripTimeNanos=34868641, setName='rs-ds137913', canonicalAddress=ds137913-a.mlab.com:37913, hosts=[ds137913-a.mlab.com:37913], passives=[], arbiters=[], primary='ds137913-a.mlab.com:37913', tagSet=TagSet{[]}, electionId=7fffffff0000000000000001, setVersion=1}
-31-Oct-2018 14:28:32.872 INFOS [http-nio-8080-exec-23] com.mongodb.diagnostics.logging.JULLogger.log Opened connection [connectionId{localValue:4, serverValue:97943}] to ds137913.mlab.com:37913
-31-Oct-2018 14:28:41.655 INFOS [http-nio-8080-exec-17] com.mongodb.diagnostics.logging.JULLogger.log Cluster created with settings {hosts=[ds137913.mlab.com:37913], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
-31-Oct-2018 14:28:41.657 INFOS [http-nio-8080-exec-17] com.mongodb.diagnostics.logging.JULLogger.log No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, all=[ServerDescription{address=ds137913.mlab.com:37913, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
-31-Oct-2018 14:28:41.937 INFOS [cluster-ClusterId{value='5bd9ae092884375146d4aa48', description='null'}-ds137913.mlab.com:37913] com.mongodb.diagnostics.logging.JULLogger.log Opened connection [connectionId{localValue:5, serverValue:97944}] to ds137913.mlab.com:37913
-31-Oct-2018 14:28:41.972 INFOS [cluster-ClusterId{value='5bd9ae092884375146d4aa48', description='null'}-ds137913.mlab.com:37913] com.mongodb.diagnostics.logging.JULLogger.log Monitor thread successfully connected to server with description ServerDescription{address=ds137913.mlab.com:37913, type=REPLICA_SET_PRIMARY, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 6, 8]}, minWireVersion=0, maxWireVersion=6, maxDocumentSize=16777216, roundTripTimeNanos=35033899, setName='rs-ds137913', canonicalAddress=ds137913-a.mlab.com:37913, hosts=[ds137913-a.mlab.com:37913], passives=[], arbiters=[], primary='ds137913-a.mlab.com:37913', tagSet=TagSet{[]}, electionId=7fffffff0000000000000001, setVersion=1}
-31-Oct-2018 14:28:42.255 INFOS [http-nio-8080-exec-17] com.mongodb.diagnostics.logging.JULLogger.log Opened connection [connectionId{localValue:6, serverValue:97945}] to ds137913.mlab.com:37913
-31-Oct-2018 14:28:50.353 INFOS [http-nio-8080-exec-18] com.mongodb.diagnostics.logging.JULLogger.log Cluster created with settings {hosts=[ds137913.mlab.com:37913], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
-31-Oct-2018 14:28:50.355 INFOS [http-nio-8080-exec-18] com.mongodb.diagnostics.logging.JULLogger.log No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, all=[ServerDescription{address=ds137913.mlab.com:37913, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
-31-Oct-2018 14:28:50.632 INFOS [cluster-ClusterId{value='5bd9ae122884375146d4aa49', description='null'}-ds137913.mlab.com:37913] com.mongodb.diagnostics.logging.JULLogger.log Opened connection [connectionId{localValue:7, serverValue:97946}] to ds137913.mlab.com:37913
-31-Oct-2018 14:28:50.668 INFOS [cluster-ClusterId{value='5bd9ae122884375146d4aa49', description='null'}-ds137913.mlab.com:37913] com.mongodb.diagnostics.logging.JULLogger.log Monitor thread successfully connected to server with description ServerDescription{address=ds137913.mlab.com:37913, type=REPLICA_SET_PRIMARY, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 6, 8]}, minWireVersion=0, maxWireVersion=6, maxDocumentSize=16777216, roundTripTimeNanos=34818935, setName='rs-ds137913', canonicalAddress=ds137913-a.mlab.com:37913, hosts=[ds137913-a.mlab.com:37913], passives=[], arbiters=[], primary='ds137913-a.mlab.com:37913', tagSet=TagSet{[]}, electionId=7fffffff0000000000000001, setVersion=1}
-31-Oct-2018 14:28:50.922 INFOS [http-nio-8080-exec-18] com.mongodb.diagnostics.logging.JULLogger.log Opened connection [connectionId{localValue:8, serverValue:97947}] to ds137913.mlab.com:37913
-31-Oct-2018 14:29:01.821 INFOS [http-nio-8080-exec-20] com.mongodb.diagnostics.logging.JULLogger.log Cluster created with settings {hosts=[ds137913.mlab.com:37913], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
-31-Oct-2018 14:29:01.823 INFOS [http-nio-8080-exec-20] com.mongodb.diagnostics.logging.JULLogger.log No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, all=[ServerDescription{address=ds137913.mlab.com:37913, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
-31-Oct-2018 14:29:02.085 INFOS [cluster-ClusterId{value='5bd9ae1d2884375146d4aa4a', description='null'}-ds137913.mlab.com:37913] com.mongodb.diagnostics.logging.JULLogger.log Opened connection [connectionId{localValue:9, serverValue:97950}] to ds137913.mlab.com:37913
-31-Oct-2018 14:29:02.120 INFOS [cluster-ClusterId{value='5bd9ae1d2884375146d4aa4a', description='null'}-ds137913.mlab.com:37913] com.mongodb.diagnostics.logging.JULLogger.log Monitor thread successfully connected to server with description ServerDescription{address=ds137913.mlab.com:37913, type=REPLICA_SET_PRIMARY, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 6, 8]}, minWireVersion=0, maxWireVersion=6, maxDocumentSize=16777216, roundTripTimeNanos=34952171, setName='rs-ds137913', canonicalAddress=ds137913-a.mlab.com:37913, hosts=[ds137913-a.mlab.com:37913], passives=[], arbiters=[], primary='ds137913-a.mlab.com:37913', tagSet=TagSet{[]}, electionId=7fffffff0000000000000001, setVersion=1}
-31-Oct-2018 14:29:02.404 INFOS [http-nio-8080-exec-20] com.mongodb.diagnostics.logging.JULLogger.log Opened connection [connectionId{localValue:10, serverValue:97951}] to ds137913.mlab.com:37913
-31-Oct-2018 14:29:17.058 INFOS [http-nio-8080-exec-22] com.mongodb.diagnostics.logging.JULLogger.log Cluster created with settings {hosts=[ds137913.mlab.com:37913], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
-31-Oct-2018 14:29:17.060 INFOS [http-nio-8080-exec-22] com.mongodb.diagnostics.logging.JULLogger.log No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, all=[ServerDescription{address=ds137913.mlab.com:37913, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
-31-Oct-2018 14:29:17.340 INFOS [cluster-ClusterId{value='5bd9ae2d2884375146d4aa4b', description='null'}-ds137913.mlab.com:37913] com.mongodb.diagnostics.logging.JULLogger.log Opened connection [connectionId{localValue:11, serverValue:97952}] to ds137913.mlab.com:37913
-31-Oct-2018 14:29:17.376 INFOS [cluster-ClusterId{value='5bd9ae2d2884375146d4aa4b', description='null'}-ds137913.mlab.com:37913] com.mongodb.diagnostics.logging.JULLogger.log Monitor thread successfully connected to server with description ServerDescription{address=ds137913.mlab.com:37913, type=REPLICA_SET_PRIMARY, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 6, 8]}, minWireVersion=0, maxWireVersion=6, maxDocumentSize=16777216, roundTripTimeNanos=35098043, setName='rs-ds137913', canonicalAddress=ds137913-a.mlab.com:37913, hosts=[ds137913-a.mlab.com:37913], passives=[], arbiters=[], primary='ds137913-a.mlab.com:37913', tagSet=TagSet{[]}, electionId=7fffffff0000000000000001, setVersion=1}
-31-Oct-2018 14:29:17.649 INFOS [http-nio-8080-exec-22] com.mongodb.diagnostics.logging.JULLogger.log Opened connection [connectionId{localValue:12, serverValue:97953}] to ds137913.mlab.com:37913
-31-Oct-2018 14:30:42.285 INFOS [http-nio-8080-exec-28] com.mongodb.diagnostics.logging.JULLogger.log Cluster created with settings {hosts=[ds137913.mlab.com:37913], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
-31-Oct-2018 14:30:42.286 INFOS [http-nio-8080-exec-28] com.mongodb.diagnostics.logging.JULLogger.log No server chosen by ReadPreferenceServerSelector{readPreference=primary} from cluster description ClusterDescription{type=UNKNOWN, connectionMode=SINGLE, all=[ServerDescription{address=ds137913.mlab.com:37913, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
-31-Oct-2018 14:30:42.652 INFOS [cluster-ClusterId{value='5bd9ae822884375146d4aa4c', description='null'}-ds137913.mlab.com:37913] com.mongodb.diagnostics.logging.JULLogger.log Opened connection [connectionId{localValue:13, serverValue:97956}] to ds137913.mlab.com:37913
-31-Oct-2018 14:30:42.687 INFOS [cluster-ClusterId{value='5bd9ae822884375146d4aa4c', description='null'}-ds137913.mlab.com:37913] com.mongodb.diagnostics.logging.JULLogger.log Monitor thread successfully connected to server with description ServerDescription{address=ds137913.mlab.com:37913, type=REPLICA_SET_PRIMARY, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 6, 8]}, minWireVersion=0, maxWireVersion=6, maxDocumentSize=16777216, roundTripTimeNanos=34735426, setName='rs-ds137913', canonicalAddress=ds137913-a.mlab.com:37913, hosts=[ds137913-a.mlab.com:37913], passives=[], arbiters=[], primary='ds137913-a.mlab.com:37913', tagSet=TagSet{[]}, electionId=7fffffff0000000000000001, setVersion=1}
-31-Oct-2018 14:30:42.942 INFOS [http-nio-8080-exec-28] com.mongodb.diagnostics.logging.JULLogger.log Opened connection [connectionId{localValue:14, serverValue:97957}] to ds137913.mlab.com:37913
+NOTE: Picked up JDK_JAVA_OPTIONS:  --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+01-Nov-2018 12:43:40.935 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.5.34
+01-Nov-2018 12:43:40.939 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Sep 4 2018 22:28:22 UTC
+01-Nov-2018 12:43:40.939 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         8.5.34.0
+01-Nov-2018 12:43:40.940 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+01-Nov-2018 12:43:40.940 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            4.15.0-38-generic
+01-Nov-2018 12:43:40.940 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+01-Nov-2018 12:43:40.940 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-11-openjdk-amd64
+01-Nov-2018 12:43:40.940 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           10.0.2+13-Ubuntu-1ubuntu0.18.04.2
+01-Nov-2018 12:43:40.941 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+01-Nov-2018 12:43:40.943 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /home/francois/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34
+01-Nov-2018 12:43:40.943 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /home/francois/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34
+01-Nov-2018 12:43:40.943 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+01-Nov-2018 12:43:40.943 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+01-Nov-2018 12:43:40.943 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+01-Nov-2018 12:43:40.943 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/home/francois/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/conf/logging.properties
+01-Nov-2018 12:43:40.944 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+01-Nov-2018 12:43:40.944 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+01-Nov-2018 12:43:40.944 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+01-Nov-2018 12:43:40.944 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+01-Nov-2018 12:43:40.944 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+01-Nov-2018 12:43:40.944 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/home/francois/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34
+01-Nov-2018 12:43:40.944 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/home/francois/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34
+01-Nov-2018 12:43:40.944 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/home/francois/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/temp
+01-Nov-2018 12:43:40.945 INFOS [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+01-Nov-2018 12:43:40.988 INFOS [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+01-Nov-2018 12:43:41.002 INFOS [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+01-Nov-2018 12:43:41.008 INFOS [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+01-Nov-2018 12:43:41.010 INFOS [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+01-Nov-2018 12:43:41.010 INFOS [main] org.apache.catalina.startup.Catalina.load Initialization processed in 617 ms
+01-Nov-2018 12:43:41.074 INFOS [main] org.apache.catalina.core.StandardService.startInternal Démarrage du service [Catalina]
+01-Nov-2018 12:43:41.074 INFOS [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.5.34
+01-Nov-2018 12:43:41.084 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire [/home/francois/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/manager] de l'application web
+01-Nov-2018 12:43:41.521 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/francois/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/manager] has finished in [435] ms
+01-Nov-2018 12:43:41.522 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire [/home/francois/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/docs] de l'application web
+01-Nov-2018 12:43:41.545 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/francois/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/docs] has finished in [23] ms
+01-Nov-2018 12:43:41.546 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire [/home/francois/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/examples] de l'application web
+01-Nov-2018 12:43:41.845 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/francois/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/examples] has finished in [300] ms
+01-Nov-2018 12:43:41.846 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire [/home/francois/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/host-manager] de l'application web
+01-Nov-2018 12:43:41.870 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/francois/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/host-manager] has finished in [25] ms
+01-Nov-2018 12:43:41.872 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire [/home/francois/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/ROOT] de l'application web
+01-Nov-2018 12:43:41.892 INFOS [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/francois/Lescours/Master/S9/ProgWeb/TD4/apache-tomcat-8.5.34/webapps/ROOT] has finished in [20] ms
+01-Nov-2018 12:43:41.896 INFOS [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+01-Nov-2018 12:43:41.909 INFOS [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-nio-8009"]
+01-Nov-2018 12:43:41.918 INFOS [main] org.apache.catalina.startup.Catalina.start Server startup in 907 ms
