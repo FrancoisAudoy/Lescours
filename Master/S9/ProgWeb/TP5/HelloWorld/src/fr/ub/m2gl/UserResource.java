@@ -51,7 +51,6 @@ public class UserResource {
 			
 			return user;
 		} catch (JsonProcessingException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 			return null;
 
@@ -68,9 +67,18 @@ public class UserResource {
 		MongoDatabase bdd = mc.getDatabase("application");
 		ObjectMapper mapper = new ObjectMapper();
 		MongoCollection<Document> collection = bdd.getCollection("user"); 
-		FindIterable<Document> doc = collection.find();
+		Document query = new Document();
+		query.append("firstname", firstname).append("lastname", lastname);
+		Document update = new Document();
+		update.append("firstname", newFirstName).append("lastname", newLastName);
 		
-		return null;
+		collection.updateOne(query, update);
+		return new User(newFirstName, newLastName);
+	}
+	
+	@DELETE
+	public void removeUser(@PathParam("firstname") String firstname, 
+			@PathParam("lastname") String lastname){
 	}
 	
 	@GET
