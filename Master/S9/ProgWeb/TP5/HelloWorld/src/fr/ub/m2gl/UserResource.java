@@ -73,9 +73,10 @@ public class UserResource {
 		return null;
 	}
 	
+	@Path("all")
 	@GET
 	@Produces("application/json")
-	public String GetUser (){
+	public String GetAllUsers (){
 
 		try {
 			MongoDatabase bdd = mc.getDatabase("application");
